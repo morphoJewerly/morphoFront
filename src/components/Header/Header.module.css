@@ -1,0 +1,58 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    z-index: 11;
+  }
+  .header_container{
+    display: flex;
+    align-items: center;
+    gap: 550px;
+  }
+  .logo_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo_block p {
+    font-family: "Tangerine";
+    margin-top: -40px;
+    font-size: 30px;
+    color: rgb(152, 152, 152);
+  }
+  .logo{
+    font-family: "Tangerine";
+    font-size: 35px;
+  }
+  ul {
+    display: flex;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+  }
+  ul li {
+    list-style: none;
+  }
+  ul li:hover a {
+    color: rgb(109, 109, 109);
+  }
+  ul li a {
+    font-family: "Marmelad";
+     text-decoration: none;
+     color: white;
+  }
+  .button{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+ }

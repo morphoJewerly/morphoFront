@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 2px rgb(255, 255, 255) solid;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .socialPages{
+    gap: 3px;
+    display: flex;
+    align-items: center;
+  }

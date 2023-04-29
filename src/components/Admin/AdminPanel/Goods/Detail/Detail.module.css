@@ -1,0 +1,54 @@
+.wrapeer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    margin-top: 140px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.buttonBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 50px;
+}
+.buttonBack button{
+    width: 120px;
+    height: 35px;
+}
+.description{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 800px;
+    margin-left: -70px;
+}
+.description_left_text{
+    transform: rotate(90deg);
+    white-space: nowrap ;
+}
+.sectionPhoto{
+    display: flex;
+    flex-direction: column;
+}
+.img3{
+    margin-left: 350px;
+    margin-top: -40px;
+}
+.button_buy{
+    width: 240px;
+    height: 50px;
+    margin-left: 330px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+a {
+    text-decoration: none;
+}
