@@ -13,8 +13,6 @@ function CreateGoods(props) {
   // const apiForm2 = process.env.REACT_APP_API_URL_FORM_TWO
   const onSubmit = (data) => {
     const newData = { ...data, imgmain: imgUrl, imgsecond: imgUrl2, imgthird: imgUrl3 };
-    // const edit = {};
-    // const EditData = { ...edit, imgmain: imgUrl, imgsecond: imgUrl2, imgthird: imgUrl3, title : title , text : text, price : price, idd : idd, category: category, };
     console.log(newData);
     { isEditing ?  axios.patch(`/posts/${id}`, newData)
     .then(function (response) {
@@ -151,11 +149,6 @@ function CreateGoods(props) {
         <label htmlFor="price"></label>
         <input   className={styles.input}  placeholder=" ціна товару" type="number" id="price" {...register('price', { required: true })} />
         {errors.price && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
-      </div>
-      <div className={styles.item}>
-        <label htmlFor="idd"></label>
-        <input  className={styles.input} placeholder=" порядковий номер товару (починаючи з нуля)" type="number" id="idd" {...register('idd', { required: true })} />
-        {errors.idd && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
       </div>
       <div className={styles.item}>
       <label htmlFor="text"></label>

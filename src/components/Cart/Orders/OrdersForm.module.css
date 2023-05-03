@@ -1,57 +1,26 @@
 .drawer{
     display: flex;
     flex-direction: column;
-    width: 1176px;
+    width: 100%;
     height: 100%;
     right: 0;
-    background-color: white;
-    border-left: 1px solid #eaeaea;
+    background-color:  white;
     z-index: 1;
     justify-content: space-between ;
-    border-bottom: 1px solid #eaeaea;
     z-index: 2;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 150px;
-    border-radius: 30px;
+    margin-top: 170px;
+    margin-bottom: 50px;
 }
 @media(max-width:700px){
     .drawer{
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px; 
+    margin-top: 130px;
+    margin-bottom: 70px; 
     border-radius: 0px;
     }
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 137px;
-    border-bottom: 1px solid #FE5F1E;
-}
-@media(max-width:500px){
-    .header{
-       display: none;
-    }
-}
-.header_left{
-    display: flex;
-    gap: 7px;
-    margin-left: 38px;
-}
-@media(max-width:320px){
-    .header_left{
-        justify-content: center;
-        margin-left: 0px;
-    }
-}
-.header_left img {
-    width: 45px;
-    height: 45px;
 }
 .title h3{
     font-family: 'Proxima Nova';
@@ -85,11 +54,12 @@
     justify-content: center;
 }
 .form form {
+    background-color:  white;
     margin-top: 10px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -103,37 +73,52 @@
 }
 form input {
     padding-left: 20px;
-    width: 230px;
-    height: 45px;
+    width: 600px;
+    height: 55px;
     color: black;
     background-color: white;
     font-size: 20px;
-    border-radius: 10px;
-    border: 1px orangered solid;
+    border-bottom: 2px rgb(0, 0, 0) solid;
+    border-top: none ;
+    border-left: none ;
+    border-right: none ;
+}
+@media (max-width: 650px) {
+    .form input{
+        width: 400px;
+    }
+}
+@media (max-width: 450px) {
+    .form input{
+        width: 300px;
+    }
 }
 
 .submit {
-    margin-top: 10px;
-    width: 260px;
+    width: 180px;
     height: 55px;
-    background: orangered;
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+.submit:hover {
+    background-color: rgb(18, 18, 18);
     color: white;
-    border: none;
-    border-radius: 10px;
-
 }
 .back {
-    width: 260px;
+    margin-top: -25px;
+    width: 180px;
     height: 55px;
-    background: grey;
+    background-color: rgb(18, 18, 18);
     color: white;
-    border: none;
-    border-radius: 10px;
+}
+.back :hover {
+    margin-top: -25px;
+    width: 180px;
+    height: 55px;
+    background: white;
+    color: black;
+    border: 2px solid black;
 }
 
-form button:hover {
-    background: #3b4133;
-    color: white;
-
-}
 

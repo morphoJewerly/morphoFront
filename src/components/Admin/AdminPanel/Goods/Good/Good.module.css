@@ -5,7 +5,7 @@
     justify-content: center;
     width: 300px;
     height: 400px;
-    background-color: white;
+    background-color:  #e7e7e7;
 }
 .editItems{
     display: none;
@@ -15,6 +15,10 @@
     z-index: 10;
     gap:180px;
     margin-top: -310px;
+}
+.editItems img{
+    cursor: pointer;
+    
 }
 .goodPhoto {
   filter: grayscale(0%);
@@ -80,4 +84,5 @@
 .item_footer button:hover {
     background-color: rgb(48, 48, 48);
 }
+
 /* ------------------------------------------------------ */

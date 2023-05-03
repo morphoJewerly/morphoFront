@@ -25,15 +25,16 @@
     gap: 373px;
     max-width: 820px;
 }
-@media(max-width:700px){
+@media(max-width:861px){
     .head{
         gap:173px ;
         margin-bottom: 10px;
-        margin-bottom: 10px;
+        margin-top: 30px;
     }
 }
-@media(max-width:580px){
+@media(max-width:710px){
     .head{
+        margin-top: 80px;
        gap:10px;
        flex-direction: column;
        align-items: center;
@@ -76,7 +77,7 @@
     display: flex;
     gap:330px;
 }
-@media(max-width:700px){
+@media(max-width:861px){
     .total_info{
         justify-content: center;
         gap:70px ;
@@ -97,7 +98,7 @@
     display: flex;
     gap:350px;
 }
-@media(max-width:700px){
+@media(max-width:861px){
     .cart_buts{
         justify-content: center;
         gap:70px ;
@@ -107,8 +108,12 @@
 @media(max-width:580px){
     .cart_buts{
         align-items: center;
-        gap:20px ;
+        gap:0px ;
         flex-direction: column;
+        margin-bottom: 70px;
+    }
+    .cart_footer{
+        margin-right: 30px;
     }
 }
 .total_count,.total_price{
@@ -141,7 +146,7 @@
 .buy {
     width: 211px;
     height: 55px;
-    background: black;
+    background-color: rgb(18, 18, 18);
     color: white;
     border: none;
 }
@@ -158,6 +163,6 @@
     color: #000000;
 }
 .c_back:hover{
-    background: #000000;
+    background-color: rgb(18, 18, 18);
     color: white;
 }

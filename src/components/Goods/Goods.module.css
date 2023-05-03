@@ -9,6 +9,7 @@
     grid-row-gap: 40px;
 }
 .main {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +43,11 @@
        flex-direction: column;
        justify-content: center;
        align-items: center;
+    }
+    .Items1,.Items2{
+        margin-left: 10px;
+        margin-right: 10px;
+       
     }
 }
 .categorios{

@@ -1,56 +1,151 @@
 import styles from './Home.module.css';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import {Link, useLocation} from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import axios from '../../axios';
+import { useSelector } from 'react-redux';
+import { selectIsAuth } from '../../Redux/auth';
 
 function Home() {
-  return (
-   <>
-      <Helmet>
-      <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Marmelad&family=Pacifico&family=Tangerine:wght@700&display=swap" rel="stylesheet"/>
-      </Helmet>
-             <main>
-              <h1 className={styles.title}>«Єдиний спосіб втечі від банальності - Мистецтво»</h1>
-              <img  src="/images/minePhoto.jpg" className={styles.mainPhoto} alt="" />
-              <div className={styles.content}>
-              <div className={styles.left_content}>
-              <div className={styles.left_content_item}>
-                <img  className={styles.blockPhoto} src="/images/im1.jpg" alt="" />
-                 <p>Все починається з натхнення та приємних ідей.</p>
-                </div>
-                <div className={styles.left_content_item}>
-                <img className={styles.blockPhoto}   src="/images/im2.jpg" alt="" />
-                 <p>Потім з'являється мета і я концентруюсь на ній.</p>
-                </div>
-                </div>
-                <div className={styles.rigth_content}>
-                  <h1>ПОТРІБНО ВІРИТИ У СЕБЕ І СВОЇ БАЖАННЯ, УСЕ ЗДІЙСНИТЬСЯ, УСЕ РЕАЛЬНО...</h1>
-                  <div className={styles.rigth_content_text}>
-                  <p>Привіт, вітаю на сайті "MORPHO-the piece of sky"! Мене звати Наталя, я - засновник та виконавець MORPHO - the.piece.of.sky Я народилась та виросла на Хмельнитчині, там, де поля пахнуть теплом і пшеницею, де блакитне глибоке небо. Потім я навчалась 5 років у Івано – Франківську - в колоритному містечку, де кожна творча людина знайде для себе щось цікаве, а головне - «своє». Перші роки були у кузні, проте який з мене коваль?)) на останньому курсі я зрозуміла, що робота з меншими деталями і іншим металом мені приносить задоволення. Метал і все, що з ним пов'язане - моя робота, хобі і ціль життя. </p>
-                  <div className={styles.line}></div>
-                  <p>Створюю прикраси і аксесуари з різних матеріалів: латунь, срібло, золото, каміння, стрази та інше. Прийнято, що потрібно обирати один стиль і напрямок, але я створюю різне, тому що я сама буваю різна: ніжна, серйозна, зухвала, шалена, і це ще далеко не весь список) Усі вироби виготовляю з любов'ю, вкладаю у них шматочок своєї душі), а ще мені подобається реставрація, це - ніби даруєш друге життя дорогим та улюбленим для людей речам. На сайті ти можеш знайти виріб для себе чи на подарунок, а також індивідуально зробити замовлення за власним ескізом, щоб даний виріб доповнював тебе та втілював твій настрій.</p>
-                  <div className={styles.line}></div>
-                  <p>MORPHO - тому, що потрібно вірити у себе і свої бажання, усе здійсниться, усе реальне...</p>
-                  {/* <div className={styles.line}></div> */}
-                  </div>
-                </div>
-               
-              </div>
-               <div className={styles.bottom_content}>
-                <div className={styles.left_content_item}>
-                <img className={styles.blockPhoto}    src="/images/im3.jpg" alt="" />
-                 <p>Нічого прекрасного не буває без крапельки чаклунства.</p>
-                </div>
-                <div className={styles.left_content_item}>
-                <img className={styles.blockPhoto}    src="/images/im4.jpg" alt="" />
-                 <p>Процес не може не народити результат.</p>
-                </div>
-                <div className={styles.left_content_item}>
-                <img className={styles.blockPhoto}    src="/images/im5.jpg" alt="" />
-                 <p>Дуже скромно у виробі живе душа та б'ється серце.</p>
-                </div>
-                </div>
-             </main>
-        </> 
-      );
-}
+  const location = useLocation();
+  const { pathname } = location;
+  const isAuth = useSelector(selectIsAuth);
+  const [isEditable, setIsEditable] = useState(false);
+  const [content, setContent] = useState([]);
 
-export default Home;
+  const handleTextClick = () => {
+    if (isAuth && pathname.startsWith("/admin")) {
+      setIsEditable(true);
+    }
+  };
+
+  const handleTextChange = (event, key) => {
+    setContent({ ...content, [key]: event.target.value });
+  };
+  
+  const id = "644e8566ff074ba376daf92e";
+  const handleSaveClick = async () => {
+    try {
+      await axios.patch(`/mainPage/${id}`, content);
+      setIsEditable(false);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+ 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/mainPage`);
+        const data = response.data;
+        setContent(data[0]);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <Helmet>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
+
+
+      </Helmet>
+      <main>
+        <h1 className={styles.title} onClick={handleTextClick}>
+          {isEditable ? (
+            <input className={styles.mainCitate} type="text" value={content.mainCitate} onChange={(e) => handleTextChange(e, "mainCitate")} />
+          ) : (
+            content.mainCitate
+          )}
+        </h1>
+        <img src="/images/minePhoto.jpg" className={styles.mainPhoto} alt="" />
+        <div className={styles.content}>
+          <div className={styles.left_content}>
+            <div className={styles.left_content_item}>
+              <img className={styles.blockPhoto} src="/images/im1.jpg" alt="" />
+              <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+           <input className={styles.descrInput} type="text" value={content.descr1} onChange={(e) => handleTextChange(e, "descr1")} />
+          ) : (
+            content.descr1
+          )}
+                </p>
+            </div>
+            <div className={styles.left_content_item}>
+              <img className={styles.blockPhoto} src="/images/im2.jpg" alt="" />
+              <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+            <input className={styles.descrInput} type="text" value={content.descr2} onChange={(e) => handleTextChange(e, "descr2")} />
+          ) : (
+            content.descr2
+          )}
+                </p>
+            </div>
+          </div>
+          <div className={styles.rigth_content}>
+            <h1 onClick={handleTextClick} >{isEditable ? (
+           <input className={styles.h1Input} type="text" value={content.h1} onChange={(e) => handleTextChange(e, "h1")} />
+          ) : (
+            content.h1
+          )}</h1>
+            <div className={styles.rigth_content_text}>
+              <p onClick={handleTextClick}> {isEditable ? (
+            <input className={styles.text1} type="text" value={content.text1} onChange={(e) => handleTextChange(e, "text1")} />
+          ) : (
+            content.text1
+          )}</p>
+              <div className={styles.line}></div>
+              <p onClick={handleTextClick}> {isEditable ? (
+          <input className={styles.text1} type="text" value={content.text2} onChange={(e) => handleTextChange(e, "text2")} />
+          ) : (
+            content.text2
+          )}</p>
+              <div className={styles.line}></div>
+              <p onClick={handleTextClick}> {isEditable ? (
+           <input className={styles.text2} type="text" value={content.text3} onChange={(e) => handleTextChange(e, "text3")} />
+          ) : (
+            content.text3
+          )}</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.bottom_content}>
+          <div className={styles.left_content_item}>
+            <img className={styles.blockPhoto} src="/images/im3.jpg" alt="" />
+            <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+           <input className={styles.descrInput} type="text" value={content.descr3} onChange={(e) => handleTextChange(e, "descr3")} />
+          ) : (
+            content.descr3
+          )}
+                </p>
+          </div>
+          <div className={styles.left_content_item}>
+            <img className={styles.blockPhoto} src="/images/im4.jpg" alt="" />
+            <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+            <input className={styles.descrInput} type="text" value={content.descr4} onChange={(e) => handleTextChange(e, "descr4")} />
+          ) : (
+            content.descr4
+          )}
+                </p>
+          </div>
+          <div className={styles.left_content_item}>
+            <img className={styles.blockPhoto} src="/images/im5.jpg" alt="" />
+            <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+           <input className={styles.descrInput} type="text" value={content.descr5} onChange={(e) => handleTextChange(e, "descr5")} />
+          ) : (
+            content.descr5
+          )}
+                </p>
+          </div>
+          </div>
+          {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""}
+          </main>
+        </>
+  )}
+  export default Home;

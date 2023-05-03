@@ -5,10 +5,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
     border-bottom: 0.5px solid #000000; ;
 }
-@media(max-width:700px){
+.title_inner_cart h3{
+    width: 200px;
+}
+.title_inner_cart h3{
+    font-size: 19px;
+    white-space:wrap;
+}
+@media(max-width:861px){
     .cart_item{
         gap:20px ;
     }
@@ -23,12 +29,12 @@
     display: flex;
     align-items: center;
 }
-@media(max-width:700px){
+@media(max-width:861px){
     .cart_item_rigth{
         gap:20px ;
     }
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .cart_item_rigth{
         flex-direction: column;
         align-items: center;
@@ -41,28 +47,23 @@
     align-items: center;
     gap: 15px;
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .descr{
         width: 200px;
     }
 }
-.descr img {
- border-radius: 5px;
-}
 .descr h3{
-    width:150px;
     font-family: 'Proxima Nova';
     font-style: normal;
-    white-space: nowrap;
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
     letter-spacing: 0.01em;
     color: #000000;
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .descr h3{
-        font-size: 15px;
+        font-size: 10px;
     }
 }
 .descr span{
@@ -75,9 +76,13 @@
     color: #8D8D8D;
 }
 @media(max-width:600px){
-    .descr span {
-        font-size: 13px;
-        width: 70px;
+    .descr img {
+        width: 40px;
+        height: 40px;
+    }
+    .title_inner_cart h3{
+        font-size: 15px;
+        white-space:wrap;
     }
 }
 .count{
@@ -86,18 +91,18 @@
     justify-content:center;
     gap: 2px;
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .count {
         gap: 1px;
     }
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .count .img_min{
         height: 15px;
         width: 15px;
     }
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .count .img_plus{
         height: 18px;
         width: 18px;
@@ -114,7 +119,7 @@
     color: #000000;
     width:20px;
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .count span{
         text-align: center;
         font-size: 15px;
@@ -131,7 +136,7 @@
     letter-spacing: 0.01em;
     color: #000000;
 }
-@media(max-width:500px){
+@media(max-width:566px){
     .price{
         font-size: 15px;
         line-height: 20px;

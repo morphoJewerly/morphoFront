@@ -17,7 +17,7 @@ function GoodsAdmin () {
     const catId = useSelector((state) => state.filter.catId)
     const goods = useSelector((state) => state.goods.goods )
     const [isClicked, setIsClicked] =  React.useState(true);
-    const [idd,setIdd] =  React.useState(0);
+    const [idf,seiIdf] =  React.useState(0);
      const selected = useSelector((state) => state.filter.selected)
     
      useEffect(() => {
@@ -49,7 +49,7 @@ function GoodsAdmin () {
     //      ) 
     const pullOut = (idt) =>{
       console.log(idt)
-      setIdd(idt);
+      seiIdf(idt);
     }
 return(
     <>
@@ -68,7 +68,7 @@ return(
     .map((item,index)=> <Good  f1={isClicked} setF1={setIsClicked} callback={(idt)=> pullOut(idt)}  isLoading={isLoading} key={index} {...item}/>)} 
       </div>
       </main>:
-      <Detail  f1={isClicked} setF1={setIsClicked} goods = {goods[idd]}/>
+      <Detail  f1={isClicked} setF1={setIsClicked} goods = {goods.find(obj => obj._id == idf)}/>
 }
       </>
        )}

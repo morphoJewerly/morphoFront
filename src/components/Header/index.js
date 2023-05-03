@@ -26,17 +26,19 @@ function Header() {
     
     <>
       <Helmet>
-      <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Marmelad&family=Pacifico&family=Tangerine:wght@700&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
       </Helmet>
        <header>
              <div className={styles.header_container}>
               <div className={styles.logo_block}>
-            <h3 className={styles.logo}>MORPHO</h3> 
-            <p className={styles.promo}>-the piece of sky</p> 
+            <h1 className={styles.logo}>«Єдиний спосіб втечі від банальності - Мистецтво»</h1> 
             </div>
               <nav>
               {(isAuth && pathname.startsWith("/admin")) ? 
                 <ul>
+                  <li> <Link to="/admin/home"  >
+                    ПРО МЕНЕ
+                </Link></li>
                 <li><Link to="/admin">ТОВАРИ</Link></li>
                 <li><Link to="/admin/create">СТВОРИТИ ТОВАР</Link></li>
                 <li><button onClick={onClickLogout} className={styles.button} >ВИХІД</button></li>

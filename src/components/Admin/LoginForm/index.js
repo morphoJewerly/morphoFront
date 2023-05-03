@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import styles from './LoginForm.module.css';
@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { fetchUserData } from '../../../Redux/auth';
 function LoginForm() {
   const dispatch = useDispatch();
+  const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
   const { register, handleSubmit, reset , setError, formState: { errors, isValid } } = useForm(
     {
       defaultValues: {
@@ -14,6 +15,16 @@ function LoginForm() {
     },
     }
   );
+  useEffect(() => {
+    // Функція, яка буде викликана після завантаження компонента
+    function handleResize() {
+      setScreenWidth(window.innerWidth);
+    }
+    // Підписка на події зміни розміру вікна
+    window.addEventListener('resize', handleResize);
+    // Повернення функції, яка відписується від подій
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   // const apiForm2 = process.env.REACT_APP_API_URL_FORM_TWO
   console.log("greg")
   const onSubmit = async (data) => {
@@ -21,6 +32,12 @@ function LoginForm() {
     if (!values.payload) return alert("Не вдалося авторизуватись");
     if ("token" in values.payload) window.localStorage.setItem("token", values.payload.token);
   };
+
+
+  if (screenWidth < 1200) {
+    return <div>Ваш екран занадто малий для перегляду цієї сторінки</div>;
+  }
+
   return (
     <>
     <div className={styles.wrapper}>

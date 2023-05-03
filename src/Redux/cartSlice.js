@@ -9,23 +9,23 @@ export const cartSlice = createSlice({
   initialState: initialState ,
   reducers: {
      increment (state,action) {
-        state.cartItems.find((obj) => obj.id === action.payload.id && obj.price === action.payload.price ).count++;
+        state.cartItems.find((obj) => obj._id === action.payload._id).count++;
         state.totalCount =  state.cartItems.reduce((current,prev)=> current + prev.count,0)
         state.cartTotalPrice = state.cartItems.reduce((sum,obj) => {
-          return  Number(((obj.price*obj.count) + sum).toFixed(2)); ;
+          return  Number(((obj.price*obj.count) + sum)); ;
           },0)
 },
   decrement (state,action) {
-    const uniq = state.cartItems.find((obj) => obj.id === action.payload.id && obj.price === action.payload.price)
+    const uniq = state.cartItems.find((obj) => obj._id === action.payload._id )
     if  (uniq.count !== 1)  uniq.count--;
     state.totalCount =  state.cartItems.reduce((current,prev)=> current + prev.count,0)
     state.cartTotalPrice = state.cartItems.reduce((sum,obj) => {
-      return  Number(((obj.price*obj.count) + sum).toFixed(2));
+      return  Number(((obj.price*obj.count) + sum));
       },0)
       },  
    addCartItems (state,action) {
       // state.cartItems.push(action.payload)
-    const uniq = state.cartItems.find((obj) => obj.id === action.payload.id && obj.price === action.payload.price && obj.typeid === action.payload.typeid  )
+    const uniq = state.cartItems.find((obj) => obj._id === action.payload._id   )
       if(uniq) {
           uniq.count++;
       }
@@ -41,7 +41,7 @@ export const cartSlice = createSlice({
         },0)
     },
     removeItem(state,action) {
-        state.cartItems = state.cartItems.filter((obj) => (obj.id != action.payload.id || obj.price !== action.payload.price ))
+        state.cartItems = state.cartItems.filter((obj) => (obj._id != action.payload._id ))
         state.totalCount =  state.cartItems.reduce((current,prev)=> current + prev.count,0)
         state.cartTotalPrice = state.cartItems.reduce((sum,obj) => {
           return  +obj.price + sum ;

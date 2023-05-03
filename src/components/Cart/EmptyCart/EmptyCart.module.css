@@ -1,6 +1,5 @@
-
 .epmty_info{
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -12,7 +11,7 @@
     .epmty_info{
         margin-left: 5px;
         margin-right: 5px;
-        margin-top: 50px;
+        margin-top: 150px;
         margin-bottom: 50px; 
 }
 }
@@ -38,12 +37,12 @@
     margin-left: 20px;
     width: 260px;
     height: 55px;
-    background: black;
+    background-color: rgb(18, 18, 18);
     color: white;
     border: none;
     border-radius: 0px;
 
 }
 .epmty_info button:hover {
-    background: rgb(37, 37, 37);
+    background-color: rgb(18, 18, 18);
 }

@@ -27,9 +27,9 @@ function FullCart() {
                             className={styles.delete_cart}
                         >
                             <img
-                                width={16}
-                                height={16}
-                                src="images/trashBasket.png"
+                                width={14}
+                                height={14}
+                                src="images/trash.png"
                                 alt="trash"
                             />
                             <span>Oчистити кошик</span>
@@ -40,7 +40,7 @@ function FullCart() {
                             {cartItems.map((item, index) => (
                                 <Item
                                     key={item.price}
-                                    id={item.id}
+                                    _id={item._id}
                                     imgmain={item.imgmain}
                                     title={item.title}
                                     price={item.price}
@@ -57,18 +57,18 @@ function FullCart() {
                                 </div>
                                 <div className={styles.total_price}>
                                     Сума замовлення:{" "}
-                                    <span>{cartTotalPrice.toFixed(2)} $</span>
+                                    <span>{cartTotalPrice} грн.</span>
                                 </div>
                             </div>
                             <div className={styles.cart_buts}>
-                                <Link to="/">
+                                <Link to="/goods">
                                     <button className={styles.c_back}>
-                                        Повернутися назад
+                                    Назад
                                     </button>
                                 </Link>
                                 <Link to="/orders">
                                     <button className={styles.buy}>
-                                        Оформити замовлення
+                                        Оформити 
                                     </button>
                                 </Link>
                             </div>

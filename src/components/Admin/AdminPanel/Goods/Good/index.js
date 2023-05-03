@@ -10,7 +10,7 @@ function Good({_id,id,idd,imgmain,title,price,callback,f1,setF1,imgUrl}) {
     const cartItem   = useSelector (state => state.cart.cartItems.find((obj) => obj.id === id   ))
     const dispatch  = useDispatch(); 
     const  pullDatta = (event) => {
-      console.log(event.target)
+      console.log(event)
         callback(event.target.id)
         setF1(!f1);
      }
@@ -33,7 +33,7 @@ function Good({_id,id,idd,imgmain,title,price,callback,f1,setF1,imgUrl}) {
                 <h3>{title}</h3>
                 <div className={styles.item_footer}>
                 <span>{price} $</span>
-                    <button  id={idd} onClick={(event) => pullDatta(event) } >ДЕТАЛІ</button>
+                    <button  id={_id} onClick={(event) => pullDatta(event) } >ДЕТАЛІ</button>
                 </div>
             </div> 
     );

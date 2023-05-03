@@ -5,7 +5,7 @@
     justify-content: center;
     width: 300px;
     height: 400px;
-    background-color: white;
+    background-color:  #e7e7e7;;
 }
 .Item a {
     text-decoration: none;
@@ -41,10 +41,34 @@
     cursor: pointer;
     width: 132px;
     height: 35px;
-    background-color: black;
+    background-color: rgb(18, 18, 18);
     color: white;
 }
 .item_footer button:hover {
     background-color: rgb(48, 48, 48);
 }
+.goodPhoto {
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+   }
+   .Item:hover .goodPhoto {
+      filter: grayscale(200%);
+   }
+   .Item:hover .editItems{
+      display: flex;
+   }
+  .Item:hover{
+      background-color: rgb(18, 18, 18);
+      color: white;
+  }
+  .Item:hover h3 {
+      color: white;
+  }
+  .Item:hover .item_footer span {
+      color: white;
+  }
+  .Item:hover .item_footer button {
+      background-color: white;
+      color: black;
+  }
 /* ------------------------------------------------------ */

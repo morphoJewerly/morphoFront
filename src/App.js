@@ -12,6 +12,7 @@ import Detail from './components/Goods/Detail';
 import Admin from './components/Admin';
 import { fetchAuthMe, selectIsAuth  } from './Redux/auth';
 import CreateGoods from './components/Admin/AdminPanel/CreateGood';
+import OrdersForm from './components/Cart/Orders';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,15 +23,16 @@ function App() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
         <Router>
           <Header/>
             <div className={styles.container}>
                     <Routes>
+                    <Route exact path="/orders" element={ <OrdersForm/>}/>
                       <Route exact path="/admin" element={ <Admin/>}/>
                     { isAuth ? <Route exact path="/admin/create" element={ <CreateGoods/>}/>: ""} 
                     { isAuth ? <Route exact path="/admin/:id/edit" element={ <CreateGoods/>}/>: ""} 
-                      <Route exact path="/" element={ <Home/>}/>
+                      <Route exact path={ "/admin/home"} element={ <Home/>}/>
+                      <Route exact path={"/"} element={ <Home/>}/>
                       <Route exact path="/goods" element={ <Goods/>}/>
                       <Route exact path="/details" element={ <Detail/>}/>
                       <Route exact path="/cart" element={ <Cart/>}/>
@@ -39,7 +41,6 @@ function App() {
             </div>
           <Footer/>
         </Router>
-      </div>     
     </div>
   );
 }
