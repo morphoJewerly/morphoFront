@@ -37,10 +37,7 @@ function CreateGoods(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`, {
-          withCredentials: true,
-          crossdomain: true,
-        });
+        setImgUrl(`http://localhost:4444${data.url}`);
         console.log(data);
        
     } catch (error) {
@@ -54,10 +51,7 @@ function CreateGoods(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl2(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`,{
-          withCredentials: true,
-          crossdomain: true,
-        });
+        setImgUrl2(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`);
         console.log(data);
        
     } catch (error) {
@@ -71,10 +65,7 @@ function CreateGoods(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl3(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`,{
-          withCredentials: true,
-          crossdomain: true,
-        });
+        setImgUrl3(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`);
         console.log(data);
        
     } catch (error) {
