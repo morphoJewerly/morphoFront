@@ -37,7 +37,7 @@ function CreateGoods(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl(`http://localhost:4444${data.url}`);
+        setImgUrl(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`);
         console.log(data);
        
     } catch (error) {
@@ -51,7 +51,7 @@ function CreateGoods(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl2(`http://localhost:4444${data.url}`);
+        setImgUrl2(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`);
         console.log(data);
        
     } catch (error) {
@@ -65,7 +65,7 @@ function CreateGoods(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl3(`http://localhost:4444${data.url}`);
+        setImgUrl3(`https://140e-188-191-234-130.eu.ngrok.io${data.url}`);
         console.log(data);
        
     } catch (error) {
@@ -80,7 +80,8 @@ function CreateGoods(props) {
       console.log(data.price);
       setValue("idd", data.idd);
       setValue("title", data.title.toString());
-      setValue("text", data.text.toString());
+      setValue("text1", data.text.toString());
+      setValue("text2", data.text.toString());
       setValue("price", data.price);
       setValue("category", data.category);
       setImgUrl(data.imgmain);
@@ -151,9 +152,14 @@ function CreateGoods(props) {
         {errors.price && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
       </div>
       <div className={styles.item}>
-      <label htmlFor="text"></label>
-      <textarea  placeholder=" опис товару" rows="4" cols="50" type="text" id="text" {...register('text', { required: true })}/>
-      {errors.text && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
+      <label htmlFor="text1"></label>
+      <textarea  placeholder=" опис товару 1" rows="4" cols="50" type="text" id="text1" {...register('text1', { required: true })}/>
+      {errors.text1 && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
+      </div>
+      <div className={styles.item}>
+      <label htmlFor="text2"></label>
+      <textarea  placeholder=" опис товару 2" rows="4" cols="50" type="text" id="text2" {...register('text2', { required: true })}/>
+      {errors.text2 && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
       </div>
       
       <button className={styles.button} type="submit">

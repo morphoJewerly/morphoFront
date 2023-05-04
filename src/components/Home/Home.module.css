@@ -206,28 +206,31 @@ main{
      /*------------------------------------------------------------------*/
 
 .mainCitate{
+  white-space: pre-wrap;
   width: 1000px;
   font-size: 25px;
   height: 80px;
 }
 .h1Input{
-  white-space: wrap;
+  white-space: pre-wrap;
   width: 800px;
   font-size: 25px;
   height: 100px;
 }
 .text1{
-  white-space: wrap;
+  white-space: pre-wrap;
   width: 800px;
   font-size: 25px;
   height: 300px;
 }
 .text2{
+  white-space: pre-wrap;
   width: 800px;
   font-size: 25px;
   height: 200px;
 }
 .descrInput{
+  white-space: pre-wrap;
   width: 350px;
   height: 40px;
   font-size: 18px;

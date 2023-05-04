@@ -20,7 +20,7 @@ function Good({id,_id,imgmain,title,price,callback,f1,setF1}) {
                   <img className={styles.goodPhoto} height={250} width={299} src={imgmain} alt="item" />
                 <h3>{title}</h3>
                 <div className={styles.item_footer}>
-                <span>{price} $</span>
+                <span>{price} ₴</span>
                     <button  id={_id} onClick={(event) => pullDatta(event) } >ДЕТАЛІ</button>
                 </div>
             </div> 

@@ -57,7 +57,7 @@ function FullCart() {
                                 </div>
                                 <div className={styles.total_price}>
                                     Сума замовлення:{" "}
-                                    <span>{cartTotalPrice} грн.</span>
+                                    <span>{cartTotalPrice} ₴</span>
                                 </div>
                             </div>
                             <div className={styles.cart_buts}>

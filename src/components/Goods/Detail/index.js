@@ -30,8 +30,8 @@ function Detail({goods,f1,setF1}) {
                     <div className={styles.description_rigth_paragraph}>
                         <h1>MORPHO</h1>
                         <h3>{goods.title}</h3>
-                        <p>{goods.text}</p>
-                        <p>{goods.text}</p>
+                        <p>{goods.text1}</p>
+                        <p>{goods.text2}</p>
                         </div>
                 </div>
                  <div className={styles.sectionPhoto}>

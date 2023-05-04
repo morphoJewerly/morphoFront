@@ -56,7 +56,7 @@ function Home() {
       <main>
         <h1 className={styles.title} onClick={handleTextClick}>
           {isEditable ? (
-            <input className={styles.mainCitate} type="text" value={content.mainCitate} onChange={(e) => handleTextChange(e, "mainCitate")} />
+            <textarea className={styles.mainCitate} type="text" value={content.mainCitate} onChange={(e) => handleTextChange(e, "mainCitate")} />
           ) : (
             content.mainCitate
           )}
@@ -68,7 +68,7 @@ function Home() {
               <img className={styles.blockPhoto} src="/images/im1.jpg" alt="" />
               <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
-           <input className={styles.descrInput} type="text" value={content.descr1} onChange={(e) => handleTextChange(e, "descr1")} />
+           <textarea className={styles.descrInput} type="text" value={content.descr1} onChange={(e) => handleTextChange(e, "descr1")} />
           ) : (
             content.descr1
           )}
@@ -78,7 +78,7 @@ function Home() {
               <img className={styles.blockPhoto} src="/images/im2.jpg" alt="" />
               <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
-            <input className={styles.descrInput} type="text" value={content.descr2} onChange={(e) => handleTextChange(e, "descr2")} />
+            <textarea className={styles.descrInput} type="text" value={content.descr2} onChange={(e) => handleTextChange(e, "descr2")} />
           ) : (
             content.descr2
           )}
@@ -87,25 +87,25 @@ function Home() {
           </div>
           <div className={styles.rigth_content}>
             <h1 onClick={handleTextClick} >{isEditable ? (
-           <input className={styles.h1Input} type="text" value={content.h1} onChange={(e) => handleTextChange(e, "h1")} />
+           <textarea  className={styles.h1Input} type="text" value={content.h1} onChange={(e) => handleTextChange(e, "h1")} />
           ) : (
             content.h1
           )}</h1>
             <div className={styles.rigth_content_text}>
               <p onClick={handleTextClick}> {isEditable ? (
-            <input className={styles.text1} type="text" value={content.text1} onChange={(e) => handleTextChange(e, "text1")} />
+            <textarea className={styles.text1} type="text" value={content.text1} onChange={(e) => handleTextChange(e, "text1")} />
           ) : (
             content.text1
           )}</p>
               <div className={styles.line}></div>
               <p onClick={handleTextClick}> {isEditable ? (
-          <input className={styles.text1} type="text" value={content.text2} onChange={(e) => handleTextChange(e, "text2")} />
+          <textarea className={styles.text1} type="text" value={content.text2} onChange={(e) => handleTextChange(e, "text2")} />
           ) : (
             content.text2
           )}</p>
               <div className={styles.line}></div>
               <p onClick={handleTextClick}> {isEditable ? (
-           <input className={styles.text2} type="text" value={content.text3} onChange={(e) => handleTextChange(e, "text3")} />
+           <textarea className={styles.text2} type="text" value={content.text3} onChange={(e) => handleTextChange(e, "text3")} />
           ) : (
             content.text3
           )}</p>
