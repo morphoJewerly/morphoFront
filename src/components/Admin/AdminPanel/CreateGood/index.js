@@ -80,8 +80,8 @@ function CreateGoods(props) {
       console.log(data.price);
       setValue("idd", data.idd);
       setValue("title", data.title.toString());
-      setValue("text1", data.text.toString());
-      setValue("text2", data.text.toString());
+      setValue("text1", data.text1.toString());
+      setValue("text2", data.text2.toString());
       setValue("price", data.price);
       setValue("category", data.category);
       setImgUrl(data.imgmain);
