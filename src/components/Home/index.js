@@ -117,7 +117,7 @@ function Home() {
             <img className={styles.blockPhoto} src="/images/im3.jpg" alt="" />
             <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
-           <input className={styles.descrInput} type="text" value={content.descr3} onChange={(e) => handleTextChange(e, "descr3")} />
+           <textarea className={styles.descrInput} type="text" value={content.descr3} onChange={(e) => handleTextChange(e, "descr3")} />
           ) : (
             content.descr3
           )}
@@ -127,7 +127,7 @@ function Home() {
             <img className={styles.blockPhoto} src="/images/im4.jpg" alt="" />
             <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
-            <input className={styles.descrInput} type="text" value={content.descr4} onChange={(e) => handleTextChange(e, "descr4")} />
+            <textarea className={styles.descrInput} type="text" value={content.descr4} onChange={(e) => handleTextChange(e, "descr4")} />
           ) : (
             content.descr4
           )}
@@ -137,7 +137,7 @@ function Home() {
             <img className={styles.blockPhoto} src="/images/im5.jpg" alt="" />
             <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
-           <input className={styles.descrInput} type="text" value={content.descr5} onChange={(e) => handleTextChange(e, "descr5")} />
+           <textarea className={styles.descrInput} type="text" value={content.descr5} onChange={(e) => handleTextChange(e, "descr5")} />
           ) : (
             content.descr5
           )}
