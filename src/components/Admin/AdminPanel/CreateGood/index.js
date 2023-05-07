@@ -13,7 +13,6 @@ function CreateGoods(props) {
   // const apiForm2 = process.env.REACT_APP_API_URL_FORM_TWO
   const onSubmit = (data) => {
     const newData = { ...data, imgmain: imgUrl, imgsecond: imgUrl2, imgthird: imgUrl3 };
-    console.log(newData);
     { isEditing ?  axios.patch(`/posts/${id}`, newData)
     .then(function (response) {
       alert("Товар успішно відредаговано)");
@@ -38,7 +37,6 @@ function CreateGoods(props) {
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
         setImgUrl(`https://dolphin-app-jq56m.ondigitalocean.app${data.url}`);
-        console.log(data);
        
     } catch (error) {
       console.warn(error);
@@ -52,7 +50,6 @@ function CreateGoods(props) {
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
         setImgUrl2(`https://dolphin-app-jq56m.ondigitalocean.app${data.url}`);
-        console.log(data);
        
     } catch (error) {
       console.warn(error);
@@ -66,8 +63,6 @@ function CreateGoods(props) {
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
         setImgUrl3(`https://dolphin-app-jq56m.ondigitalocean.app${data.url}`);
-        console.log(data);
-       
     } catch (error) {
       console.warn(error);
       alert("Помилка при завантаженні файлу")
@@ -77,7 +72,6 @@ function CreateGoods(props) {
   React.useEffect(()=>{
     if (id) {
     axios.get(`/posts/${id}`).then( ({data}) => {
-      console.log(data.price);
       setValue("idd", data.idd);
       setValue("title", data.title.toString());
       setValue("text1", data.text1.toString());

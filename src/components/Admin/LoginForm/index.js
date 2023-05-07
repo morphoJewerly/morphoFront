@@ -26,7 +26,6 @@ function LoginForm() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   // const apiForm2 = process.env.REACT_APP_API_URL_FORM_TWO
-  console.log("greg")
   const onSubmit = async (data) => {
     const values = await dispatch(fetchUserData(data))
     if (!values.payload) return alert("Не вдалося авторизуватись");

@@ -11,7 +11,6 @@ function Cart() {
       <FullCart/> :
        <EmptyCart/>
     }
-      {/* <Counter/> */}
       </div> 
 
 </>

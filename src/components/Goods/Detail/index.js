@@ -16,7 +16,6 @@ function Detail({goods,f1,setF1}) {
     const title = goods.title;
     const price = goods.price;
     const imgmain = goods.imgmain;
-    console.log(goods.img)
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>

@@ -51,6 +51,7 @@ function Contacts() {
   <label htmlFor="details"></label>
   <select className={styles.select}  id="details" {...register('details', { required: true })}>
     <option className={styles.option} value="ДЕТАЛІ ЗАМОВЛЕННЯ">ДЕТАЛІ ЗАМОВЛЕННЯ</option>
+    <option className={styles.option1} value="РЕМОНТ ТА РЕСТАВРАЦІЯ">РЕМОНТ ТА РЕСТАВРАЦІЯ</option>
     <option className={styles.option1} value="СПІВРОБІТНИЦТВО">СПІВРОБІТНИЦТВО</option>
     <option className={styles.option} value="ІНДИВІДУАЛЬНІ ЗАМОВЛЕННЯ">ІНДИВІДУАЛЬНІ ЗАМОВЛЕННЯ</option>
   </select>

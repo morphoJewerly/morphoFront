@@ -10,7 +10,6 @@ function Good({_id,id,idd,imgmain,title,price,callback,f1,setF1,imgUrl}) {
     const cartItem   = useSelector (state => state.cart.cartItems.find((obj) => obj.id === id   ))
     const dispatch  = useDispatch(); 
     const  pullDatta = (event) => {
-      console.log(event)
         callback(event.target.id)
         setF1(!f1);
      }
