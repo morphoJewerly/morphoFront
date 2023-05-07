@@ -54,7 +54,7 @@ function Contacts() {
     <option className={styles.option1} value="СПІВРОБІТНИЦТВО">СПІВРОБІТНИЦТВО</option>
     <option className={styles.option} value="ІНДИВІДУАЛЬНІ ЗАМОВЛЕННЯ">ІНДИВІДУАЛЬНІ ЗАМОВЛЕННЯ</option>
   </select>
-  {errors.details && <span style={{color:"red"}}>snajdshb</span>}
+  {errors.details && <span style={{color:"red"}}>всі поля мають бути заповнені</span>}
 </div>
       <div className={styles.item}>
       <label htmlFor="letter"></label>

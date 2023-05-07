@@ -79,7 +79,6 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             type="tel"
                             placeholder=" ТЕЛЕФОН"
                         />
-                        {errors.phone && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.phone.message}</p>}
                         <input
                             {...register("city",{ 
                                 required: "Field is required",
@@ -91,7 +90,13 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             placeholder=" МІСТО"
                         />
                         {errors.city && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.city.message}</p>}
-                        
+                        <textarea 
+                            className={styles.textarea}
+                            {...register("descr")}
+                            name="descr"
+                            type="text"
+                            placeholder="Вкажіть параметри пунктів вашого замовлення (розмір, товщина, тип матеріалу...) "
+                        />
                         <button className={styles.submit} type="submit">Оформити</button>
                         <Link to="/cart"> <button className={styles.back} >Назад</button> </Link>
                     </form>

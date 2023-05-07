@@ -70,15 +70,17 @@ header{
  
   @media(max-width:700px){
     nav{
-      width: 400px;
-      overflow-x: scroll;
+      width: 100%;
+      /* overflow-x: scroll; */
       height: 40px;
-      overflow-y: hidden;
+      /* overflow-y: hidden; */
       padding-bottom: 10px;
+      padding-left: 0;
     }
     ul {
-      width: 500px;
+      width: 100%;
       gap: 25px;
+      padding-left: 0;
     }
     ul li a {
       white-space: nowrap;
@@ -87,14 +89,14 @@ header{
 
 @media(max-width:500px){
   nav{
-    width: 300px;
-    overflow-x: scroll;
+    width: 100%;
+    /* overflow-x: scroll; */
     height: 40px;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   ul {
-    width: 500px;
-    gap: 15px;
+    width: 100%;
+    gap: 20px;
   }
   ul li a {
     white-space: nowrap;
@@ -102,4 +104,11 @@ header{
  header{
   height: 200px;
  }
+}
+@media(max-width:400px){
+ 
+  ul li a {
+    
+    font-size: 13px;
+  }
 }

@@ -51,7 +51,7 @@ function Header() {
                   <li><a href="">СЕРЕЖКИ</a></li>
                   <li><a href="">ПІДВІСКИ</a></li> */}
                   <li><Link to="/goods">ТОВАРИ</Link></li>
-                  <li><Link to="/cart">КОШИК {totalCount}</Link></li>
+                  <li><Link to="/cart">КОШИК</Link></li>
                   <li><Link to="/contacts">КОНТАКТИ</Link></li>
                 </ul>
                 }
