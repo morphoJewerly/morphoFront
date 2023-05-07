@@ -28,7 +28,7 @@ function Contacts() {
     <div className={styles.contWrapper}>
        <h3>Виробництво прикрас. Ремонт та реставрація.</h3>
       <img width={50} height={50} src="/images/phone.png" alt="phone" />
-       <a href="tel:+380977033730">+380 (97) 703-37-30</a>
+       {/* <a href="tel:+380977033730">+380 (97) 703-37-30</a> */}
        <a href="tel:+380631964616">+380 (63) 196-46-16</a>
    </div>
       <div className={styles.header_form}>
