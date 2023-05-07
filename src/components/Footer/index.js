@@ -9,9 +9,9 @@ function Footer() {
       </Helmet>
       <footer>
           <div className={styles.socialPages}>
-            <a href=""><img width={42} height={40} src="/images/facebook.png" alt=""  /></a>
-            <a href=""><img width={33} height={33} src="/images/instagram.png"  alt=""  /></a>
-            <a href=""><img width={35} height={37} src="/images/tiktok.png"  alt=""  /></a>
+            <a href="https://www.facebook.com/The.piece.of.sky" target="_blank"><img width={42} height={40} src="/images/facebook.png" alt=""  /></a>
+            <a href="https://www.instagram.com/morpho_jewelry_/" target="_blank"><img width={33} height={33} src="/images/instagram.png"  alt=""  /></a>
+            <a href="https://www.tiktok.com/@morpho_jewelry" target="_blank"><img width={35} height={37} src="/images/tiktok.png"  alt=""  /></a>
           </div>
           <a>morpho.jewelry</a>
         </footer>

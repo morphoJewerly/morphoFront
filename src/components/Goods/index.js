@@ -13,7 +13,7 @@ import Detail from "./Detail";
 function Goods ({}) {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = React.useState(true);
-    const categories = ["РІЗНЕ","КАБЛУЧКИ","CЕРЕЖКИ","ПІДВІСКИ",]
+    const categories = ["ВСІ ТОВАРИ","КАБЛУЧКИ","CЕРЕЖКИ","ПІДВІСКИ","РІЗНЕ"]
     const catId = useSelector((state) => state.filter.catId)
     const goods = useSelector((state) => state.goods.goods)
     const [isClicked, setIsClicked] =  React.useState(true);

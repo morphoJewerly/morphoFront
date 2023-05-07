@@ -16,16 +16,24 @@
 }
 @media(max-width:1050px){
     .catItems{
-       width: 100%;
-       flex-wrap: wrap;
-       /* overflow-x: scroll; */
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        width: 1000px;
+        overflow: hidden;
    }
+   .catNav{
+   padding-bottom: 0px;
+   padding-top: 0px;
+   width: 700px;
+   flex-wrap: wrap;
+   overflow-x: scroll;
+}
 }
 @media(max-width:725px){
 .catItems{
     flex-wrap: wrap;
     overflow-x: scroll;
-    width: 700px;
+    width: 1000px;
     overflow: hidden;
 }
 }
@@ -55,11 +63,6 @@
     }
 }
 
-@media(max-width:1050px){
-    .catItem {
-        display: inline-block;
-    }
-}
    .catItem {
        background-color:  #e7e7e7;
        font-family: "Marmelad";

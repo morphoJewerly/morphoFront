@@ -131,6 +131,7 @@ function CreateGoods(props) {
     <option className={styles.option1} value="1">каблучки</option>
     <option className={styles.option} value="2">сережки</option>
     <option className={styles.option} value="3">підвіски</option>
+    <option className={styles.option} value="4">різне</option>
   </select>
   {errors.category && <span style={{color:"red"}}>snajdshb</span>}
 </div>

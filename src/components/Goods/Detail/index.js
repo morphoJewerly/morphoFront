@@ -15,6 +15,7 @@ function Detail({goods,f1,setF1}) {
     const _id = goods._id;
     const title = goods.title;
     const price = goods.price;
+    const category = goods.category;
     const imgmain = goods.imgmain;
     return (
         <div className={styles.wrapper}>
@@ -39,7 +40,7 @@ function Detail({goods,f1,setF1}) {
                  </div>
             </div>
             <Link to="/cart">
-            <button  onClick={()=>addCartItem({_id,imgmain,title,price,})}  className={styles.button_buy}  >КУПИТИ</button>
+            <button  onClick={()=>addCartItem({_id,imgmain,title,price,category})}  className={styles.button_buy}  >КУПИТИ</button>
 
                   </Link>
             </div>

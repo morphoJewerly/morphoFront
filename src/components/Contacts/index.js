@@ -10,6 +10,7 @@ function Contacts() {
     .then((response) => {
       if (response.status === 200) {
         alert('Form submitted successfully!');
+        reset();
       } else {
         throw new Error(response.statusText);
       }

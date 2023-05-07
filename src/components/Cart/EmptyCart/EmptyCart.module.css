@@ -1,5 +1,4 @@
 .epmty_info{
-    margin-top: 70px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -11,7 +10,7 @@
     .epmty_info{
         margin-left: 5px;
         margin-right: 5px;
-        margin-top: 150px;
+        margin-top: 40px;
         margin-bottom: 50px; 
 }
 }
@@ -34,7 +33,7 @@
 }
 .epmty_info button {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 0px;
     width: 260px;
     height: 55px;
     background-color: rgb(18, 18, 18);

@@ -11,7 +11,14 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
     const cartItems = useSelector (state => state.cart.cartItems)
     const totalCount = useSelector((state) => state.cart.totalCount);
     const cartTotalPrice = useSelector((state) => state.cart.cartTotalPrice);
-    
+
+    const cats = [];
+for (let i = 0; i < cartItems.length; i++ ){
+  if (cartItems[i].category == 1) cats.push(cartItems[i].category);
+  console.log(cats);
+}
+
+
     let [onSub, setOnSub] = useState(false);
     const dispatch = useDispatch();
     const {
@@ -90,13 +97,15 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             placeholder=" МІСТО"
                         />
                         {errors.city && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.city.message}</p>}
+                        {(cats.length !== 0) ?
                         <textarea 
                             className={styles.textarea}
                             {...register("descr")}
                             name="descr"
                             type="text"
-                            placeholder="Вкажіть параметри пунктів вашого замовлення (розмір, товщина, тип матеріалу...) "
-                        />
+                            placeholder=" РОЗМІР КАБЛУЧКИ"
+                        /> : ""
+                      }
                         <button className={styles.submit} type="submit">Оформити</button>
                         <Link to="/cart"> <button className={styles.back} >Назад</button> </Link>
                     </form>

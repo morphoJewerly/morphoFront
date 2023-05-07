@@ -4,7 +4,7 @@ import { useSelector,useDispatch } from "react-redux";
 import {useState} from "react";
 import { Link } from "react-router-dom";
 import Detail from "../Detail";
-function Good({id,_id,imgmain,title,price,callback,f1,setF1}) {
+function Good({id,_id,imgmain,title,price,category,callback,f1,setF1}) {
     const cartItems  = useSelector(state => state.cart.cartItems)
     const [isClicked, setIsClicked] = useState(true);
     const dispatch  = useDispatch(); 
