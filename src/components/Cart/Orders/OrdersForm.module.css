@@ -81,10 +81,10 @@ form input {
     border-left: none ;
     border-right: none ;
 }
-.textarea{
+.select{
     padding-left: 20px;
     width:610px;
-    height:100px;
+    height:55px;
     color:black;
     font-size:17px;
     background-color:white;
@@ -107,7 +107,7 @@ form input {
     .form input{
         width: 300px;
     }
-    .textarea{
+    .select{
         width: 310px;
     }
 }

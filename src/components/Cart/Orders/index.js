@@ -98,13 +98,28 @@ for (let i = 0; i < cartItems.length; i++ ){
                         />
                         {errors.city && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.city.message}</p>}
                         {(cats.length !== 0) ?
-                        <textarea 
-                            className={styles.textarea}
-                            {...register("descr")}
-                            name="descr"
-                            type="text"
-                            placeholder=" РОЗМІР КАБЛУЧКИ"
-                        /> : ""
+
+<select className={styles.select}  id="descr" {...register('descr')}>
+<option className={styles.option} value="не вказано">РОЗМІР КАБЛУЧКИ</option>
+<option className={styles.option} value="13.5">13.5</option>
+<option className={styles.option} value="14">14</option>
+<option className={styles.option} value="14.5">14.5</option>
+<option className={styles.option} value="15">15</option>
+<option className={styles.option} value="15.5">15.5</option>
+<option className={styles.option} value="16">16</option>
+<option className={styles.option} value="16.5">16.5</option>
+<option className={styles.option} value="17">17</option>
+<option className={styles.option} value="17.5">17.5</option>
+<option className={styles.option} value="18">18</option>
+<option className={styles.option} value="18.5">18.5</option>
+<option className={styles.option} value="19">19</option>
+<option className={styles.option} value="19.5">19.5</option>
+<option className={styles.option} value="20">20</option>
+<option className={styles.option} value="20.5">20.5</option>
+<option className={styles.option} value="21">21</option>
+<option className={styles.option} value="21.5">21.5</option>
+<option className={styles.option} value="22">22</option>
+</select>: ""                       
                       }
                         <button className={styles.submit} type="submit">Оформити</button>
                         <Link to="/cart"> <button className={styles.back} >Назад</button> </Link>
