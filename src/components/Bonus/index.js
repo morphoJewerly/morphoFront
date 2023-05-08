@@ -24,7 +24,7 @@ function Bonus() {
         <img width={50} height={50} src="/images/guarantee.png" alt="" srcset="" />
         <h2 className={styles.title}>ГАРАНТІЯ НА ВСІ ВИДИ ПРОДУКЦІЇ</h2>
         </div>
-        <p className={styles.descr}>Зробивши замовлення на нашому сайті - ви отримаєте гарантію до 2-х років на будь який вид нашої продукції.</p>
+        <p className={styles.descr}>Гарантія на вироби - 2 роки з моменту отримання (гарантія не поширюється на дефект не виробничого характеру).</p>
         </div>
         <div className={styles.item}>
         <span className={styles.number}>03</span>
@@ -32,7 +32,7 @@ function Bonus() {
         <img width={50} height={50} src="/images/brash.png" alt="" srcset="" />
         <h2 className={styles.title}>БЕЗКОШТОВНА ЧИСТКА ВИРОБІВ</h2>
         </div>
-        <p className={styles.descr}>Також при замовленні ви отримаєте можливість безкоштовно почистити свій виріб протягом 2-х років.  </p>
+        <p className={styles.descr}>Також після замовлення на протязі 2-х років ви отримаєте можливість безкоштовної чистки свого виробу.</p>
         </div>
     </div>
     

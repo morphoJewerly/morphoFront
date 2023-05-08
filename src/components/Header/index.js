@@ -43,7 +43,6 @@ function Header() {
         }
       }
   return (
-    
     <>
       <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
@@ -60,7 +59,7 @@ function Header() {
               {(isAuth && pathname.startsWith("/admin")) ? 
                 <ul onClick={() => openHandler()}  className={styles.rigthHeader}>
                   <li> <Link onClick={() => setActiveItem(0)} className={activeItem === 0 ? styles.activen : ''} to="/admin/home"  >
-                    ПРО МЕНЕ
+                    ГОЛОВНА
                 </Link></li>
                 <li><Link onClick={() => setActiveItem(1)} className={activeItem === 1 ? styles.activen : ''} to="/admin">ТОВАРИ</Link></li>
                 <li><Link onClick={() => setActiveItem(2)}   className={activeItem === 2 ? styles.activen : ''} to="/admin/create">СТВОРИТИ ТОВАР</Link></li>
@@ -68,7 +67,7 @@ function Header() {
               </ul>
                 :<ul onClick={() => openHandler()}  className={styles.rigthHeader}>
                   <li> <Link onClick={() => setActiveItem(1)}  className={activeItem === 1 ? styles.activen : ''} to="/"  >
-                    ПРО МЕНЕ
+                  ГОЛОВНА
                 </Link></li>
                   {/* <li><a href="">КІЛЬЦЯ</a></li>
                   <li><a href="">СЕРЕЖКИ</a></li>
@@ -83,7 +82,6 @@ function Header() {
                 <div onClick={() => openHandler()}  className={ open ? styles.burger :  styles.burger + " " + styles.active}>
         <span></span>
                </div>
-               
         </div>
              </header>
        </>

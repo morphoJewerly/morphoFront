@@ -187,7 +187,7 @@ header {
   bottom: 50%;
   transform: rotate(45deg) translate(0,50%);
  }
- @media(max-width:1450px){
+ @media(max-width:1000px){
   header{
     display: flex;
     justify-content: space-between;
