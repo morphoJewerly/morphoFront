@@ -58,12 +58,13 @@
     filter: invert(1);
 }
 @media(max-width:500px){
+    .item_header{
+       justify-content: center;
+       align-items: center;
+    }
     .item{
         align-items: center;
         justify-content: center;
-        padding-right: 20px;
-        padding-left: 40px;
-        
     }
     .item img{
        margin-top: 25px;
@@ -79,11 +80,9 @@
     }
     .descr{
         font-size: 18px;
-        margin-left: 30px;
-        margin-right: 10px;
     }
     .number{
         top:15px;
-       right: 45%;
+       /* right: 45%; */
     }
 }

@@ -47,11 +47,11 @@
     align-items: center;
     gap: 15px;
 }
-@media(max-width:566px){
+/* @media(max-width:566px){
     .descr{
         width: 200px;
     }
-}
+} */
 .descr h3{
     font-family: 'Proxima Nova';
     font-style: normal;
@@ -107,6 +107,9 @@
         height: 18px;
         width: 18px;
     }
+    .cart_item{
+       height: 70px;
+    }
 }
 .count span {
     text-align: center; 
@@ -141,6 +144,10 @@
         font-size: 15px;
         line-height: 20px;
         width: 40px;
+    }
+    .del_cart{
+        width: 20px;
+        height: 20px;
     }
 }
 @media(max-width:400px){
