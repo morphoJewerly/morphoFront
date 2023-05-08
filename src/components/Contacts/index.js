@@ -26,7 +26,7 @@ function Contacts() {
     <div className={styles.content}>
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
     <div className={styles.contWrapper}>
-       <h3>Виробництво прикрас. Ремонт та реставрація.</h3>
+       <h3>Виготовлення прикрас. Ремонт та реставрація.</h3>
       <img width={50} height={50} src="/images/phone.png" alt="phone" />
        {/* <a href="tel:+380977033730">+380 (97) 703-37-30</a> */}
        <a href="tel:+380631964616">+380 (63) 196-46-16</a>
@@ -34,7 +34,7 @@ function Contacts() {
       <div className={styles.header_form}>
       <div className={styles.item}>
         <label htmlFor="name"></label>
-        <input placeholder=" ІМ'Я" type="text" id="name" {...register('name', { required: true })} />
+        <input placeholder="ПРІЗВИЩЕ ІМ'Я" type="text" id="name" {...register('name', { required: true })} />
         {errors.name && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
       </div>
       <div className={styles.item}>
@@ -53,7 +53,7 @@ function Contacts() {
   <select className={styles.select}  id="details" {...register('details', { required: true })}>
     <option className={styles.option} value="ДЕТАЛІ ЗАМОВЛЕННЯ">ДЕТАЛІ ЗАМОВЛЕННЯ</option>
     <option className={styles.option1} value="РЕМОНТ ТА РЕСТАВРАЦІЯ">РЕМОНТ ТА РЕСТАВРАЦІЯ</option>
-    <option className={styles.option1} value="СПІВРОБІТНИЦТВО">СПІВРОБІТНИЦТВО</option>
+    <option className={styles.option1} value="СПІВПРАЦЯ">СПІВПРАЦЯ</option>
     <option className={styles.option} value="ІНДИВІДУАЛЬНІ ЗАМОВЛЕННЯ">ІНДИВІДУАЛЬНІ ЗАМОВЛЕННЯ</option>
   </select>
   {errors.details && <span style={{color:"red"}}>всі поля мають бути заповнені</span>}

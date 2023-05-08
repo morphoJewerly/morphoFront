@@ -75,8 +75,13 @@ for (let i = 0; i < cartItems.length; i++ ){
                             })}
                             name="fullName"
                             type="text"
-                            placeholder=" ПОВНЕ ІМ'Я"
+                            placeholder=" ПРІЗВИЩЕ ІМ'Я"
                         />
+                        <div className={styles.item}>
+        <label htmlFor="email"></label>
+        <input placeholder=" E-MAIL" type="email" id="email" {...register('email', { required: true })} />
+        {errors.email && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
+      </div>
                         {errors.fullName && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.fullName.message}</p>}
                         <input 
                             {...register("phone",{ 

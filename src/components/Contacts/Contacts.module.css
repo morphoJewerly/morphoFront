@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 80px;
 }
 .content{
     margin-top: 80px;
@@ -30,6 +31,8 @@
    font-size: 25px;
    font-weight: 400;
    text-align: center;
+   margin-left: 3px;
+   margin-right: 3px;
    color: rgb(41, 41, 41);
 }
 .contWrapper p {
@@ -137,7 +140,7 @@
         width: 400px;
     }
     .header_form .item input {
-        width: 175px;
+        width: 180px;
     }
     .item select,.item select option{
         width:405px;
@@ -160,19 +163,19 @@
         width: 300px;
     }
     .header_form .item input {
-        width: 125px;
+        width: 130px;
     }
     .item select,.item select option{
-        width:300px;
+        width:320px;
     };
     .form{
-        width:300px;
+        width:310px;
     }
     .textarea{
-        width:300px; 
+        width:305px; 
     }
     .item input{
-        width:300px;
+        width:310px;
     }
     h3{
       font-size:17px;

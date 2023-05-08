@@ -13,6 +13,7 @@ import Admin from './components/Admin';
 import { fetchAuthMe, selectIsAuth  } from './Redux/auth';
 import CreateGoods from './components/Admin/AdminPanel/CreateGood';
 import OrdersForm from './components/Cart/Orders';
+import Bonus from './components/Bonus';
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ function App() {
                       <Route exact path={ "/admin/home"} element={ <Home/>}/>
                       <Route exact path={"/"} element={ <Home/>}/>
                       <Route exact path="/goods" element={ <Goods/>}/>
+                      <Route exact path="/bonus" element={ <Bonus/>}/>
                       <Route exact path="/details" element={ <Detail/>}/>
                       <Route exact path="/cart" element={ <Cart/>}/>
                       <Route exact path="/contacts" element={ <Contacts/>}/>
