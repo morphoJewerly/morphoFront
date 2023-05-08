@@ -62,6 +62,8 @@
         align-items: center;
         justify-content: center;
         padding-right: 20px;
+        padding-left: 40px;
+        
     }
     .item img{
        margin-top: 25px;
@@ -72,15 +74,16 @@
         font-size: 30px;
     }
     .title{
-        margin-top: 40px;
+        margin-top: 60px;
         font-size: 22px;
     }
     .descr{
         font-size: 18px;
-        margin-left: 10px;
+        margin-left: 30px;
         margin-right: 10px;
     }
     .number{
+        top:15px;
        right: 45%;
     }
 }
