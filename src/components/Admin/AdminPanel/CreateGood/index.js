@@ -100,7 +100,7 @@ function CreateGoods(props) {
     type="file" 
     id="img1" 
   />
-  {isEditing && <img width={100} heigth={100} src={imgUrl} alt="product" />}
+  {isEditing && <img width={100} height={100} src={imgUrl} alt="product" />}
 </div>
 <div className={styles.item}>
   <label htmlFor="img2">Фото 2:</label>
@@ -111,7 +111,7 @@ function CreateGoods(props) {
     type="file" 
     id="img2"  
   />
-  {isEditing && <img width={100} heigth={100} src={imgUrl2} alt="product" />}
+  {isEditing && <img width={100} height={100} src={imgUrl2} alt="product" />}
 </div>
 <div className={styles.item}>
   <label htmlFor="img3">Фото 3:</label>
@@ -122,7 +122,7 @@ function CreateGoods(props) {
     type="file" 
     id="img3"  
   />
-  {isEditing && <img width={100} heigth={100} src={imgUrl3} alt="product" />}
+  {isEditing && <img width={100} height={100} src={imgUrl3} alt="product" />}
 </div>
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.item}>
