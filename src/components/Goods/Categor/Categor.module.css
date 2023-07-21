@@ -1,97 +1,146 @@
-
 .catItems {
-    margin-bottom: 50px;
-       display: flex;
-       gap: 12px;
-       padding-left: 0px;
-       padding-bottom: 0px;
-       padding-top: 0px;
-   }
-   @media(max-width:1150px){
-    .catItems{
+    margin-bottom: 30px;
+    display: flex;
+    gap: 12px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+@media (max-width: 1150px) {
+    .catItems {
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
 }
-@media(max-width:1050px){
-    .catItems{
-        flex-wrap: wrap;
-        overflow-x: scroll;
-        width: 1000px;
-        overflow: hidden;
-   }
-   .catNav{
-   padding-bottom: 0px;
-   padding-top: 0px;
-   width: 700px;
-   flex-wrap: wrap;
-   overflow-x: scroll;
-}
-}
-@media(max-width:725px){
-.catItems{
-    flex-wrap: wrap;
-    overflow-x: scroll;
-    width: 1000px;
-    overflow: hidden;
-}
-}
-@media(max-width:725px){
-    .catNav{
-        height: 60px;
-       padding-bottom: 0px;
-       padding-top: 0px;
-       width: 500px;
-       flex-wrap: wrap;
-       overflow-x: scroll;
-    }
-}
-/* @media(max-width:850px){
-    .catNav{
-       width: 450px;
-       flex-wrap: wrap;
-       overflow-x: scroll;
-    }
-} */
-@media(max-width:501px){
-    .catNav{
-       width: 300px;
-       flex-wrap: wrap;
-       overflow-x: scroll;
-       
-    }
-}
-
-   .catItem {
-       background-color:  #e7e7e7;
-       font-family: "Marmelad";
-       List-style-type:none;
-       padding-top: 14px;
-       padding-bottom: 14px;
-       padding-left: 35px;
-       padding-right: 35px;
-   }
-   .active {
-       background-color: rgb(18, 18, 18);
-       color:white;
-       List-style-type:none;
-       padding-top: 14px;
-       padding-bottom: 14px;
-       padding-left: 35px;
-       padding-right: 35px;
-}
-   
-   .catItems li :hover{
-       background-color: white;
-       color: black;
-       cursor: pointer;
-   }
-    
-
-@media(max-width:700px){
+@media (max-width: 1050px) {
     .catItems {
+        /* flex-wrap: wrap; */
+        overflow-x: scroll;
+        width: 100%;
+        overflow: hidden;
+    }
+    .catNav {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        width: 100vw;
+        /* flex-wrap: wrap; */
+        overflow-x: scroll;
+    }
+}
+@media (max-width: 700px) {
+    .catItems {
+        gap: 5px;
+    }
+}
+@media (max-width: 520px) {
+    .catItems {
+        /* flex-wrap: wrap; */
+        overflow-x: scroll;
+        width: 110vw;
         margin-top: 0;
         margin-bottom: 0;
-   }
-} 
+    }
+    .catNav {
+        height: 40px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        width: 100vw;
+        /* flex-wrap: wrap; */
+        overflow-x: scroll;
+    }
+}
+/* @media (max-width: 550px) {
+    .catItems {
+        overflow-x: scroll;
+        width: 125vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+} */
+@media (max-width: 490px) {
+    .catItems {
+        overflow-x: scroll;
+        width: 115vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 467px) {
+    .catItems {
+        width: 120vw;
+    }
+}
+@media (max-width: 450px) {
+    .catItems {
+        width: 125vw;
+    }
+}
+@media (max-width: 435px) {
+    .catItems {
+        width: 130vw;
+    }
+}
+@media (max-width: 420px) {
+    .catItems {
+        width: 135vw;
+    }
+}
+@media (max-width: 405px) {
+    .catItems {
+        width: 140vw;
+    }
+}
+@media (max-width: 390px) {
+    .catItems {
+        width: 145vw;
+    }
+}
+@media (max-width: 375px) {
+    .catItems {
+        width: 150vw;
+    }
+}
+@media (max-width: 350px) {
+    .catItems {
+        width: 155vw;
+    }
+}
+.catItem {
+    cursor: pointer;
+    font-family: "Marmelad";
+    List-style-type: none;
+    color: rgb(173, 173, 173);
+    font-weight: 600;
+    font-size: 17px;
+}
+.active {
+    cursor: pointer;
+    font-family: "Marmelad";
+    List-style-type: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 17px;
+    List-style-type: none;
+    border-bottom: 3px solid rgb(12, 163, 143);
+}
+/* li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: rgb(14, 206, 181);;
+    transform: scaleX(0);
+    transition: transform 0.7s ease;
+  } */
+  
+  /* .active:after {
+    transform: scaleX(1);
+  } */
+/* .catItems li :hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+} */

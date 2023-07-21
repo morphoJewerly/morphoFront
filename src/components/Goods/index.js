@@ -9,6 +9,7 @@ import axios from "../../axios";
 import MyLoader from "./Good/PizzaBlock";
 import Categor from "./Categor";
 import MyContext from "../../MyContext";
+import {Link, useLocation} from "react-router-dom";
 import Detail from "./Detail";
 function Goods ({}) {
     const dispatch = useDispatch();
@@ -31,6 +32,11 @@ return(
     <>
     { isClicked ?  
       <main className={styles.main}>
+         <Link to="/"> <img width={25} height={30} className={styles.home} src="/images/arrowg.png" alt="home" /></Link>
+      <div className={styles.header}>
+        <h1 className={styles.h1}>MORPHO</h1>
+        <h4 className={styles.h4}>THE PIECE OF SKY</h4>
+      </div>
       <div className={styles.categorios}>
        <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
        </div>

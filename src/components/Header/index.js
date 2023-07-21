@@ -20,21 +20,21 @@ function Header() {
     let openHandler= () => {
         setOpen(!open);
       }
-      const handleScroll = () => {
-        const currentPosition = window.pageYOffset;
-        if (currentPosition < scrollPosition && isVisible) {
-          setIsVisible(false);
-        } else if (currentPosition > scrollPosition && !isVisible) {
-          setIsVisible(true);
-        }
-        setScrollPosition(currentPosition);
-      };
-      useEffect(() => {
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-      }, [isVisible, scrollPosition]);
+      // const handleScroll = () => {
+      //   const currentPosition = window.pageYOffset;
+      //   if (currentPosition < scrollPosition && isVisible) {
+      //     setIsVisible(false);
+      //   } else if (currentPosition > scrollPosition && !isVisible) {
+      //     setIsVisible(true);
+      //   }
+      //   setScrollPosition(currentPosition);
+      // };
+      // useEffect(() => {
+      //   window.addEventListener("scroll", handleScroll, { passive: true });
+      //   return () => {
+      //     window.removeEventListener("scroll", handleScroll);
+      //   };
+      // }, [isVisible, scrollPosition]);
     
       const onClickLogout = () => {
         if (window.confirm("Ви дійсно хочете вийти?")){
@@ -47,15 +47,16 @@ function Header() {
       <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
       </Helmet>
+      {pathname.includes("/goods") || pathname.includes("/cart") || pathname.includes("/orders") ? null :
        <header className={isVisible ? styles.header : ""}>
              <div className={styles.header_container}>
              <div className={styles.leftHeader}>
             {/* <img width={30} height={30} src="/images/Vector.png" /> */}
             <div className={styles.store_title}>
-                <img height={130} width={130} src="/images/logo.jpg" alt="" />
+                <h3>"Єдиний спосіб втечі від банальності - мистецтво"</h3>
             </div>
         </div>
-            <div className={open ? styles.menu : styles.menu + " " + styles.active }>
+            <div className={ styles.menu }>
               {(isAuth && pathname.startsWith("/admin")) ? 
                 <ul onClick={() => openHandler()}  className={styles.rigthHeader}>
                   <li> <Link onClick={() => setActiveItem(0)} className={activeItem === 0 ? styles.activen : ''} to="/admin/home"  >
@@ -73,17 +74,18 @@ function Header() {
                   <li><a href="">СЕРЕЖКИ</a></li>
                   <li><a href="">ПІДВІСКИ</a></li> */}
                   <li><Link onClick={() => setActiveItem(0)}  className={activeItem === 0 ? styles.activen : ''} to="/goods">ТОВАРИ</Link></li>
-                  {/* <li><Link onClick={() => setActiveItem(4)}  className={activeItem === 4 ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li> */}
-                  <li><Link onClick={() => setActiveItem(2)}  className={activeItem === 2 ? styles.activen : ''} to="/cart">КОШИК</Link></li>
+                  <li><Link onClick={() => setActiveItem(4)}  className={activeItem === 4 ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li>
+                  {/* <li><Link onClick={() => setActiveItem(2)}  className={activeItem === 2 ? styles.activen : ''} to="/cart">КОШИК</Link></li> */}
                   <li><Link onClick={() => setActiveItem(3)}  className={activeItem === 3 ? styles.activen : ''} to="/contacts">КОНТАКТИ</Link></li>
                 </ul>
                 }
                 </div>
-                <div onClick={() => openHandler()}  className={ open ? styles.burger :  styles.burger + " " + styles.active}>
+                {/* <div onClick={() => openHandler()}  className={ open ? styles.burger :  styles.burger + " " + styles.active}>
         <span></span>
-               </div>
+               </div> */}
         </div>
-             </header>
+             </header> 
+            }   
        </>
   );
 }

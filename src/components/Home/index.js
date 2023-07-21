@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../axios';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../Redux/auth';
+// import Header from '../Header';
 
 function Home() {
   const location = useLocation();
@@ -53,6 +54,7 @@ function Home() {
 
 
       </Helmet>
+      {/* <Header/> */}
       <main>
         <h1 className={styles.title} onClick={handleTextClick}>
           {isEditable ? (

@@ -2,8 +2,7 @@ import styles from './Bonus.module.css';
 import {Helmet} from "react-helmet";
 function Bonus() {
   return (
-    
-    <>
+       <>
       <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Marmelad&family=Pacifico&family=Tangerine:wght@700&display=swap" rel="stylesheet"/>
       </Helmet>

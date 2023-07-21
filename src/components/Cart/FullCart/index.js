@@ -26,12 +26,12 @@ function FullCart() {
                             onClick={() => dispatch(clearItems())}
                             className={styles.delete_cart}
                         >
-                            <img
+                            {/* <img
                                 width={14}
                                 height={14}
                                 src="images/trash.png"
                                 alt="trash"
-                            />
+                            /> */}
                             <span>Oчистити кошик</span>
                         </div>
                     </div>
