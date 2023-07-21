@@ -13,24 +13,18 @@
 .buttonBack{
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 5px;
-    right: 5px;;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-bottom: 50px;
 }
-.buttonBack:hover{
-  padding: 2px;
-  background-color: rgb(223, 223, 223);
-  border-radius: 100%;
-}
-/* .buttonBack button{
+.buttonBack button{
     background-color: rgb(18, 18, 18);
     width: 120px;
     height: 35px;
 }
 .buttonBack img{
     margin-top: 20px;
- } */
+ }
 .description{
     margin-top: 50px;
     margin-bottom: 50px;

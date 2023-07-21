@@ -107,6 +107,21 @@
   .Item:hover .price  {
       color: white ;
   }
+  @media(max-width:400px) {
+    .Item{
+        width: 320px;
+        height: 400px;
+        background-color:  #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Item img {
+        width: 320px;
+    }
+    .item_footer .button img {
+        display: none;
+}
+  }
   /* .Item:hover .item_footer button {
       background-color: white;
       color: black;
