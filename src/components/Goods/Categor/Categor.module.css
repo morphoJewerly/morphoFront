@@ -105,6 +105,7 @@
     }
 }
 .catItem {
+    white-space: nowrap;
     cursor: pointer;
     font-family: "Marmelad";
     List-style-type: none;

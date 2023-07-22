@@ -350,11 +350,33 @@ li:hover::after {
 }
 @media(max-width:630px){
   .store_title h3 {
-    font-size: 18px;
+    font-size: 19px;
   }
   .rigthHeader li a {
-    font-size: 13px;
+    font-size: 14px;
   }
+  .rigthHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding-right: 0px;
+    padding-left: 22px;
+  }
+}
+@media(max-width:418px){
+  .rigthHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
+    padding-right: 0px;
+    padding-left: 20px;
+  }
+}
+@media(max-width:370px){
   .rigthHeader {
     display: flex;
     align-items: center;
@@ -365,33 +387,6 @@ li:hover::after {
     padding-left: 20px;
   }
 }
-/* @media(max-width:390px){
-.store_title h3 {
-  letter-spacing: 1.5px;
-  font-family: "El Messiri";
-  white-space: nowrap;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: white;
-}
-.store_title h4 {
-  letter-spacing: 1.5px;
-  margin-left: 10px;
-  margin-top: -28px;
-  padding-top: 100 px;
-  font-family: "Catamaran";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 20px;
-  color: white;
-  
-}
-
-} */
 .button {
   background-color: rgb(31, 31, 31);
   margin-bottom: 20px;
