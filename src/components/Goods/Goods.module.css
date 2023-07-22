@@ -31,7 +31,10 @@
     filter: invert(100%);
  }
  .header{
+    width: 100%;
     cursor: pointer;
+    /* border-bottom: 2px solid rgb(12, 163, 143); */
+    margin-bottom: -10px;
  }
 .h1 {
     margin-top: -10px;
@@ -39,14 +42,21 @@
     font-weight: 400;
     margin-bottom: -30px;
     letter-spacing: 12px;
-    color: #292929;
+    color: #000000;
  }
+ .h1 span {
+    color: #09777a;
+ }
+ /* .h4 span {
+    color: #3bb3b8;
+ } */
  .h4 {
     font-size: 23px;
     font-weight: 400;
-    color: #535353;
+    /* color: #535353; */
+    color: #09777a;
     letter-spacing: 11px;
-    margin-bottom: -10px;
+    margin-bottom: 5px;
  }
  @media(max-width:500px){
     .h1{
