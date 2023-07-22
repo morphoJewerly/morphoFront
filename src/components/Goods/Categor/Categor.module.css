@@ -59,29 +59,29 @@
 @media (max-width: 490px) {
     .catItems {
         overflow-x: scroll;
-        width: 115vw;
+        width: 120vw;
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 @media (max-width: 467px) {
     .catItems {
-        width: 120vw;
+        width: 125vw;
     }
 }
 @media (max-width: 450px) {
     .catItems {
-        width: 125vw;
+        width: 130vw;
     }
 }
 @media (max-width: 435px) {
     .catItems {
-        width: 130vw;
+        width: 135vw;
     }
 }
 @media (max-width: 420px) {
     .catItems {
-        width: 135vw;
+        width: 140vw;
     }
 }
 @media (max-width: 405px) {
