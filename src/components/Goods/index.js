@@ -32,11 +32,12 @@ return(
     <>
     { isClicked ?  
       <main className={styles.main}>
-         <Link to="/"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link>
-      <div className={styles.header}>
+         {/* <Link to="/"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link> */}
+         <Link to="/"><div className={styles.header}>
         <h1 className={styles.h1}>MORPHO</h1>
         <h4 className={styles.h4}>THE PIECE OF SKY</h4>
       </div>
+      </Link>
       <div className={styles.categorios}>
        <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
        </div>

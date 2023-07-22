@@ -30,6 +30,9 @@
  .home:hover{
     filter: invert(100%);
  }
+ .header{
+    cursor: pointer;
+ }
 .h1 {
     margin-top: -10px;
     font-size: 70px;
