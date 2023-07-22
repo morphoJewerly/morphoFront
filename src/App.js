@@ -15,16 +15,17 @@ import CreateGoods from './components/Admin/AdminPanel/CreateGood';
 import OrdersForm from './components/Cart/Orders';
 import Bonus from './components/Bonus';
 import Preloader from './Preloader';
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import animations from './animations.module.css';
 function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
   const [isLoading, setIsLoading] = useState(true); // Додано useState
-
+  const uniqueKey = Date.now();
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 1000);
     dispatch(fetchAuthMe())
   },[])
 
@@ -36,6 +37,17 @@ function App() {
         <Router>
           <Header/> 
           <div className={styles.container}>
+          <TransitionGroup>
+              <CSSTransition
+                key={uniqueKey} 
+                timeout={500}
+                classNames={{
+                  enter: animations.fadeEnter,
+                  enterActive: animations.fadeEnterActive,
+                  exit: animations.fadeExit,
+                  exitActive: animations.fadeExitActive,
+                }}
+              >
             <Routes>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>
@@ -49,6 +61,8 @@ function App() {
               <Route exact path="/cart" element={<Cart/>}/>
               <Route exact path="/contacts" element={<Contacts/>}/>
             </Routes>
+            </CSSTransition>
+            </TransitionGroup>
           </div>
           <Footer/>
         </Router>

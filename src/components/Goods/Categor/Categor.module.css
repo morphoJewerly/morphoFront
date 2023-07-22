@@ -18,7 +18,7 @@
         gap: 5px;
     }
 }
-@media (max-width: 530px) {
+@media (max-width: 535px) {
     .catItems {
         /* flex-wrap: wrap; */
         overflow-x: scroll;

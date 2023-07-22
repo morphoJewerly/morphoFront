@@ -4,6 +4,8 @@ const Preloader = () => {
     const imageStyle = {
         width: "350px", 
         height: "350px", 
+        marginRight:"10px",
+        marginBottom:"200px",
       };
       const preloader = {
         display: "flex",
