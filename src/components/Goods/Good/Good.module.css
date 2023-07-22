@@ -98,7 +98,7 @@
       display: flex;
    }
   .Item:hover{
-      background-color: rgb(18, 18, 18);
+      background-color: rgb(27, 27, 27);
       color: white;
   }
   .Item:hover h3 {

@@ -12,7 +12,7 @@ header {
 .header {
   transform: translateY(-100%);
 }
-.header_container{
+.header_container {
   width: 1600px;
   display: flex;
   justify-content: space-around;
@@ -51,7 +51,7 @@ header {
   /* white-space: nowrap; */
   font-style: normal;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 27px;
   line-height: 30px;
   /* text-transform: uppercase; */
   color: white;
@@ -83,7 +83,7 @@ header {
 }
 } */
 .rigthHeader li span {
-  color: white;
+  color: rgb(161, 161, 161);
 }
 .rigthHeader li {
   display: flex;
@@ -91,7 +91,7 @@ header {
 }
 .rigthHeader li a {
   text-decoration: none;
-  color: white;
+  color: rgb(127, 127, 127);
   font-size: 18px;
   font-family: "Oswald";
   font-style: normal;
@@ -113,7 +113,6 @@ header {
   }
   .rigthHeader li a {
     text-decoration: none;
-    color: white;
     font-size: 16px;
     font-family: "Oswald";
     font-style: normal;
@@ -121,7 +120,7 @@ header {
   }
 }
 .rigthHeader li .activen  {
-  color:rgb(143, 143, 143);
+  color:white;
 }
 .cart {
   display: flex;

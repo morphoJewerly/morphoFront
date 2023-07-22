@@ -55,7 +55,7 @@ function Home() {
 
       </Helmet>
       {/* <Header/> */}
-      <main>
+      <main className={styles.main}  >
         <h1 className={styles.title} onClick={handleTextClick}>
           {isEditable ? (
             <textarea className={styles.mainCitate} type="text" value={content.mainCitate} onChange={(e) => handleTextChange(e, "mainCitate")} />

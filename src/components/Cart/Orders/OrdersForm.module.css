@@ -120,14 +120,14 @@ form input {
     border: 2px solid black;
 }
 .submit:hover {
-    background-color: rgb(18, 18, 18);
+    background-color: rgb(27, 27, 27);
     color: white;
 }
 .back {
     margin-top: -25px;
     width: 180px;
     height: 55px;
-    background-color: rgb(18, 18, 18);
+    background-color:rgb(27, 27, 27);
     color: white;
 }
 .back :hover {

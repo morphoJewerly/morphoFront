@@ -32,7 +32,7 @@ return(
     <>
     { isClicked ?  
       <main className={styles.main}>
-         <Link to="/"> <img width={25} height={30} className={styles.home} src="/images/arrowg.png" alt="home" /></Link>
+         <Link to="/"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link>
       <div className={styles.header}>
         <h1 className={styles.h1}>MORPHO</h1>
         <h4 className={styles.h4}>THE PIECE OF SKY</h4>

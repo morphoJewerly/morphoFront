@@ -21,7 +21,7 @@ function Detail({goods,f1,setF1}) {
         <div className={styles.wrapper}>
             <div className={styles.container}>
               <div onClick={() => {setF1(!f1)}} className={styles.buttonBack}>
-                    <img src="/images/arrow.png" alt="" />
+              <img width={25} height={30}  src="/images/arrowg.png" alt="home" />
                     <button>ТОВАРИ</button>
                 </div> 
                 <img className={styles.imgmain} height={500} width={900}  src={goods.imgmain}  />
