@@ -189,7 +189,7 @@ function Home() {
             content.descr5
           )}
                 </p>
-              {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} 
+              {isEditable ?  <button className={styles.buttonSave} onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} 
           </div>
           </main>
         </>

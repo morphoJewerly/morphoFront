@@ -261,7 +261,7 @@
   /*------------------------------------------------------------------*/
      /*------------------------------------------------------------------*/
 
-/* .mainCitate{
+.mainCitate{
   white-space: pre-wrap;
   width: 1000px;
   font-size: 25px;
@@ -287,11 +287,16 @@
 }
 .descrInput{
   white-space: pre-wrap;
-  width: 350px;
+  width: 90%;
   height: 40px;
   font-size: 18px;
 }
-   */
+.buttonSave{
+  background-color: rgb(0, 121, 32);
+  width: 220px;
+  height: 45px;
+  color: white
+}
  
   
  

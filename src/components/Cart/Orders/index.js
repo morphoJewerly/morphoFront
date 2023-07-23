@@ -64,6 +64,7 @@ for (let i = 0; i < cartItems.length; i++ ){
         <FramedCart openCart={openCart} />
     ) : (
         <div className={styles.drawer}>
+          <h2 className={styles.h2}>Заповніть поля:</h2>
             <div className={styles.cart_Items}>
                 <div className={styles.form}>
                     <form onSubmit={handleSubmit(onSubmit)}>

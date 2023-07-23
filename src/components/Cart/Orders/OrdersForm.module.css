@@ -10,13 +10,20 @@
     z-index: 2;
     /* margin-left: 20px; */
     margin-right: 20px;
-    margin-top: 70px;
+    margin-top: 20px;
+}
+.h2{
+    margin: 0 auto;
+    color: #4b4b4b;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 @media(max-width:700px){
     .drawer{
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 70px;
+    margin-top: 0px;
     border-radius: 0px;
     }
 }
@@ -83,19 +90,22 @@ form input {
 }
 .select{
     padding-left: 20px;
-    width:610px;
+    width:625px;
     height:45px;
     color:black;
     font-size:16px;
     background-color:white;
     border:none;
     padding-left: 5px;
-    border-bottom: 2px black solid;
-    border-top: none;
+    border: 1px black solid;
+    /* border-top: none;
     border-left: none;
-    border-right: none;
+    border-right: none; */
 }
 @media (max-width: 650px) {
+    .select{
+    width: 425px;
+    }
     .form input{
         width: 400px;
     }
@@ -108,7 +118,7 @@ form input {
         width: 300px;
     }
     .select{
-        width: 310px;
+        width: 325px;
     }
 }
 

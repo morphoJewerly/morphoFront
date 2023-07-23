@@ -17,14 +17,6 @@
     gap: 15px;
     padding-bottom: 50px;
 }
-.buttonBack button{
-    background-color: rgb(27, 27, 27);;
-    width: 120px;
-    height: 35px;
-}
-.buttonBack img{
-    margin-top: 20px;
- }
 .description{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -63,15 +55,24 @@
 }
 .button_buy{
     background-color: rgb(27, 27, 27);;
-    width: 220px;
+    width: 200px;
     height: 45px;
 } 
+.button_buy:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border: 2px solid rgb(27, 27, 27) ;
+}
 .button_back{
     color: #000;
     background-color: rgb(255, 255, 255);;
     border: 2px solid rgb(27, 27, 27) ;
-    width: 220px;
+    width: 200px;
     height: 45px;
+}
+.button_back:hover{
+    color: white;
+    background-color:rgb(27, 27, 27);
 }
 a {
     text-decoration: none;
