@@ -8,6 +8,13 @@ header {
   width: 100%;
   transition: transform 0.3s ease-in-out;
 }
+a:focus {
+  /* Тут ви можете задати бажаний стиль для фокусу, який відповідатиме вашому дизайну */
+  /* Наприклад, змінити колір або додати підкреслення */
+  outline: none; /* Щоб забрати стандартний оутлайн */
+  /* Приклад стилів, змініть на ваш власний */
+  /* Додаткові стилі, які застосовуються, коли посилання має фокус */
+}
 .header{
   width: 100%;
   cursor: pointer;
@@ -163,7 +170,6 @@ header {
 }
 } */
 .rigthHeader li span {
- 
   color: rgb(161, 161, 161);
 }
 .rigthHeader li {
@@ -171,6 +177,9 @@ header {
   gap: 10px;
 }
 .rigthHeader li a {
+   -webkit-tap-highlight-color: transparent;
+    text-decoration:none;
+    background-color: none;
     padding-bottom: 3px;
     white-space: nowrap;
     cursor: pointer;
@@ -179,6 +188,14 @@ header {
     color: rgb(173, 173, 173);
     font-weight: 600;
     font-size: 17px;
+    outline: none;
+}
+.rigthHeader li a :focus {
+  /* Тут ви можете задати бажаний стиль для фокусу, який відповідатиме вашому дизайну */
+  /* Наприклад, змінити колір або додати підкреслення */
+  outline: none; /* Щоб забрати стандартний оутлайн */
+  /* Приклад стилів, змініть на ваш власний */
+  /* Додаткові стилі, які застосовуються, коли посилання має фокус */
 }
 @media (max-width: 900px) {
   .store_title h3 {

@@ -133,15 +133,17 @@ a {
     .imgsecond{
         width:150px;
         height: 100px;
+        margin-left: 5px;
     }
     .imgthird{
         width:200px;
         height: 150px;
-        margin-left: 140px;
+        margin-left: 145px;
         margin-top: -40px;
     }
     .description{
         width: 350px;
+        margin-left: 5px;
     }
     
 }

@@ -105,6 +105,7 @@
     }
 }
 .catItem {
+    -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
     cursor: pointer;
     font-family: "Marmelad";
@@ -114,6 +115,7 @@
     font-size: 17px;
 }
 .active {
+    -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
     cursor: pointer;
     font-family: "Marmelad";
