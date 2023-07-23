@@ -122,7 +122,7 @@
     font-weight: 600;
     font-size: 17px;
     List-style-type: none;
-    border-bottom: 3px solid #09777a;
+    border-bottom: 3px solid   #222;
 }
 /* li::after {
     content: "";

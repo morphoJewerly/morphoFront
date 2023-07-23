@@ -28,7 +28,7 @@ function Contacts() {
     <div className={styles.content}>
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
     <div className={styles.contWrapper}>
-       <h3>Виготовлення прикрас. Ремонт та реставрація.</h3>
+       <h3>Виготовлення, ремонт та реставрація прикрас.</h3>
       <img width={50} height={50} src="/images/phone.png" alt="phone" />
        {/* <a href="tel:+380977033730">+380 (97) 703-37-30</a> */}
        <a href="tel:+380631964616">+380 (63) 196-46-16</a>

@@ -56,7 +56,7 @@ function Home() {
       </Helmet>
       {/* <Header/> */}
       <main className={styles.main}  >
-        <h1 className={styles.title} onClick={handleTextClick}>
+        {/* <h1 className={styles.title} onClick={handleTextClick}>
           {isEditable ? (
             <textarea className={styles.mainCitate} type="text" value={content.mainCitate} onChange={(e) => handleTextChange(e, "mainCitate")} />
           ) : (
@@ -146,7 +146,51 @@ function Home() {
                 </p>
           </div>
           </div>
-          {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""}
+          {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} */}
+          <div className={styles.container}>
+          <img src="/images/minePhoto.jpg" className={styles.mainPhoto} alt="" />  
+          <img className={styles.blockPhoto} src="/images/im1.jpg" alt="" /> 
+          <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+           <textarea className={styles.descrInput} type="text" value={content.descr1} onChange={(e) => handleTextChange(e, "descr1")} />
+          ) : (
+            content.descr1
+          )}
+                </p>
+          <img className={styles.blockPhoto} src="/images/im2.jpg" alt="" />
+          <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+            <textarea className={styles.descrInput} type="text" value={content.descr2} onChange={(e) => handleTextChange(e, "descr2")} />
+          ) : (
+            content.descr2
+          )}
+                </p>
+          <img  className={styles.blockPhoto} src="/images/im3.jpg" alt="" />
+          <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+           <textarea className={styles.descrInput} type="text" value={content.descr3} onChange={(e) => handleTextChange(e, "descr3")} />
+          ) : (
+            content.descr3
+          )}
+                </p>
+          <img className={styles.blockPhoto} src="/images/im4.jpg" alt="" />
+          <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+            <textarea className={styles.descrInput} type="text" value={content.descr4} onChange={(e) => handleTextChange(e, "descr4")} />
+          ) : (
+            content.descr4
+          )}
+                </p>
+          <img className={styles.blockPhoto} src="/images/im5.jpg" alt="" />
+          <p className={styles.descr} onClick={handleTextClick} >
+              {isEditable ? (
+           <textarea className={styles.descrInput} type="text" value={content.descr5} onChange={(e) => handleTextChange(e, "descr5")} />
+          ) : (
+            content.descr5
+          )}
+                </p>
+              {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} 
+          </div>
           </main>
         </>
   )}

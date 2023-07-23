@@ -52,9 +52,11 @@ function Header() {
              <div className={styles.header_container}>
              <div className={styles.leftHeader}>
             {/* <img width={30} height={30} src="/images/Vector.png" /> */}
-            <div className={styles.store_title}>
-                <h3>"Єдиний спосіб втечі від банальності - мистецтво"</h3>
-            </div>
+            <Link to="/"><div className={styles.header2}>
+        <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
+        <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
+      </div>
+      </Link>
         </div>
             <div className={ styles.menu }>
               {(isAuth && pathname.startsWith("/admin")) ? 

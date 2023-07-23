@@ -15,7 +15,7 @@
     flex-wrap: wrap;
 }
 .main {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -45,7 +45,7 @@
     color: #000000;
  }
  .h1 span {
-    color: #09777a;
+    color: #000000;
  }
  /* .h4 span {
     color: #3bb3b8;
@@ -53,8 +53,8 @@
  .h4 {
     font-size: 23px;
     font-weight: 400;
-    /* color: #535353; */
-    color: #09777a;
+    color: #535353;
+    /* color: #09777a; */
     letter-spacing: 11px;
     margin-bottom: 5px;
  }

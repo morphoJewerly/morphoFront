@@ -7,7 +7,7 @@ function Bonus() {
       <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Marmelad&family=Pacifico&family=Tangerine:wght@700&display=swap" rel="stylesheet"/>
       </Helmet>
       <div className={styles.wrapper}>
-        <h1 className={styles.h1}>АКЦІЇ ТА ВИГІДНІ ПРОПОЗИЦІЇ</h1>
+        {/* <h1 className={styles.h1}>АКЦІЇ ТА ВИГІДНІ ПРОПОЗИЦІЇ</h1> */}
     <div className={styles.items}>
     <div className={styles.item}>
         <span className={styles.number}>01</span>

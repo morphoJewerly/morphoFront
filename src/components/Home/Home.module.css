@@ -3,8 +3,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1300px;
+    max-width:900px;
+    background-color: black;
   }
+  .container {
+      gap: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 85%;
+      border-left: 20px dashed #fff3f3;
+      border-right: 20px dashed #fff3f3;
+      background-color: rgb(0, 0, 0);
+    }    
+    .container img {
+      border-radius: 7px;
+      width: 90%;
+      height: auto;
+    }
   .content{
     margin-top: 30px;
     display: flex;
@@ -81,6 +101,7 @@
   }
   .descr{
     font-size: 13px;
+    color: white;
   }
   @media(max-width:1305px){
     .mainPhoto{
@@ -216,7 +237,7 @@
   /*------------------------------------------------------------------*/
      /*------------------------------------------------------------------*/
 
-.mainCitate{
+/* .mainCitate{
   white-space: pre-wrap;
   width: 1000px;
   font-size: 25px;
@@ -246,7 +267,7 @@
   height: 40px;
   font-size: 18px;
 }
-  
+   */
  
   
  

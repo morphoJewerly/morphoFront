@@ -7,7 +7,7 @@
     padding-bottom: 80px;
 }
 .content{
-    margin-top: 80px;
+    /* margin-top: 80px; */
     border: 2px black solid;
     display: flex;
     align-items: center;
@@ -136,7 +136,6 @@
 }
 @media(max-width:712px){
     .content{
-        margin-top: 50px;
         width: 400px;
     }
     .header_form .item input {
@@ -159,6 +158,11 @@
     }
 }
 @media(max-width:512px){
+    .form {
+        margin-top:20px;
+        padding-top:0px;
+        padding-bottom:80px;
+    }
     .content{
         width: 300px;
     }
