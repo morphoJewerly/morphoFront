@@ -97,16 +97,6 @@
    .Item:hover .editItems{
       display: flex;
    }
-  .Item:hover{
-      background-color: rgb(27, 27, 27);
-      color: white;
-  }
-  .Item:hover h3 {
-      color: white;
-  }
-  .Item:hover .price  {
-      color: white ;
-  }
   @media(max-width:400px) {
     .Item{
         width: 320px;

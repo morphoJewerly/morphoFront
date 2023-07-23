@@ -20,7 +20,7 @@ function Item({_id,imgmain,price,title,typeid,sizes,type}) {
                 <span>{addedCount}</span>
                 <img onClick={() => dispatch(increment({_id}))} className={styles.img_plus} width={27} height={27} src="images/add.png" alt="" />
               </div>
-              <div className={styles.price}>{(price * addedCount)}</div>
+              <div className={styles.price}>{(price * addedCount)}₴</div>
               </div>
               <img onClick={() => dispatch(removeItem({_id}))} className={styles.del_cart} width={30} height={30} src="images/delGood.png" alt="" />
             </div>

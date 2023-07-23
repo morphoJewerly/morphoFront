@@ -20,13 +20,9 @@ function Detail({goods,f1,setF1}) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
-              <div onClick={() => {setF1(!f1)}} className={styles.buttonBack}>
-              <img width={25} height={30}  src="/images/arrowg.png" alt="home" />
-                    <button>ТОВАРИ</button>
-                </div> 
                 <img className={styles.imgmain} height={500} width={900}  src={goods.imgmain}  />
                 <div className={styles.description}>
-                    <div className={styles.description_left_text}><h4>ДЕТАЛІ ПРОДУКТУ</h4></div>
+                    {/* <div className={styles.description_left_text}><h4>ДЕТАЛІ ПРОДУКТУ</h4></div> */}
                     <div className={styles.description_rigth_paragraph}>
                         <h1>MORPHO</h1>
                         <h3>{goods.title}</h3>
@@ -39,10 +35,13 @@ function Detail({goods,f1,setF1}) {
                  <img className={styles.imgthird} height={350} width={550}  src={goods.imgthird} />
                  </div>
             </div>
+            <div className={styles.buttons}>
             <Link to="/cart">
             <button  onClick={()=>addCartItem({_id,imgmain,title,price,category})}  className={styles.button_buy}  >КУПИТИ</button>
 
                   </Link>
+                  <button  className={styles.button_back} onClick={() => {setF1(!f1)}} >НАЗАД</button>
+                  </div>
             </div>
     );
 }

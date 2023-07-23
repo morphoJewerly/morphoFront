@@ -5,6 +5,7 @@
     flex-direction: column;
 }
 .container{
+    margin-top: 20px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -31,7 +32,14 @@
     align-items: center;
     justify-content: flex-start;
     width: 800px;
-    margin-left: -70px;
+    /* margin-left: -70px; */
+}
+.description h3 {
+    font-size: 20px;
+}
+.description p {
+    color: #5c5c5c;
+
 }
 .description_left_text{
     transform: rotate(90deg);
@@ -41,21 +49,29 @@
     display: flex;
     flex-direction: column;
 }
-
-.imgmain {
-
-}
 .imgthird{
     margin-left: 350px;
     margin-top: -40px;
 }
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .button_buy{
     background-color: rgb(27, 27, 27);;
-    width: 240px;
-    height: 50px;
-    margin-left: 330px;
-    margin-top: 70px;
-    margin-bottom: 100px;
+    width: 220px;
+    height: 45px;
+} 
+.button_back{
+    color: #000;
+    background-color: rgb(255, 255, 255);;
+    border: 2px solid rgb(27, 27, 27) ;
+    width: 220px;
+    height: 45px;
 }
 a {
     text-decoration: none;
@@ -77,13 +93,13 @@ a {
     .description{
         width: 700px;
     }
-    .button_buy{
+    /* .button_buy{
         width: 240px;
         height: 50px;
         margin-left: 245px;
         margin-top: 70px;
         margin-bottom: 100px;
-    }
+    } */
 }
 @media(max-width:710px){
     .imgmain {
@@ -103,12 +119,10 @@ a {
     .description{
         width: 500px;
     }
-    .button_buy{
-        width: 240px;
-        height: 50px;
-        margin-left: 145px;
-        margin-top: 70px;
-        margin-bottom: 100px;
+    .button_buy,.button_back {
+        width: 180px;
+        height: 40px;
+        font-size: 13px;
     }
 }
 @media(max-width:510px){
@@ -129,11 +143,5 @@ a {
     .description{
         width: 350px;
     }
-    .button_buy{
-        width: 240px;
-        height: 50px;
-        margin-left: 60px;
-        margin-top: 70px;
-        margin-bottom: 100px;
-    }
+    
 }

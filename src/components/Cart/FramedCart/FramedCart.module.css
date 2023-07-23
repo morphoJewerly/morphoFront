@@ -97,12 +97,14 @@
 
 .epmty_info button {
     margin-top: 10px;
-    width: 260px;
-    height: 55px;
+    width: 200px;
+    height: 45px;
     background-color: rgb(27, 27, 27);
     color: white;
     border: none;
 }
 .epmty_info button:hover {
-    background: rgb(27, 27, 27);
+    border: 2px solid rgb(27, 27, 27);;
+    background: white;
+    color: black;
 }

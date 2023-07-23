@@ -148,7 +148,7 @@ function Home() {
           </div>
           {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} */}
           <div className={styles.container}>
-          <img src="/images/minePhoto.jpg" className={styles.mainPhoto} alt="" />  
+          {/* <img src="/images/minePhoto.jpg" className={styles.mainPhoto} alt="" />   */}
           <img className={styles.blockPhoto} src="/images/im1.jpg" alt="" /> 
           <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (

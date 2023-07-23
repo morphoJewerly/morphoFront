@@ -34,8 +34,8 @@
 .epmty_info button {
     margin-top: 10px;
     margin-left: 0px;
-    width: 260px;
-    height: 55px;
+    width: 200px;
+    height: 45px;
     background-color: rgb(27, 27, 27);
     color: white;
     border: none;
@@ -43,5 +43,7 @@
 
 }
 .epmty_info button:hover {
-    background-color: rgb(18, 18, 18);
+    border: 2px solid rgb(27, 27, 27);;
+    background-color:white;
+    color: black;
 }
