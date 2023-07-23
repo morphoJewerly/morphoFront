@@ -1,20 +1,21 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const MyLoader = () => (
+const MyLoader = (props) => (
   <ContentLoader 
-    speed={2}
-    width={260}
-    height={410}
-    viewBox="0 0 260 410"
-    backgroundColor="#d6d6d6"
-    foregroundColor="#6e6e6e"
+    speed={1}
+    width={340}
+    height={400}
+    viewBox="0 0 340 400"
+    backgroundColor="#8f8f8f"
+    foregroundColor="#ecebeb"
+    {...props}
   >
-    <rect x="22" y="187" rx="0" ry="0" width="260" height="30" /> 
-    <circle cx="132" cy="90" r="90" /> 
-    <rect x="23"  y="233" rx="0" ry="0" width="260" height="85" /> 
-    <rect x="23"  y="328" rx="0" ry="0" width="90"  height="27" /> 
-    <rect x="150" y="328" rx="0" ry="0" width="132" height="27" />
+    {/* <circle cx="623" cy="244" r="20" /> 
+    <rect x="483" y="233" rx="0" ry="0" width="31" height="20" /> 
+    <circle cx="592" cy="235" r="48" />  */}
+    <rect x="4" y="0" rx="0" ry="0" width="340" height="240" /> 
+    <rect x="4" y="250" rx="0" ry="0" width="340" height="140" style={{ marginBottom: 0 }}  />
   </ContentLoader>
 )
 

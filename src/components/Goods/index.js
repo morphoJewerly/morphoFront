@@ -21,13 +21,15 @@ function Goods ({}) {
     const [idf,setIdf] =  React.useState(0);
      const selected = useSelector((state) => state.filter.selected)
      useEffect(() => {
-    dispatch(fetchGoods());
-    setIsLoading(false)
-   },[])
-
+      dispatch(fetchGoods()).then(() => {
+        setIsLoading(false);
+      });
+    }, []);
+  
     const pullOut = (idt) =>{
       setIdf(idt);
     }
+    const ar = [1,2,3,4,5,6,7,8]
 return(
     <>
     { isClicked ?  
@@ -42,7 +44,7 @@ return(
        <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
        </div>
     <div className={styles.Items1}>
-      {isLoading ? [...Array(8)].map((_ , index) => <MyLoader key={index}/>):
+      {isLoading ? ar.map(( _ , index) => <MyLoader key={index}/>):
       (catId == 0) ? 
       goods.map((item,index) => <Good f1={isClicked} setF1={setIsClicked} callback={(idt)=> pullOut(idt)}  isLoading={isLoading} key={index} {...item}/>):
       goods.filter((obj => (obj.category === catId)))
