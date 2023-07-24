@@ -21,9 +21,11 @@ function Goods ({}) {
     const [idf,setIdf] =  React.useState(0);
      const selected = useSelector((state) => state.filter.selected)
      useEffect(() => {
-      dispatch(fetchGoods()).then(() => {
-        setIsLoading(false);
-      });
+      dispatch(fetchGoods()).then(
+        () => setTimeout(() => {
+          setIsLoading(false);
+        }, 500)
+      );
     }, []);
   
     const pullOut = (idt) =>{
