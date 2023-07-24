@@ -5,7 +5,7 @@ const Preloader = () => {
         width: "200px", 
         height: "200px", 
         marginRight:"10px",
-        marginBottom:"230px",
+        marginBottom:"300px",
       };
       const preloader = {
         display: "flex",
