@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width:800px;
+    max-width:600px;
     background-color: black;
   }
   .container {
@@ -28,7 +28,7 @@
     }
     .descr{
       font-family: 'Philosopher', sans-serif;
-      font-size: 1.5em;
+      font-size: 1em;
       width: 93%;
       color: rgb(169, 169, 169);
       text-align: center;

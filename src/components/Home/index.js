@@ -44,7 +44,9 @@ function Home() {
       }
     };
     fetchData().then(
-      () => setIsLoading(false)
+      () => setTimeout(() => {
+        setIsLoading(false);
+      }, 1000)
     );
   }, []);
 
