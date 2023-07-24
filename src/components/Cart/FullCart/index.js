@@ -61,7 +61,7 @@ function FullCart() {
                                 </div>
                             </div>
                             <div className={styles.cart_buts}>
-                                <Link to="/goods">
+                                <Link to="/">
                                     <button className={styles.c_back}>
                                     Назад
                                     </button>

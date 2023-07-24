@@ -25,7 +25,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true); // Додано useState
   useEffect(() => {
     dispatch(fetchAuthMe()).then(
-      () => setIsLoading(false)
+      () => setTimeout(() => {
+        setIsLoading(false);
+      }, 1000)
     )
   },[])
 
@@ -86,8 +88,8 @@ function App() {
           <div className={styles.container}>
           <Header/> 
               <Routes>
-              <Route exact path="/" element={<Home  setIsLoading = {setIsLoading} />}/>
-              <Route exact path="/goods" element={<Goods/>}/>
+              <Route exact path="/about" element={<Home  setIsLoading = {setIsLoading} />}/>
+              <Route exact path="/" element={<Goods/>}/>
               <Route element={<AnimationLayout />}>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>

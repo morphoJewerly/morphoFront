@@ -11,7 +11,7 @@ function EmptyCart() {
         <span>Скоріш за все ви ще не робили замовлення.</span>
         <span> Для здійснення замовлення перейдіть на сторінку "ТОВАРИ".</span>
         <img height={260} width={280} src="/images/epmty.jfif" />
-        <Link to="/goods">
+        <Link to="/">
         <button>Назад</button>
         </Link>
       </main>

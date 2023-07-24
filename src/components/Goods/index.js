@@ -37,7 +37,7 @@ return(
     { isClicked ?  
       <main className={styles.main}>
          {/* <Link to="/"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link> */}
-         <Link to="/"><div className={styles.header}>
+         <Link to="/about"><div className={styles.header}>
         <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
       </div>

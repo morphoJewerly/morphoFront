@@ -18,11 +18,9 @@
     gap: 35px;
     margin-bottom: 50px;
 }
-.item{
+.item1,.item2,.item3{
     position: relative;
     width: 80%;
-    border: 2px black solid;
-    background-color: white;
     border-radius: 5px;
     padding-left: 20px;
     padding-top: 20px;
@@ -30,10 +28,26 @@
     padding-right: 45px
    
 }
-.item:hover {
+.item1{
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.item2 {
     background-color: rgb(27, 27, 27);
     color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
+}
+.item3 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.item2 img {
+    filter: invert(1);
+}
+.item3 img {
+    filter: invert(1);
 }
 .number{
     position: absolute;
@@ -62,13 +76,19 @@
        justify-content: center;
        align-items: center;
     }
-    .item{
+    .item1,.item2,.item3{
         align-items: center;
         justify-content: center;
     }
-    .item img{
+    .item1 img{
        margin-top: 25px;
     }
+    .item2 img{
+        margin-top: 25px;
+     }
+     .item3 img{
+        margin-top: 25px;
+     }
     .h1{
         text-align: center;
         color: black;

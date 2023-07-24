@@ -31,11 +31,11 @@ function Header() {
       <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
       </Helmet>
-      {pathname.includes("/goods") || pathname.includes("/cart") || pathname.includes("/orders") ? null :
+      {pathname === "/" || pathname.includes("/cart") || pathname.includes("/orders") ? null :
        <header className={isVisible ? styles.header : ""}>
              <div className={styles.header_container}>
              <div className={styles.leftHeader}>
-            <Link to="/"><div className={styles.header2}>
+            <Link><div className={styles.header2}>
         <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
       </div>
@@ -45,17 +45,18 @@ function Header() {
               {(isAuth && pathname.startsWith("/admin")) ? 
                 <ul onClick={() => openHandler()}  className={styles.rigthHeader}>
                   <li> <Link onClick={() => setActiveItem("/admin/home")} className={activeItem === "/admin/home" ? styles.activen : ''} to="/admin/home"  >
-                    ГОЛОВНА
+                  ПРО МЕНЕ
                 </Link></li>
                 <li><Link onClick={() => setActiveItem("/admin")} className={activeItem === "/admin" ? styles.activen : ''} to="/admin">ТОВАРИ</Link></li>
                 <li><Link onClick={() => setActiveItem("/admin/create")}   className={activeItem === "/admin/create" ? styles.activen : ''} to="/admin/create">СТВОРИТИ ТОВАР</Link></li>
                 <li>< button onClick={onClickLogout} className={styles.button} >ВИХІД</button></li>
               </ul>
-                :<ul onClick={() => openHandler()}  className={styles.rigthHeader}>
-                  <li> <Link onClick={() => setActiveItem("/")}  className={activeItem === "/" || activeItem === "/goods" ? styles.activen : ''} to="/"  >
-                  ГОЛОВНА
+                :
+                <ul onClick={() => openHandler()}  className={styles.rigthHeader}>
+                  <li><Link onClick={() => setActiveItem("/about")} to="/" >ТОВАРИ</Link></li>
+                  <li> <Link onClick={() => setActiveItem("/about")}  className={activeItem === "/about" || activeItem === "/" ? styles.activen : ''} to="/"  >
+                  ПРО МЕНЕ
                 </Link></li>
-                  <li><Link onClick={() => setActiveItem("/goods")} to="/goods" >ТОВАРИ</Link></li>
                   <li><Link onClick={() => setActiveItem("/bonus")}  className={activeItem === "/bonus" ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li>
                   {/* <li><Link onClick={() => setActiveItem(2)}  className={activeItem === 2 ? styles.activen : ''} to="/cart">КОШИК</Link></li> */}
                   <li><Link onClick={() => setActiveItem("/contacts")}  className={activeItem === "/contacts" ? styles.activen : ''} to="/contacts">КОНТАКТИ</Link></li>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Preloader = () => {
     const imageStyle = {
-        width: "300px", 
-        height: "300px", 
+        width: "200px", 
+        height: "200px", 
         marginRight:"10px",
         marginBottom:"230px",
       };

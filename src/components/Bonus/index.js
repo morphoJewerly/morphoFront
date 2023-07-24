@@ -12,7 +12,7 @@ function Bonus() {
       {/* <Header/> */}
         {/* <h1 className={styles.h1}>АКЦІЇ ТА ВИГІДНІ ПРОПОЗИЦІЇ</h1> */}
     <div className={styles.items}>
-    <div className={styles.item}>
+    <div className={styles.item1}>
         <span className={styles.number}>01</span>
         <div  className={styles.item_header}>
         <img width={50} height={50} src="/images/delivery.png" alt="" srcset="" />
@@ -20,7 +20,7 @@ function Bonus() {
         </div>
         <p className={styles.descr}>При замовленні на суму від 3000 грн - доставка безкоштовно по Україні.</p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item2}>
         <span className={styles.number}>02</span>
         <div  className={styles.item_header}>
         <img width={50} height={50} src="/images/guarantee.png" alt="" srcset="" />
@@ -28,7 +28,7 @@ function Bonus() {
         </div>
         <p className={styles.descr}>Гарантія на вироби - 2 роки з моменту отримання (гарантія не поширюється на дефект не виробничого характеру).</p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item3}>
         <span className={styles.number}>03</span>
         <div  className={styles.item_header}>
         <img width={50} height={50} src="/images/brash.png" alt="" srcset="" />

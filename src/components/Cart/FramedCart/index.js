@@ -9,7 +9,7 @@ function FramedCart() {
         </div>
         <span>Через декілька хвилин ми вам зателефонуємо.</span>
         <img className={styles.frimg} height={100} width={100} src="/images/framed.png"/>
-        <Link to="/goods">
+        <Link to="/">
         <button> Назад</button>
         </Link>
       </main>
