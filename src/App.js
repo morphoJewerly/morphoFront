@@ -23,13 +23,12 @@ function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
   const [isLoading, setIsLoading] = useState(true); // Додано useState
-  const uniqueKey = Date.now();
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    dispatch(fetchAuthMe())
+    dispatch(fetchAuthMe()).then(
+      () => setIsLoading(false)
+    )
   },[])
+
   const PageLayout = ({ children }) => children;
 
   const pageVariants = {
@@ -86,15 +85,15 @@ function App() {
          
           <div className={styles.container}>
           <Header/> 
-            <Routes>
-            <Route element={<AnimationLayout />}>
+              <Routes>
+              <Route exact path="/" element={<Home  setIsLoading = {setIsLoading} />}/>
+              <Route exact path="/goods" element={<Goods/>}/>
+              <Route element={<AnimationLayout />}>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>
               {isAuth ? <Route exact path="/admin/create" element={<CreateGoods/>}/> : ""}
               {isAuth ? <Route exact path="/admin/:id/edit" element={<CreateGoods/>}/> : ""}
               <Route exact path="/admin/home" element={<Home/>}/>
-              <Route exact path="/" element={<Home/>}/>
-              <Route exact path="/goods" element={<Goods/>}/>
               <Route exact path="/bonus" element={<Bonus/>}/>
               <Route exact path="/details" element={<Detail/>}/>
               <Route exact path="/cart" element={<Cart/>}/>
@@ -102,7 +101,6 @@ function App() {
               <Route path="*" element={<Navigate to="/audit" replace />} />
               </Route>
             </Routes>
-           
           </div>
           <Footer/>
         </Router>

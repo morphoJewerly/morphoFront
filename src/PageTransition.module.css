@@ -1,0 +1,12 @@
+.page-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Стилі для дочірнього елемента анімації */
+  /* Наприклад, встановлення бордера та падінгу */
+  
+  .page-item {
+    border: 1px solid black;
+    padding: 20px;
+  }

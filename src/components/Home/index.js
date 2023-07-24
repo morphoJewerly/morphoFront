@@ -5,14 +5,14 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../axios';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../Redux/auth';
-
+import Preload from '../../Preload';
 function Home() {
   const location = useLocation();
   const { pathname } = location;
   const isAuth = useSelector(selectIsAuth);
   const [isEditable, setIsEditable] = useState(false);
   const [content, setContent] = useState([]);
-
+  const [isLoading, setIsLoading] = React.useState(true);
   const handleTextClick = () => {
     if (isAuth && pathname.startsWith("/admin")) {
       setIsEditable(true);
@@ -43,7 +43,9 @@ function Home() {
         console.error(error);
       }
     };
-    fetchData();
+    fetchData().then(
+      () => setIsLoading(false)
+    );
   }, []);
 
   return (
@@ -54,6 +56,7 @@ function Home() {
 
       </Helmet>
       {/* <Header/> */}
+    { isLoading ?  <Preload/> :
       <main className={styles.main}  >
         {/* <h1 className={styles.title} onClick={handleTextClick}>
           {isEditable ? (
@@ -191,6 +194,7 @@ function Home() {
               {isEditable ?  <button className={styles.buttonSave} onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} 
           </div>
           </main>
+          }
         </>
   )}
   export default Home;

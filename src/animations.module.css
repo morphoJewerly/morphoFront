@@ -1,0 +1,24 @@
+.page-enter {
+  opacity: 0;
+  transform: translateX(100%);
+  background-color: blue;
+  z-index: 10000000;
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 500ms, transform 500ms;
+  background-color: blue;
+  z-index: 10000000;
+}
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 10000000;
+}
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 500ms, transform 500ms;
+  z-index: 10000000;
+}
