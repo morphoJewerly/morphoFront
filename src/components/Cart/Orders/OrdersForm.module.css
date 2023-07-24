@@ -11,6 +11,7 @@
     /* margin-left: 20px; */
     margin-right: 20px;
     margin-top: 20px;
+    margin-bottom: 60px;
 }
 .h2{
     margin: 0 auto;
@@ -23,7 +24,7 @@
     .drawer{
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 0px;
+    margin-top: 20px;
     border-radius: 0px;
     }
 }

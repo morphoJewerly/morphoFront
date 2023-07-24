@@ -1,8 +1,8 @@
 .container{
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 200px;
     max-width: 1176px;
     background-color: white;
 }
@@ -10,8 +10,8 @@
     .container{
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px; 
+    margin-top: -70px;
+    margin-bottom: 100px; 
     border-radius: 0px;
     }
 }
