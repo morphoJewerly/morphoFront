@@ -7,7 +7,6 @@
     padding-bottom: 80px;
 }
 .content{
-    /* margin-top: 80px; */
     border: 2px black solid;
     display: flex;
     align-items: center;

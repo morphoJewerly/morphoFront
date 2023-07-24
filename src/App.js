@@ -5,8 +5,11 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Goods from './components/Goods';
 import Cart from './components/Cart';
-import React, { useState, useEffect } from 'react'; // Додано імпорт useState
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect, } from 'react'; // Додано імпорт useState
+import { BrowserRouter as Router, Routes, Route,  Link,
+  Outlet,
+  useLocation,
+  Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import Detail from './components/Goods/Detail';
 import Admin from './components/Admin';
@@ -15,8 +18,7 @@ import CreateGoods from './components/Admin/AdminPanel/CreateGood';
 import OrdersForm from './components/Cart/Orders';
 import Bonus from './components/Bonus';
 import Preloader from './Preloader';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import animations from './animations.module.css';
+import { motion } from "framer-motion";
 function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
@@ -28,27 +30,64 @@ function App() {
     }, 1000);
     dispatch(fetchAuthMe())
   },[])
+  const PageLayout = ({ children }) => children;
 
+  const pageVariants = {
+  initial: {
+    opacity: 0.2,
+    x: -50,
+    rotateX: 0,
+    rotateY: 0,
+  },
+  in: {
+    opacity: 1,
+    x: 0,
+    rotateX: 0,
+    rotateY: 360,
+  },
+  out: {
+    opacity: 0.2,
+    x: 50,
+    rotateX: 0,
+    rotateY: 0,
+  },
+};
+
+  
+  const pageTransition = {
+    type: "tween",
+    ease: "linear",
+    duration: 1
+  };
+  
+  const AnimationLayout = () => {
+    const { pathname } = useLocation();
+    return (
+      <PageLayout>
+        <motion.div
+          key={pathname}
+          initial="initial"
+          animate="in"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          <Outlet />
+        </motion.div>
+      </PageLayout>
+    );
+  };
+  
   return (
-    <div className={styles.wrapper}>
+    <>
       {isLoading ? (
         <Preloader />
       ) : (
         <Router>
-          <Header/> 
+         
           <div className={styles.container}>
-          <TransitionGroup>
-              <CSSTransition
-                key={uniqueKey} 
-                timeout={500}
-                classNames={{
-                  enter: animations.fadeEnter,
-                  enterActive: animations.fadeEnterActive,
-                  exit: animations.fadeExit,
-                  exitActive: animations.fadeExitActive,
-                }}
-              >
+          <Header/> 
             <Routes>
+            <Route element={<AnimationLayout />}>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>
               {isAuth ? <Route exact path="/admin/create" element={<CreateGoods/>}/> : ""}
@@ -60,14 +99,15 @@ function App() {
               <Route exact path="/details" element={<Detail/>}/>
               <Route exact path="/cart" element={<Cart/>}/>
               <Route exact path="/contacts" element={<Contacts/>}/>
+              <Route path="*" element={<Navigate to="/audit" replace />} />
+              </Route>
             </Routes>
-            </CSSTransition>
-            </TransitionGroup>
+           
           </div>
           <Footer/>
         </Router>
       )}
-    </div>
+    </>
   );
 }
 

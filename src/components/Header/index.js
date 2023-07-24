@@ -14,28 +14,12 @@ function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const scrollThreshold = 50;
 
-    const [activeItem, setActiveItem] = React.useState(1);
+    const [activeItem, setActiveItem] = React.useState(pathname);
     const totalCount = useSelector((state) => state.cart.totalCount);
   let  [open,setOpen] = React.useState("true")
     let openHandler= () => {
         setOpen(!open);
       }
-      // const handleScroll = () => {
-      //   const currentPosition = window.pageYOffset;
-      //   if (currentPosition < scrollPosition && isVisible) {
-      //     setIsVisible(false);
-      //   } else if (currentPosition > scrollPosition && !isVisible) {
-      //     setIsVisible(true);
-      //   }
-      //   setScrollPosition(currentPosition);
-      // };
-      // useEffect(() => {
-      //   window.addEventListener("scroll", handleScroll, { passive: true });
-      //   return () => {
-      //     window.removeEventListener("scroll", handleScroll);
-      //   };
-      // }, [isVisible, scrollPosition]);
-    
       const onClickLogout = () => {
         if (window.confirm("Ви дійсно хочете вийти?")){
           dispatch(logout());
@@ -51,7 +35,6 @@ function Header() {
        <header className={isVisible ? styles.header : ""}>
              <div className={styles.header_container}>
              <div className={styles.leftHeader}>
-            {/* <img width={30} height={30} src="/images/Vector.png" /> */}
             <Link to="/"><div className={styles.header2}>
         <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
@@ -61,30 +44,24 @@ function Header() {
             <div className={ styles.menu }>
               {(isAuth && pathname.startsWith("/admin")) ? 
                 <ul onClick={() => openHandler()}  className={styles.rigthHeader}>
-                  <li> <Link onClick={() => setActiveItem(0)} className={activeItem === 0 ? styles.activen : ''} to="/admin/home"  >
+                  <li> <Link onClick={() => setActiveItem("/admin/home")} className={activeItem === "/admin/home" ? styles.activen : ''} to="/admin/home"  >
                     ГОЛОВНА
                 </Link></li>
-                <li><Link onClick={() => setActiveItem(1)} className={activeItem === 1 ? styles.activen : ''} to="/admin">ТОВАРИ</Link></li>
-                <li><Link onClick={() => setActiveItem(2)}   className={activeItem === 2 ? styles.activen : ''} to="/admin/create">СТВОРИТИ ТОВАР</Link></li>
+                <li><Link onClick={() => setActiveItem("/admin")} className={activeItem === "/admin" ? styles.activen : ''} to="/admin">ТОВАРИ</Link></li>
+                <li><Link onClick={() => setActiveItem("/admin/create")}   className={activeItem === "/admin/create" ? styles.activen : ''} to="/admin/create">СТВОРИТИ ТОВАР</Link></li>
                 <li>< button onClick={onClickLogout} className={styles.button} >ВИХІД</button></li>
               </ul>
                 :<ul onClick={() => openHandler()}  className={styles.rigthHeader}>
-                  <li> <Link onClick={() => setActiveItem(1)}  className={activeItem === 1 ? styles.activen : ''} to="/"  >
+                  <li> <Link onClick={() => setActiveItem("/")}  className={activeItem === "/" || activeItem === "/goods" ? styles.activen : ''} to="/"  >
                   ГОЛОВНА
                 </Link></li>
-                  {/* <li><a href="">КІЛЬЦЯ</a></li>
-                  <li><a href="">СЕРЕЖКИ</a></li>
-                  <li><a href="">ПІДВІСКИ</a></li> */}
-                  <li><Link  className={ ''} to="/goods">ТОВАРИ</Link></li>
-                  <li><Link onClick={() => setActiveItem(2)}  className={activeItem === 2 ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li>
+                  <li><Link onClick={() => setActiveItem("/goods")} to="/goods" >ТОВАРИ</Link></li>
+                  <li><Link onClick={() => setActiveItem("/bonus")}  className={activeItem === "/bonus" ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li>
                   {/* <li><Link onClick={() => setActiveItem(2)}  className={activeItem === 2 ? styles.activen : ''} to="/cart">КОШИК</Link></li> */}
-                  <li><Link onClick={() => setActiveItem(3)}  className={activeItem === 3 ? styles.activen : ''} to="/contacts">КОНТАКТИ</Link></li>
+                  <li><Link onClick={() => setActiveItem("/contacts")}  className={activeItem === "/contacts" ? styles.activen : ''} to="/contacts">КОНТАКТИ</Link></li>
                 </ul>
                 }
                 </div>
-                {/* <div onClick={() => openHandler()}  className={ open ? styles.burger :  styles.burger + " " + styles.active}>
-        <span></span>
-               </div> */}
         </div>
              </header> 
             }   

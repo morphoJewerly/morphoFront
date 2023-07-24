@@ -4,21 +4,12 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 29;
-  /* background-color: rgb(24, 24, 24); */
   width: 100%;
   transition: transform 0.3s ease-in-out;
-}
-a:focus {
-  /* Тут ви можете задати бажаний стиль для фокусу, який відповідатиме вашому дизайну */
-  /* Наприклад, змінити колір або додати підкреслення */
-  outline: none; /* Щоб забрати стандартний оутлайн */
-  /* Приклад стилів, змініть на ваш власний */
-  /* Додаткові стилі, які застосовуються, коли посилання має фокус */
 }
 .header{
   width: 100%;
   cursor: pointer;
-  /* border-bottom: 2px solid rgb(12, 163, 143); */
   margin-bottom: -15px;
   display: flex;
   flex-direction: column;
@@ -72,16 +63,6 @@ a:focus {
       gap: 30px;
   }
 }
-/* @media(max-width:900px){
-  .Items1,.Items2{
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media(max-width:600px){
-  .Items1,.Items2{
-      grid-template-columns: repeat(1, 1fr);
-  }
-} */
 @media(max-width:600px){
   .main {
      display: flex;
@@ -105,19 +86,8 @@ a:focus {
   flex-direction: column;
   align-items: center;
 }
-/* @media (max-width: 1400px) {
-  .header {
-      gap: 50px;
-}
-} */
-/* @media (max-width: 1100px) {
-  .header {
-      gap: 10px;
-}
-} */
 .leftHeader {
   display: flex;
-  /* gap: 10px; */
   justify-content: center;
   align-items: center;
 }
@@ -134,12 +104,10 @@ a:focus {
   letter-spacing: 6px;
   font-family: "El Messiri";
   text-align: center;
-  /* white-space: nowrap; */
   font-style: normal;
   font-weight: 400;
   font-size: 27px;
   line-height: 30px;
-  /* text-transform: uppercase; */
   color: white;
 }
 
@@ -164,11 +132,6 @@ a:focus {
   padding-right: 30px;
   margin-top: 25px;
 }
-/* @media (max-width: 1200px) {
-  .rigthHeader {
-      gap: 30px;
-}
-} */
 .rigthHeader li span {
   color: rgb(161, 161, 161);
 }
@@ -190,25 +153,16 @@ a:focus {
     font-size: 17px;
     outline: none;
 }
-.rigthHeader li a :focus {
-  /* Тут ви можете задати бажаний стиль для фокусу, який відповідатиме вашому дизайну */
-  /* Наприклад, змінити колір або додати підкреслення */
-  outline: none; /* Щоб забрати стандартний оутлайн */
-  /* Приклад стилів, змініть на ваш власний */
-  /* Додаткові стилі, які застосовуються, коли посилання має фокус */
-}
 @media (max-width: 900px) {
   .store_title h3 {
     display: flex;
     letter-spacing: 3px;
     font-family: "El Messiri";
     text-align: center;
-    /* white-space: nowrap; */
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 30px;
-    /* text-transform: uppercase; */
     color: white;
   }
   .rigthHeader li a {
@@ -245,16 +199,6 @@ a:focus {
   font-weight: 700;
   font-size: 17px;
 }
-
-
-@media (max-width: 700px) {
-  
-}
-/* @media (max-width: 660px) {
-  .header {
-      gap: -5px;
-  }
-} */
 @media (max-width: 750px) {
   .cart span {
       display: none;
@@ -277,170 +221,11 @@ a:focus {
   align-items: center;
   justify-content: center;
 }
-/* .burger{
-  display: none;
-  position:relative;
-  align-items: center;
-  justify-content: flex-end;
-  width: 30px;
-  height: 18px;
-  z-index: 50;
-}
-.burger span {
-  height: 2px;
-  width: 100%;
-  transform: scale(1);
-  background-color: white;
-}
-.burger:before, .burger:after{
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: white;
-  transition: all 0.3s ease 0s; 
-}
-.burger:before{
-  top: 0;
-}
-.burger:after{
-  bottom: 0;
-}
-.burger.active span {
-  transform: scale(0);
-}
- .burger.active:before {
-  top: 50%;
-  transform: rotate(-45deg) translate(0,-50%);
- }
- .burger.active:after {
-  bottom: 50%;
-  transform: rotate(45deg) translate(0,50%);
- } */
- /* @media(max-width:1000px){
-  header{
-    display: flex;
-    justify-content: space-between;
-    gap: calc(100px + 1vw);
-  }
-  .burger {
-    margin-right: -200px;
-    display: flex;
- }
- .store_title {
-  margin-left: -250px;
-
- }
- .logo {
-  max-width: 500px;
-}
- .menu {
-  display: none;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: fixed;
-  top: 0; bottom: 0; left: 0; right: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 50;
-  overflow-y: auto;
-  padding: 35px 20px;
-  background-color: black;
-  animation: burgerAnimation 0.7s;
-}
-.menu ul {
-  display: content;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 30px;
-}
-.menu ul li a{
-font-size: 23px;
-}
-.menu ul li div span {
-  font-size: 23px;
-}
-.menu ul li a:hover {
- color: rgb(67, 65, 65);
-}
-.menu.active {
-display: flex;
-}
-.menu select {
-width:120px;
-height: 30px;
-color:white; 
-font-size: 19px;
-background-color: rgb(143, 143, 143);
-border:none;
-}
-} */
-/* @keyframes burgerAnimation {
-  from {opacity: 0}
-  to {opacity: 1}
-}
-@media(max-width:650px){
-  .logo {
-    max-width: 250px;
-  }
-}
-li {
-  position: relative;
-  padding-bottom: 5px;
-  margin-right: 20px;
-} */
 li {
   position: relative;
   padding-bottom: 5px;
   margin-right: 20px;
 } 
-/* li::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform: scaleX(0);
-  transition: transform 0.7s ease;
-}
-
-li:hover::after {
-  transform: scaleX(1);
-} */
-/* @media(max-width:950px){
-    .burger {
-      margin-right: -100px;
-      display: flex;
-   }
-   .store_title {
-    margin-left: -150px;
-  }} */
-  /* @media(max-width:750px){
-
-    .burger {
-      margin-right: -20px;
-      display: flex;
-   }
-   .store_title {
-    margin-left: -50px;
-  }} */
-  /* @media(max-width:630px){
-    header{
-      display: flex;
-      justify-content: center;
-    }
-    .burger {
-      margin-right: 20px;
-      display: flex;
-   }
-   .store_title {
-    margin-left: 0px;
-  }
-  
-} */
 @media(max-width:630px){
   .store_title h3 {
     font-size: 16px;

@@ -1,11 +1,10 @@
 import styles from './Home.module.css';
 import { Helmet } from "react-helmet";
-import {Link, useLocation} from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import axios from '../../axios';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../Redux/auth';
-// import Header from '../Header';
 
 function Home() {
   const location = useLocation();

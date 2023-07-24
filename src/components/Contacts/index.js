@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import styles from './Contacts.module.css';
-// import Header from '../Header';
+import Header from '../Header';
 function Contacts() {
   const { register, handleSubmit, reset , formState: { errors } } = useForm();
   const apiForm = process.env.REACT_APP_API_URL_FORM_ONE

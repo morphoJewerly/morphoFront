@@ -1,12 +1,15 @@
+import Header from '../Header';
 import styles from './Bonus.module.css';
 import {Helmet} from "react-helmet";
 function Bonus() {
   return (
        <>
+        
       <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Marmelad&family=Pacifico&family=Tangerine:wght@700&display=swap" rel="stylesheet"/>
       </Helmet>
       <div className={styles.wrapper}>
+      {/* <Header/> */}
         {/* <h1 className={styles.h1}>АКЦІЇ ТА ВИГІДНІ ПРОПОЗИЦІЇ</h1> */}
     <div className={styles.items}>
     <div className={styles.item}>
