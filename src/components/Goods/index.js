@@ -24,7 +24,7 @@ function Goods ({}) {
       dispatch(fetchGoods()).then(
         () => setTimeout(() => {
           setIsLoading(false);
-        }, 500)
+        }, 1000)
       );
     }, []);
   
