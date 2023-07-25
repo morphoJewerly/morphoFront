@@ -141,25 +141,24 @@
        
     }
     .home{
+        top:10px;
         width: 23px;
         height: 23px;
+      
+     }
+     .cart{
+       top: 5px;
       
      }
      .cart img {
         width: 33px;
         height: 33px;
      }
-     .icons {
-        height: 33px;
-     }
      .badge {
         width: 15px;
         height: 15px;
-        top: 4px;
+        top: 3px;
         right: -7px;
-     }
-     .header{
-        margin-top: 30px;
      }
 }
 .categorios{
