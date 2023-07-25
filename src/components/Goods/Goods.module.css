@@ -39,7 +39,7 @@
     /* filter: invert(1); */
     /* filter: brightness(1.5); */
  }
- .cart img:hover, .home:hover {
+ .cart:hover, .home:hover {
     filter: invert(1);
  }
  .badge {
@@ -140,6 +140,27 @@
         margin-right: 10px;
        
     }
+    .home{
+        width: 23px;
+        height: 23px;
+      
+     }
+     .cart img {
+        width: 33px;
+        height: 33px;
+     }
+     .icons {
+        height: 33px;
+     }
+     .badge {
+        width: 15px;
+        height: 15px;
+        top: 4px;
+        right: -7px;
+     }
+     .header{
+        margin-top: 30px;
+     }
 }
 .categorios{
     display: flex;
