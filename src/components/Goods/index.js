@@ -20,6 +20,7 @@ function Goods ({}) {
     const [isClicked, setIsClicked] =  React.useState(true);
     const [idf,setIdf] =  React.useState(0);
      const selected = useSelector((state) => state.filter.selected)
+     const count = useSelector((state) => state.cart.totalCount)
      useEffect(() => {
       dispatch(fetchGoods()).then(
         () => setTimeout(() => {
@@ -43,7 +44,10 @@ return(
       </div>
       <div className={styles.icons}>
       <Link to="/about"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link>
-      <Link to="/cart"> <img width={40} height={40} className={styles.cart} src="/images/cart2.png" alt="cart" /></Link>  
+      <Link to="/cart"> <div class={styles.cart}>
+      <img width={40} height={40} src="/images/cart2.png" alt="cart" />
+        <span class={styles.badge}>{count}</span> 
+    </div></Link>  
          </div>
      
       </div>
