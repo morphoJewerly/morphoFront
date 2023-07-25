@@ -14,12 +14,12 @@ function FullCart() {
                 <div className={styles.cart}>
                     <div className={styles.head}>
                         <div className={styles.title_cart}>
-                            <img
+                            {/* <img
                                 width={30}
                                 height={30}
                                 src="images/cart2.png"
                                 alt="cart"
-                            />
+                            /> */}
                             <h1>Кошик</h1>
                         </div>
                         <div
@@ -63,12 +63,12 @@ function FullCart() {
                             <div className={styles.cart_buts}>
                                 <Link to="/">
                                     <button className={styles.c_back}>
-                                    Назад
+                                    НАЗАД
                                     </button>
                                 </Link>
                                 <Link to="/orders">
                                     <button className={styles.buy}>
-                                        Оформити 
+                                        ОФОРМИТИ 
                                     </button>
                                 </Link>
                             </div>

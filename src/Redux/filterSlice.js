@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 export const initialState ={
-    catId:0,
-    selected:0,
+    catId:1,
+    selected:1,
 }
 export const filterSlice = createSlice({
   name: "filter",

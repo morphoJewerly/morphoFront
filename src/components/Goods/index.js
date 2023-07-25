@@ -14,7 +14,7 @@ import Detail from "./Detail";
 function Goods ({}) {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = React.useState(true);
-    const categories = ["ВСІ ТОВАРИ","КАБЛУЧКИ","CЕРЕЖКИ","ПІДВІСКИ","РІЗНЕ"]
+    const categories = ['ВСІ ТОВАРИ',"КАБЛУЧКИ","CЕРЕЖКИ","ПІДВІСКИ","РІЗНЕ"]
     const catId = useSelector((state) => state.filter.catId)
     const goods = useSelector((state) => state.goods.goods)
     const [isClicked, setIsClicked] =  React.useState(true);
@@ -36,12 +36,17 @@ return(
     <>
     { isClicked ?  
       <main className={styles.main}>
-         {/* <Link to="/"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link> */}
-         <Link to="/about"><div className={styles.header}>
+         <div className={styles.head}>
+        <div className={styles.header}>
         <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
       </div>
-      </Link>
+      <div className={styles.icons}>
+      <Link to="/about"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link>
+      <Link to="/cart"> <img width={40} height={40} className={styles.cart} src="/images/cart2.png" alt="cart" /></Link>  
+         </div>
+     
+      </div>
       <div className={styles.categorios}>
        <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
        </div>

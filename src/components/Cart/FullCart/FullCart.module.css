@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
 }
 @media (max-width:700px) {
     .cart {
@@ -17,7 +16,6 @@
 }
 }
 .head{
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,12 +26,11 @@
     .head{
         gap:173px ;
         margin-bottom: 10px;
-        margin-top: 30px;
+        margin-top: 0px;
     }
 }
 @media(max-width:710px){
     .head{
-        margin-top: 80px;
        gap:10px;
        flex-direction: column;
        align-items: center;
@@ -63,8 +60,7 @@
     color: #B6B6B6;
 }
 .delete_cart span:hover{
-    color: rgb(87, 87, 87) ;
-    font-size: 16.5px;
+    color: rgb(240, 0, 0) ;
 }
 .cart_footer{
     display: flex;
@@ -143,6 +139,7 @@
     color: black;
 }
 .buy {
+    font-size: 15px;
     width: 200px;
     height: 45px;
     background-color: rgb(27, 27, 27);
@@ -155,6 +152,7 @@
     border: 2px solid #000000;
 }
 .c_back{  
+    font-size: 15px;
     width: 200px;
     height: 45px;
     background: #FFFFFF;
