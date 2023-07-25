@@ -4,8 +4,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width:600px;
+    width:550px;
     background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .container {
       gap: 5px;
@@ -24,7 +26,55 @@
     .container img {
       border-radius: 7px;
       width: 93%;
-      height: auto;
+      height: 700px;
+    }
+    @media(max-width:621px){
+      .main{
+        max-width: 550px;
+      }
+      .container img {
+        height: 650px;
+      }
+    }
+    @media(max-width:570px){
+      .main{
+        max-width: 450px;
+      }
+      .container img {
+        height: 580px;
+      }
+    }
+    @media(max-width:475px){
+      .main{
+        max-width: 400px;
+      }
+      .container img {
+        height: 500px;
+      }
+    }
+    @media(max-width:425px){
+      .main{
+        max-width: 380px;
+      }
+      .container img {
+        height: 480px;
+      }
+    }
+    @media(max-width:400px){
+      .main{
+        max-width: 350px;
+      }
+      .container img {
+        height: 450px;
+      }
+    }
+    @media(max-width:373px){
+      .main{
+        max-width: 330px;
+      }
+      .container img {
+        height: 430px;
+      }
     }
     .descr{
       font-family: 'Philosopher', sans-serif;
