@@ -51,9 +51,7 @@ return(
          </div> */}
      
       </div>
-      <div className={styles.categorios}>
        <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
-       </div>
     <div className={styles.Items1}>
       {isLoading ? ar.map(( _ , index) => <MyLoader key={index}/>):
       (catId == 0) ? 

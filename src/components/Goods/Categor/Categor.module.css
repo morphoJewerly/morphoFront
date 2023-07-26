@@ -1,10 +1,12 @@
 .catItems {
-    margin-bottom: 30px;
     display: flex;
     gap: 12px;
     padding-left: 0px;
     padding-bottom: 0px;
     padding-top: 0px;
+}
+.catNav {
+    margin-top: 25px;
 }
 @media (max-width: 1150px) {
     .catItems {
@@ -18,11 +20,10 @@
         gap: 5px;
     }
 }
-@media (max-width: 621px) {
+@media (max-width: 620px) {
     .catItems {
-        /* flex-wrap: wrap; */
-        overflow-x: scroll;
-        width: 100vw;
+        overflow-x: hidden;
+        width: 105vw;
         margin-top: 0;
         margin-bottom: 0;
         -ms-overflow-style: none;
@@ -35,8 +36,6 @@
     }
     .catNav {
         height: 40px;
-        padding-bottom: 0px;
-        padding-top: 0px;
         width: 100vw;
         /* flex-wrap: wrap; */
         overflow-x: scroll;
@@ -48,66 +47,62 @@
         height: 0;
     }
 }
-@media (max-width: 583px) {
+@media (max-width: 561px) {
     .catItems {
-        overflow-x: scroll;
         width: 110vw;
-        margin-top: 0;
-        margin-bottom: 0;
     }
 }
-@media (max-width: 554px) {
+@media (max-width: 532px) {
     .catItems {
-        overflow-x: scroll;
+        width: 115vw;
+    }
+}
+@media (max-width: 511px) {
+    .catItems {
         width: 120vw;
-        margin-top: 0;
-        margin-bottom: 0;
     }
 }
-@media (max-width: 505px) {
+@media (max-width: 490px) {
     .catItems {
-        overflow-x: scroll;
+        width: 125vw;
+    }
+}
+@media (max-width: 467px) {
+    .catItems {
         width: 130vw;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-@media (max-width: 475px) {
-    .catItems {
-        width: 135vw;
     }
 }
 @media (max-width: 450px) {
     .catItems {
-        width: 140vw;
+        width: 135vw;
     }
 }
 @media (max-width: 435px) {
     .catItems {
-        width: 145vw;
+        width: 140vw;
     }
 }
 @media (max-width: 420px) {
     .catItems {
-        width: 150vw;
+        width: 145vw;
     }
 }
 @media (max-width: 405px) {
     .catItems {
-        width: 155vw;
+        width: 150vw;
     }
 }
 @media (max-width: 390px) {
     .catItems {
-        width: 160vw;
+        width: 155vw;
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 380px) {
     .catItems {
         width: 165vw;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 350px) {
     .catItems {
         width: 170vw;
     }

@@ -10,7 +10,7 @@
     flex-wrap: wrap;
 }
 .main {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -161,17 +161,4 @@
         top: 3px;
         right: -7px;
      }
-}
-.categorios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    gap: 30px;
-   }
-   @media(max-width:1150px){
-    .categorios{
-        flex-direction: column;
-        justify-content: center;
-    }
 }
