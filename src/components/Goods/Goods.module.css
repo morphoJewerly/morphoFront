@@ -74,7 +74,7 @@
     z-index: 10000;
  }
  .header{
-    margin-top: 40px;
+    margin-top: 0px;
     width: 100%;
     cursor: pointer;
     /* border-bottom: 2px solid rgb(12, 163, 143); */
