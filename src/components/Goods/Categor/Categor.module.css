@@ -8,7 +8,7 @@
 .catNav {
     margin-top: 25px;
 }
-@media (max-width: 1150px) {
+/* @media (max-width: 1150px) {
     .catItems {
         justify-content: center;
         align-items: center;
@@ -37,7 +37,6 @@
     .catNav {
         height: 40px;
         width: 100vw;
-        /* flex-wrap: wrap; */
         overflow-x: scroll;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -106,7 +105,7 @@
     .catItems {
         width: 170vw;
     }
-}
+} */
 .catItem {
     -webkit-tap-highlight-color: transparent;
     padding-bottom: 3px;
@@ -133,7 +132,19 @@
 }
 @media (max-width: 900px) {
     .catItem,.active {
-        font-size: 16px;
+        font-size: 15px;
+    }
+    .active {
+        font-size: 15px;
+    }
+    .catItems{
+        gap: 0px;
+    }
+}
+@media (max-width: 370px) {
+    .catItem{
+        margin-left: 2px;
+        margin-right: 12px;
     }
 }
 

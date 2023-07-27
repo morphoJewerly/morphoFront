@@ -38,15 +38,16 @@ return(
     { isClicked ?  
       <main className={styles.main}>
          <div className={styles.head}>
-        <div className={styles.header}>
+        {/* <div className={styles.header}>
         <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
-      </div>
-      <div className={styles.icon}>
-      <Link to="/about"> <img width={30} height={30} className={styles.home} src="/images/homn.png" alt="home" /></Link>
+      </div> */}
+      <div className={styles.icons}>
+      <Link to="/about"> <img width={25} height={25} className={styles.home} src="/images/h.png" alt="home" /></Link>
+      <p className={styles.p}>THE PIECE OF SKY</p>
       <Link to="/cart"> <div class={styles.cart}>
-      <img width={27} height={27} src="/images/cart.png" alt="cart" />
-        {/* <span class={styles.badge}>{count}</span>  */}
+      <img width={35} height={35} src="/images/cart2.png" alt="cart" />
+        <span class={styles.badge}>{count}</span> 
     </div></Link>  
          </div>
      
