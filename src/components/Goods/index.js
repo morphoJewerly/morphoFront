@@ -9,7 +9,7 @@ import axios from "../../axios";
 import MyLoader from "./Good/PizzaBlock";
 import Categor from "./Categor";
 import MyContext from "../../MyContext";
-// import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import Detail from "./Detail";
 function Goods ({}) {
     const dispatch = useDispatch();
@@ -42,13 +42,13 @@ return(
         <h1 className={styles.h1}>MO<span>R</span>PH<span>O</span></h1>
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
       </div>
-      {/* <div className={styles.icons}>
-      <Link to="/about"> <img width={30} height={30} className={styles.home} src="/images/h.png" alt="home" /></Link>
+      <div className={styles.icon}>
+      <Link to="/about"> <img width={30} height={30} className={styles.home} src="/images/homn.png" alt="home" /></Link>
       <Link to="/cart"> <div class={styles.cart}>
-      <img width={40} height={40} src="/images/cart2.png" alt="cart" />
-        <span class={styles.badge}>{count}</span> 
+      <img width={27} height={27} src="/images/cart.png" alt="cart" />
+        {/* <span class={styles.badge}>{count}</span>  */}
     </div></Link>  
-         </div> */}
+         </div>
      
       </div>
       <div className={styles.categorios}>

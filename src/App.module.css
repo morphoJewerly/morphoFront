@@ -21,7 +21,6 @@
   width: 100%;
  }
 }
-
 .fade-enter {
   opacity: 0;
   z-index: 1;
@@ -39,4 +38,10 @@
 .fade-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in-out;
+}
+.div{
+  margin-top: 15px;
+  width: 100%;
+  height: 7px;
+  background-color: rgb(29, 29, 29);
 }

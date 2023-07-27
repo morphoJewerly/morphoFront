@@ -37,26 +37,31 @@ function App() {
     initial: {
       opacity: 1,
       x: -1000,
-      // rotateY: 90, // Початковий поворот на 90 градусів (прихована сторона)
-      // transformOrigin: "left center", // Задаємо точку трансформації (зліва по центру)
-      // backfaceVisibility: "hidden", // Щоб приховати зворотню сторону при повороті
     },
     in: {
       opacity: 1,
       x: 0,
-      // rotateY: 0, // Повертаємо на 0 градусів (показуємо зовнішню сторону)
-      // transformOrigin: "left center",
-      // backfaceVisibility: "hidden",
     },
     out: {
       opacity: 1,
       x: 50,
-      // rotateY: -90, // Поворот на -90 градусів (приховуємо зовнішню сторону)
-      // transformOrigin: "right center", // Задаємо точку трансформації (справа по центру)
-      // backfaceVisibility: "hidden",
     },
   };
   
+  const pageVariants2 = {
+    initial: {
+      opacity: 1,
+      x: 1000, // Змінено на положення зліва за межі вікна
+    },
+    in: {
+      opacity: 1,
+      x: 0, // Залишаємо без змін, щоб з'являтись у центрі
+    },
+    out: {
+      opacity: 1,
+      x: -50, // Змінено на положення справа за межі вікна
+    },
+  };
  
   const pageTransition = {
     type: "tween",
@@ -80,18 +85,37 @@ function App() {
       </PageLayout>
     );
   };
+  const AnimationLayout2 = () => {
+    const { pathname } = useLocation();
+    return (
+      <PageLayout>
+        <motion.div
+          key={pathname}
+          initial="initial"
+          animate="in"
+          variants={pageVariants2}
+          transition={pageTransition}
+        >
+          <Outlet />
+        </motion.div>
+      </PageLayout>
+    );
+  };
   
+
   return (
     <>
       {isLoading ? (
         <Preloader />
       ) : (
-        <Router>
-         
+        <Router>  
           <div className={styles.container}>
-          <Header/> 
+            <div className={styles.div}></div>
+          {/* <Header/>  */}
               <Routes>
+              <Route element={<AnimationLayout2 />}>
               <Route exact path="/about" element={<Home  setIsLoading = {setIsLoading} />}/>
+              </Route>
               <Route element={<AnimationLayout />}>
               <Route exact path="/" element={<Goods/>}/>
               <Route exact path="/orders" element={<OrdersForm/>}/>

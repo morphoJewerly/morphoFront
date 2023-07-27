@@ -6,6 +6,7 @@ import axios from '../../axios';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../Redux/auth';
 import Preload from '../../Preload';
+import Header from '../Header';
 function Home() {
   const location = useLocation();
   const { pathname } = location;
@@ -57,7 +58,7 @@ function Home() {
 
 
       </Helmet>
-      {/* <Header/> */}
+      <Header/>
     { isLoading ?  <Preload/> :
       <main className={styles.main}  >
         {/* <h1 className={styles.title} onClick={handleTextClick}>

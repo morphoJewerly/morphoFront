@@ -23,7 +23,7 @@ function Contacts() {
   };
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
     <div className={styles.wrapper}>
     <div className={styles.content}>
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

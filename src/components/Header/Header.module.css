@@ -4,7 +4,7 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 29;
-  width: 100%;
+  width: 100vw;
   transition: transform 0.3s ease-in-out;
 }
 .header{
@@ -36,7 +36,7 @@ header {
   color: #535353;
   /* color: #09777a; */
   letter-spacing: 11px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 @media(max-width:500px){
   .h1{
@@ -172,7 +172,7 @@ header {
     List-style-type: none;
     color: rgb(173, 173, 173);
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 .rigthHeader li .activen  {
@@ -182,7 +182,7 @@ header {
     List-style-type: none;
     color: rgb(0, 0, 0);
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
     List-style-type: none;
     border-bottom: 3px solid   #222;
 }
@@ -231,7 +231,7 @@ li {
     font-size: 16px;
   }
   .rigthHeader li a {
-    font-size: 14px;
+    font-size: 15px;
   }
   .rigthHeader {
     display: flex;

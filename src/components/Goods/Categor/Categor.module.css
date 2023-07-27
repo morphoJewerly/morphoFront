@@ -109,6 +109,7 @@
 }
 .catItem {
     -webkit-tap-highlight-color: transparent;
+    padding-bottom: 3px;
     white-space: nowrap;
     cursor: pointer;
     font-family: "Marmelad";
@@ -116,6 +117,7 @@
     color: rgb(173, 173, 173);
     font-weight: 600;
     font-size: 17px;
+    outline: none;
 }
 .active {
     -webkit-tap-highlight-color: transparent;
@@ -129,6 +131,12 @@
     List-style-type: none;
     border-bottom: 3px solid   #222;
 }
+@media (max-width: 900px) {
+    .catItem,.active {
+        font-size: 16px;
+    }
+}
+
 /* li::after {
     content: "";
     position: absolute;
