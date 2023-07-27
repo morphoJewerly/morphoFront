@@ -140,9 +140,12 @@
     .catItems{
         gap: 0px;
     }
+    .active{
+        gap: 0px;
+    }
 }
 @media (max-width: 370px) {
-    .catItem{
+    .catItem, .active{
         margin-left: 2px;
         margin-right: 12px;
     }
