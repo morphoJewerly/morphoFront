@@ -34,31 +34,34 @@ function App() {
   const PageLayout = ({ children }) => children;
 
   const pageVariants = {
-  initial: {
-    opacity: 0.2,
-    x: -50,
-    rotateX: 0,
-    rotateY: 0,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    rotateX: 0,
-    rotateY: 360,
-  },
-  out: {
-    opacity: 0.2,
-    x: 50,
-    rotateX: 0,
-    rotateY: 0,
-  },
-};
-
+    initial: {
+      opacity: 1,
+      x: -1000,
+      // rotateY: 90, // Початковий поворот на 90 градусів (прихована сторона)
+      // transformOrigin: "left center", // Задаємо точку трансформації (зліва по центру)
+      // backfaceVisibility: "hidden", // Щоб приховати зворотню сторону при повороті
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      // rotateY: 0, // Повертаємо на 0 градусів (показуємо зовнішню сторону)
+      // transformOrigin: "left center",
+      // backfaceVisibility: "hidden",
+    },
+    out: {
+      opacity: 1,
+      x: 50,
+      // rotateY: -90, // Поворот на -90 градусів (приховуємо зовнішню сторону)
+      // transformOrigin: "right center", // Задаємо точку трансформації (справа по центру)
+      // backfaceVisibility: "hidden",
+    },
+  };
   
+ 
   const pageTransition = {
     type: "tween",
     ease: "linear",
-    duration: 1
+    duration: 0.4
   };
   
   const AnimationLayout = () => {
@@ -89,8 +92,8 @@ function App() {
           <Header/> 
               <Routes>
               <Route exact path="/about" element={<Home  setIsLoading = {setIsLoading} />}/>
-              <Route exact path="/" element={<Goods/>}/>
               <Route element={<AnimationLayout />}>
+              <Route exact path="/" element={<Goods/>}/>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>
               {isAuth ? <Route exact path="/admin/create" element={<CreateGoods/>}/> : ""}
