@@ -53,8 +53,8 @@ function Header() {
               </ul>
                 :
                 <ul onClick={() => openHandler()}  className={styles.rigthHeader}>
-                  <li><Link onClick={() => setActiveItem("/about")} to="/" >ТОВАРИ</Link></li>
-                  <li> <Link onClick={() => setActiveItem("/about")}  className={activeItem === "/about" || activeItem === "/" ? styles.activen : ''} to="/"  >
+                  <li><Link onClick={() => setActiveItem("/")} to="/" >ТОВАРИ</Link></li>
+                  <li> <Link onClick={() => setActiveItem("/about")}  className={activeItem === "/about" || activeItem === "/" ? styles.activen : ''} to="/about"  >
                   ПРО МЕНЕ
                 </Link></li>
                   <li><Link onClick={() => setActiveItem("/bonus")}  className={activeItem === "/bonus" ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li>
