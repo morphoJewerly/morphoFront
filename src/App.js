@@ -104,7 +104,7 @@ function App() {
   
 
   return (
-    <>
+    <div lang="en">
       {isLoading ? (
         <Preloader />
       ) : (
@@ -134,7 +134,7 @@ function App() {
           <Footer/>
         </Router>
       )}
-    </>
+   </div>
   );
 }
 
