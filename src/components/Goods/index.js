@@ -43,10 +43,10 @@ return(
         <h4 className={styles.h4}>THE PIECE <span>O</span>F SKY</h4>
       </div> */}
       <div className={styles.icons}>
-      <Link to="/about"> <img width={25} height={25} className={styles.home} src="/images/h.png" alt="home" /></Link>
+      <Link to="/about"> <img width={25} height={25} className={styles.home} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRoWspnZm3dBSrLQaSlkuK5X1u13UpfUjdA&usqp=CAU"} alt="home" /></Link>
       <p className={styles.p}>THE PIECE OF SKY</p>
       <Link to="/cart"> <div class={styles.cart}>
-      <img width={35} height={35} src="/images/cart2.png" alt="cart" />
+      <img width={35} height={35} src={"https://www.iconbunny.com/icons/media/catalog/product/1/0/1027.1-shopping-bag-icon-iconbunny.jpg"} alt="cart" />
         <span class={styles.badge}>{count}</span> 
     </div></Link>  
          </div>
