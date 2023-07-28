@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from "react-router-dom";
 import axios from '../../../../axios';
 import styles from './CreateGoods.module.css';
+import Header from '../../../Header';
 function CreateGoods(props) {
   const [imgUrl, setImgUrl] =  React.useState("");
   const [imgUrl2, setImgUrl2] =  React.useState("");
@@ -89,6 +90,7 @@ function CreateGoods(props) {
 
   return (
     <>
+    <Header/>
     <div className={styles.wrapper}>
     <div className={styles.content}>
     <div className={styles.item}>
