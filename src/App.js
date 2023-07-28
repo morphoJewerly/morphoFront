@@ -104,7 +104,7 @@ function App() {
   
 
   return (
-    <div lang="en">
+    <div translate="no">
       {isLoading ? (
         <Preloader />
       ) : (
