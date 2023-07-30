@@ -61,16 +61,17 @@ function FullCart() {
                                 </div>
                             </div>
                             <div className={styles.cart_buts}>
+                            <Link to="/orders">
+                                    <button className={styles.buy}>
+                                        ОФОРМИТИ 
+                                    </button>
+                                </Link>
                                 <Link to="/">
                                     <button className={styles.c_back}>
                                     НАЗАД
                                     </button>
                                 </Link>
-                                <Link to="/orders">
-                                    <button className={styles.buy}>
-                                        ОФОРМИТИ 
-                                    </button>
-                                </Link>
+                                
                             </div>
                         </div>
                     </div>

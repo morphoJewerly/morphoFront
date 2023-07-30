@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .container{
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -71,6 +71,7 @@
 } 
 .button_buy:hover{
     background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(27, 27, 27) ;
     color: #000;
     border: 2px solid rgb(27, 27, 27) ;
 }
@@ -80,6 +81,7 @@
     border: 2px solid rgb(27, 27, 27) ;
     width: 200px;
     height: 45px;
+    margin-top: 15px;
 }
 .button_back:hover{
     color: white;
@@ -91,14 +93,15 @@ a {
 @media(max-width:910px){
     .imgmain {
         width: 700px;
+        height: 466px;
     }
     .imgsecond{
         width:300px;
-        height: 250px;
+        height: 200px;
     }
     .imgthird{
         width:400px;
-        height: 300px;
+        height: 266px;
         margin-left: 280px;
         margin-top: -40px;
     }
@@ -109,11 +112,11 @@ a {
 @media(max-width:710px){
     .imgmain {
         width: 500px;
-        height: 300px;
+        height: 333px;
     }
     .imgsecond{
         width:200px;
-        height: 150px;
+        height: 133px;
     }
     .imgthird{
         width:300px;
@@ -133,7 +136,7 @@ a {
 @media(max-width:510px){
     .imgmain {
         width: 350px;
-        height: 250px;
+        height: 233px;
     }
     .imgsecond{
         width:150px;
@@ -142,13 +145,12 @@ a {
     }
     .imgthird{
         width:200px;
-        height: 150px;
+        height: 133px;
         margin-left: 145px;
         margin-top: -40px;
     }
     .description{
         width: 350px;
         margin-left: 5px;
-    }
-    
+    }  
 }

@@ -1,7 +1,7 @@
 import styles from "./Detail.module.css";
 import {addCartItems,increment} from "../../../Redux/cartSlice";
 import { useSelector,useDispatch } from "react-redux";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 function Detail({goods,f1,setF1}) {
     // {id,img,title,price,isLoading,}
@@ -17,10 +17,13 @@ function Detail({goods,f1,setF1}) {
     const price = goods.price;
     const category = goods.category;
     const imgmain = goods.imgmain;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []); 
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
-                <img className={styles.imgmain} height={500} width={900}  src={goods.imgmain}  />
+                <img className={styles.imgmain} height={600} width={900}  src={goods.imgmain}  />
                 <div className={styles.description}>
                     {/* <div className={styles.description_left_text}><h4>ДЕТАЛІ ПРОДУКТУ</h4></div> */}
                     <div className={styles.description_rigth_paragraph}>
@@ -31,8 +34,8 @@ function Detail({goods,f1,setF1}) {
                         </div>
                 </div>
                  <div className={styles.sectionPhoto}>
-                 <img className={styles.imgsecond} height={300} width={400} src={goods.imgsecond}  />
-                 <img className={styles.imgthird} height={350} width={550}  src={goods.imgthird} />
+                 <img className={styles.imgsecond} height={266} width={400} src={goods.imgsecond}  />
+                 <img className={styles.imgthird} height={366} width={550}  src={goods.imgthird} />
                  </div>
             </div>
             <div className={styles.buttons}>

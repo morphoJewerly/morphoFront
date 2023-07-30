@@ -139,6 +139,7 @@
     color: black;
 }
 .buy {
+    margin-top: 10px;
     font-size: 15px;
     width: 200px;
     height: 45px;
@@ -152,9 +153,10 @@
     border: 2px solid #000000;
 }
 .c_back{  
+    margin-top: 10px;
     font-size: 15px;
     width: 200px;
-    height: 45px;
+    height: 43px;
     background: #FFFFFF;
     border: 2px solid rgb(27, 27, 27);
     color: #000000;

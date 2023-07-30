@@ -127,8 +127,8 @@ for (let i = 0; i < cartItems.length; i++ ){
 <option className={styles.option} value="22">22</option>
 </select>: ""                       
                       }
-                        <button className={styles.submit} type="submit">Оформити</button>
-                        <Link to="/cart"> <button className={styles.back} >Назад</button> </Link>
+                        <button className={styles.submit} type="submit">ОФОРМИТИ</button>
+                        <Link to="/cart"> <button className={styles.back} >НАЗАД</button> </Link>
                     </form>
                 </div>
             </div>

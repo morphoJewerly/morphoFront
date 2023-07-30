@@ -20,7 +20,7 @@ function Detail({goods,f1,setF1}) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
-                <img className={styles.imgmain} height={500} width={900}  src={goods.imgmain}  />
+            <img className={styles.imgmain} height={600} width={900}  src={goods.imgmain}  />
                 <div className={styles.description}>
                     {/* <div className={styles.description_left_text}><h4>ДЕТАЛІ ПРОДУКТУ</h4></div> */}
                     <div className={styles.description_rigth_paragraph}>
@@ -30,9 +30,9 @@ function Detail({goods,f1,setF1}) {
                         <p>{goods.text2}</p>
                         </div>
                 </div>
-                 <div className={styles.sectionPhoto}>
-                 <img className={styles.imgsecond} height={300} width={400} src={goods.imgsecond}  />
-                 <img className={styles.imgthird} height={350} width={550}  src={goods.imgthird} />
+                <div className={styles.sectionPhoto}>
+                 <img className={styles.imgsecond} height={266} width={400} src={goods.imgsecond}  />
+                 <img className={styles.imgthird} height={366} width={550}  src={goods.imgthird} />
                  </div>
             </div>
             {/* <div className={styles.buttons}>
