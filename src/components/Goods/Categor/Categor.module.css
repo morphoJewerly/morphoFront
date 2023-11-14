@@ -138,7 +138,7 @@
         font-size: 15px;
     }
     .catItems{
-        gap: 0px;
+        gap: 10px;
     }
     .active{
         gap: 0px;

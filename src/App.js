@@ -19,6 +19,8 @@ import OrdersForm from './components/Cart/Orders';
 import Bonus from './components/Bonus';
 import Preloader from './Preloader';
 import { motion } from "framer-motion";
+import Posts from './components/Posts';
+import CreateItem from './components/Admin/AdminPanel/CreateItem';
 function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
@@ -118,10 +120,14 @@ function App() {
               </Route>
               <Route element={<AnimationLayout />}>
               <Route exact path="/" element={<Goods/>}/>
+              <Route exact path="posts" element={<Posts/>}/>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>
+              <Route exact path="/admin/posts" element={<Admin/>}/>
               {isAuth ? <Route exact path="/admin/create" element={<CreateGoods/>}/> : ""}
               {isAuth ? <Route exact path="/admin/:id/edit" element={<CreateGoods/>}/> : ""}
+              {isAuth ? <Route exact path="/admin/createpost" element={<CreateItem/>}/> : ""}
+              {isAuth ? <Route exact path="/admin/:id/editpost" element={<CreateItem/>}/> : ""}
               <Route exact path="/admin/home" element={<Home/>}/>
               <Route exact path="/bonus" element={<Bonus/>}/>
               <Route exact path="/details" element={<Detail/>}/>

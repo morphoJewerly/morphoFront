@@ -22,7 +22,7 @@ function CreateGoods(props) {
     .catch(function (error) {
       alert("Не вдалося відредагувати товар) Спробуйте будь ласка пізніше)");
     })
-     : axios.post("/posts",newData)
+     : axios.post("/posts", newData)
     .then(function (response) {
       alert("Товар успішно додано)");
       reset()

@@ -73,7 +73,6 @@ header {
   .Items1,.Items2{
       margin-left: 10px;
       margin-right: 10px;
-     
   }
 }
 .header {
@@ -124,13 +123,17 @@ header {
   color: white;
 }
 .rigthHeader {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 65px;
+  justify-content: space-between;
+  /* gap: 30px; */
   list-style: none;
-  padding-right: 30px;
+  /* padding-right: 30px; */
+  padding: 0;
   margin-top: 25px;
+  width: 500px;
+
+  
 }
 .rigthHeader li span {
   color: rgb(161, 161, 161);
@@ -212,9 +215,7 @@ header {
 
   }
 }
-
-@media (max-width: 500px) {
-  
+@media (max-width: 550px) {
 }
 .menu{
   display: flex;
@@ -224,23 +225,22 @@ header {
 li {
   position: relative;
   padding-bottom: 5px;
-  margin-right: 20px;
+  margin-right: 0px;
 } 
 @media(max-width:630px){
   .store_title h3 {
     font-size: 16px;
   }
   .rigthHeader li a {
-    font-size: 15px;
+    font-size: 14px;
   }
-  .rigthHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    padding-right: 30px;
+ 
+}
+@media(max-width:570px){
+  .rigthHeader  {
+   width: 400px;
   }
+ 
 }
 @media(max-width:630px){
   .rigthHeader li .activen  {
@@ -250,7 +250,7 @@ li {
     List-style-type: none;
     color: rgb(0, 0, 0);
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     List-style-type: none;
     border-bottom: 3px solid   #222;
 }
@@ -258,38 +258,31 @@ li {
     font-size: 19px;
   }
   .rigthHeader li a {
-    font-size: 15px;
+    font-size: 14px;
   }
-  .rigthHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    padding-right: 0px;
-    padding-left: 22px;
-  }
+  
 }
 @media(max-width:418px){
   .rigthHeader {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    width: 350px;
+    /* justify-content: space-between; */
+    /* gap: 5px; */
     list-style: none;
-    padding-right: 0px;
-    padding-left: 20px;
+    /* padding-right: 0px; */
+    /* padding-left: 20px; */
   }
 }
 @media(max-width:370px){
   .rigthHeader {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0px;
+    /* justify-content: center; */
+    /* gap: 0px; */
     list-style: none;
-    padding-right: 0px;
-    padding-left: 20px;
+    /* padding-right: 0px; */
+    /* padding-left: 20px; */
   }
 }
 .button {

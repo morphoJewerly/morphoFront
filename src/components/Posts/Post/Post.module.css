@@ -1,0 +1,48 @@
+.Item{
+    width: 350px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.editItems{
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    gap:250px;
+}
+.editItems img{
+    cursor: pointer;
+}
+ .Item:hover .editItems{
+    display: flex;
+ }
+
+.button{
+    background-color: white;
+    width: 150px;
+    height: 35px;
+    border: 1px rgb(214, 214, 214) solid;
+    color: rgb(84, 84, 84);
+    margin: 0 auto;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.button:hover{
+    background-color: rgb(0, 0, 0);
+    width: 150px;
+    height: 35px;
+    border: 1px black solid;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+@media(max-width:415px){
+    .Item{
+        width: 300px;
+    }
+}

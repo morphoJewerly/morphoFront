@@ -1,0 +1,5 @@
+<svg viewBox="0 0 200 200">
+  <rect x="0" y="0" width="200" height="200" fill="white" />
+  <path d="M100 0 C50 50 0 100 0 150 S50 200 100 250 C150 200 200 150 200 100 S150 0 100 0 z" stroke="black" stroke-width="2" fill="none" />
+  <text x="50" y="100" font-size="100" font-family="sans-serif" fill="black">Schlusselfertiges Haus</text>
+</svg>

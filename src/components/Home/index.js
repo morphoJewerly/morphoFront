@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../Redux/auth';
 import Preload from '../../Preload';
 import Header from '../Header';
+import Lazyload from '../../Lazyload';
 function Home() {
   const location = useLocation();
   const { pathname } = location;
@@ -154,7 +155,10 @@ function Home() {
           {isEditable ?  <button onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} */}
           <div className={styles.container}>
           {/* <img src="/images/minePhoto.jpg" className={styles.mainPhoto} alt="" />   */}
-          <img className={styles.blockPhoto} src="/images/im1.jpg" alt="" /> 
+          <Lazyload className={styles.blockPhoto}
+        src="/images/im1.jpg"
+        alt="img1"
+      />
           <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
            <textarea className={styles.descrInput} type="text" value={content.descr1} onChange={(e) => handleTextChange(e, "descr1")} />
@@ -162,7 +166,10 @@ function Home() {
             content.descr1
           )}
                 </p>
-          <img className={styles.blockPhoto} src="/images/im2.jpg" alt="" />
+          <Lazyload className={styles.blockPhoto}
+        src="/images/im2.jpg"
+        alt="img2"
+      />
           <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
             <textarea className={styles.descrInput} type="text" value={content.descr2} onChange={(e) => handleTextChange(e, "descr2")} />
@@ -170,7 +177,10 @@ function Home() {
             content.descr2
           )}
                 </p>
-          <img  className={styles.blockPhoto} src="/images/im3.jpg" alt="" />
+                <Lazyload className={styles.blockPhoto}
+        src="/images/im3.jpg"
+        alt="img3"
+      />
           <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
            <textarea className={styles.descrInput} type="text" value={content.descr3} onChange={(e) => handleTextChange(e, "descr3")} />
@@ -178,7 +188,10 @@ function Home() {
             content.descr3
           )}
                 </p>
-          <img className={styles.blockPhoto} src="/images/im4.jpg" alt="" />
+                <Lazyload className={styles.blockPhoto}
+        src="/images/im4.jpg"
+        alt="img4"
+      />
           <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
             <textarea className={styles.descrInput} type="text" value={content.descr4} onChange={(e) => handleTextChange(e, "descr4")} />
@@ -186,7 +199,10 @@ function Home() {
             content.descr4
           )}
                 </p>
-          <img className={styles.blockPhoto} src="/images/im5.jpg" alt="" />
+                <Lazyload className={styles.blockPhoto}
+        src="/images/im5.jpg"
+        alt="img5"
+      />
           <p className={styles.descr} onClick={handleTextClick} >
               {isEditable ? (
            <textarea className={styles.descrInput} type="text" value={content.descr5} onChange={(e) => handleTextChange(e, "descr5")} />
