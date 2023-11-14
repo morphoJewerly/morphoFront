@@ -9,12 +9,12 @@ import 'react-quill/dist/quill.snow.css'; // Стилі Quill
 function CreateItem(props) {
   const [imgUrl, setImgUrl] =  React.useState("");
   const {id} = useParams();
-  const [quillContent, setQuillContent] = React.useState('');
+  const [text, setText] = React.useState('');
   const isEditing = Boolean(id)
   const { register, handleSubmit, reset , setValue , formState: { errors } } = useForm();
   // const apiForm2 = process.env.REACT_APP_API_URL_FORM_TWO
   const onSubmit = (data) => {
-    const newData = { ...data, imgmain: imgUrl, quillContent };
+    const newData = { ...data, imgmain: imgUrl, text };
     { isEditing ?  axios.patch(`/items/${id}`, newData)
     .then(function (response) {
       alert("Статтю успішно відредаговано)");
@@ -35,7 +35,7 @@ function CreateItem(props) {
 
 
   const handleChange = (value) => {
-    setQuillContent(value);
+    setText(value);
   };
   const handleChangeFile = async (event) => {
     try {
@@ -57,7 +57,7 @@ function CreateItem(props) {
     axios.get(`/items/${id}`).then( ({data}) => {
       setValue("idd", data.idd);
       setValue("title", data.title.toString());
-      setQuillContent(data.text.toString());
+      setText(data.text.toString());
       setImgUrl(data.imgmain);
 
     } ).catch((err) =>{
@@ -91,7 +91,7 @@ function CreateItem(props) {
         {errors.title && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
       </div>
       <ReactQuill
-  value={quillContent}
+  value={text}
   onChange={handleChange}
   modules={{
     toolbar: [
