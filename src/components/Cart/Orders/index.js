@@ -78,12 +78,10 @@ for (let i = 0; i < cartItems.length; i++ ){
                             type="text"
                             placeholder=" ПРІЗВИЩЕ ІМ'Я"
                         />
-                        <div className={styles.item}>
-        <label htmlFor="email"></label>
-        <input placeholder=" E-MAIL" type="email" id="email" {...register('email', { required: true })} />
-        {errors.email && <span style={{color:"red"}} >всі поля мають бути заповнені</span>}
-      </div>
-                        {errors.fullName && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.fullName.message}</p>}
+                         {errors.fullName && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.fullName.message}</p>}
+
+                     <input placeholder=" E-MAIL" type="email" id="email" {...register('email', {   required: "Field is required",})} />
+                     {errors.email && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}} >{errors.email.message}</p>}
                         <input 
                             {...register("phone",{ 
                                 required: "Field is required",
@@ -92,6 +90,7 @@ for (let i = 0; i < cartItems.length; i++ ){
                             type="tel"
                             placeholder=" ТЕЛЕФОН"
                         />
+                         {errors.phone && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}} >{errors.phone.message}</p>}
                         <input
                             {...register("city",{ 
                                 required: "Field is required",
@@ -127,6 +126,20 @@ for (let i = 0; i < cartItems.length; i++ ){
 <option className={styles.option} value="22">22</option>
 </select>: ""                       
                       }
+
+                      <div className={styles.itemr}>
+              <input
+                type="checkbox"
+                id="confirmTerms"
+                {...register("confirmTerms", { required: "Підтвердіть, що ви ознайомлені." })}
+              />
+              <label className={styles.label} htmlFor="confirmTerms">Я погоджуюсь із <Link to="/oferta"> угодою користувача </Link></label>
+            </div>
+            {errors.confirmTerms && (
+                <p style={{ color: "red", height: "-20px", marginTop: "-15px", marginBottom: "-15px" }}>
+                  {errors.confirmTerms.message}
+                </p>
+              )}
                         <button className={styles.submit} type="submit">ОФОРМИТИ</button>
                         <Link to="/cart"> <button className={styles.back} >НАЗАД</button> </Link>
                     </form>

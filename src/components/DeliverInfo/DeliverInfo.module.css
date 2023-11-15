@@ -1,0 +1,22 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    text-align: left;
+    display: flex;
+    max-width: 1200px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.container h3 {
+    margin: 0 auto;
+}
+.pCenter{
+    margin: 20px auto;
+}

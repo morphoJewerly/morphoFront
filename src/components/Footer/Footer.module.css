@@ -1,13 +1,19 @@
 footer{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 100%;
+    gap: 15px;
     margin-top: auto;
-    border-top: 2px rgb(255, 255, 255) solid;
     padding-bottom: 20px;
     padding-top: 20px;
+  }
+  .rigthFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
   }
   .socialPages{
     gap: 3px;

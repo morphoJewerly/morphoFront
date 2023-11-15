@@ -151,3 +151,16 @@ form input {
 }
 
 
+.itemr{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+}
+.itemr input{
+    width: 20px;
+}
+.label a:hover{
+    text-decoration: underline;
+}

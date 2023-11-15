@@ -49,7 +49,7 @@ function Header() {
                   <li> <Link onClick={() => setActiveItem("/admin/home")} className={activeItem === "/admin/home" ? styles.activen : ''} to="/admin/home"  >
                   ПРО МЕНЕ
                 </Link></li>
-                <li><Link onClick={() => setActiveItem("/admin/posts")} className={activeItem === "/admin/posts" ? styles.activen : ''} to="/admin/posts">СТАТТІ</Link></li>
+                <li><Link onClick={() => setActiveItem("/admin/posts")} className={activeItem === "/admin/posts" ? styles.activen : ''} to="/admin/posts">БЛОГ</Link></li>
                 <li><Link onClick={() => setActiveItem("/admin")} className={activeItem === "/admin" ? styles.activen : ''} to="/admin">ТОВАРИ</Link></li>
                 {(isAuth && pathname.startsWith("/admin/posts")) ?
                  <li><Link onClick={() => setActiveItem("/admin/createposts")}   className={activeItem === "/admin/createposts" ? styles.activen : ''} to="/admin/createpost">СТВОРИТИ CТАТТЮ</Link></li>
@@ -66,7 +66,7 @@ function Header() {
                   ПРО МЕНЕ
                 </Link></li>
                   <li><Link onClick={() => setActiveItem("/bonus")}  className={activeItem === "/bonus" ? styles.activen : ''} to="/bonus">АКЦІЇ</Link></li>
-                  <li><Link onClick={() => setActiveItem("/posts")}  className={activeItem === "/posts" ? styles.activen : ''} to="/posts">СТАТТІ</Link></li>
+                  <li><Link onClick={() => setActiveItem("/posts")}  className={activeItem === "/posts" ? styles.activen : ''} to="/posts">БЛОГ</Link></li>
                   {/* <li><Link onClick={() => setActiveItem(2)}  className={activeItem === 2 ? styles.activen : ''} to="/cart">КОШИК</Link></li> */}
                   <li><Link onClick={() => setActiveItem("/contacts")}  className={activeItem === "/contacts" ? styles.activen : ''} to="/contacts">КОНТАКТИ</Link></li>
                 </ul>

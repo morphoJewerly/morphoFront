@@ -21,6 +21,10 @@ import Preloader from './Preloader';
 import { motion } from "framer-motion";
 import Posts from './components/Posts';
 import CreateItem from './components/Admin/AdminPanel/CreateItem';
+import Oferta from './components/Oferta';
+
+import TurnAround from './components/TurnAround';
+import DeliverInfo from './components/DeliverInfo';
 function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
@@ -120,6 +124,9 @@ function App() {
               </Route>
               <Route element={<AnimationLayout />}>
               <Route exact path="/" element={<Goods/>}/>
+              <Route exact path="/oferta" element={<Oferta/>}/>
+              <Route exact path="/deliverinfo" element={<DeliverInfo/>}/>
+              <Route exact path="/turnaround" element={<TurnAround/>}/>
               <Route exact path="posts" element={<Posts/>}/>
               <Route exact path="/orders" element={<OrdersForm/>}/>
               <Route exact path="/admin" element={<Admin/>}/>
