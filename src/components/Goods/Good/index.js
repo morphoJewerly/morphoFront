@@ -31,7 +31,7 @@ function Good({id,_id,imgmain,title,price,text1,category,callback,f1,setF1}) {
   
     return (
          <div className={styles.Item}>
-                  <img className={styles.goodPhoto} height={226} width={340} src={imgmain} alt="item" />
+                  <img className={styles.goodPhoto} height={226} width={330} src={imgmain} alt="item" />
                 <h3 className={styles.title} >{title}</h3>
                 <div className={styles.item_footer}>
                 {/* <span>{text}</span> */}

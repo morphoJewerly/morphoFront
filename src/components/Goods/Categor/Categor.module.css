@@ -1,5 +1,7 @@
 .catItems {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
     padding-left: 0px;
     padding-bottom: 0px;
@@ -138,18 +140,18 @@
         font-size: 15px;
     }
     .catItems{
-        gap: 10px;
+        gap: 12px;
     }
     .active{
         gap: 0px;
     }
 }
-@media (max-width: 370px) {
+/* @media (max-width: 390px) {
     .catItem, .active{
-        margin-left: 2px;
+        margin-left: 0px;
         margin-right: 12px;
     }
-}
+} */
 
 /* li::after {
     content: "";
