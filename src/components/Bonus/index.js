@@ -1,3 +1,4 @@
+import Footer from '../Footer';
 import Header from '../Header';
 import styles from './Bonus.module.css';
 import {Helmet} from "react-helmet";
@@ -40,6 +41,7 @@ function Bonus() {
     
          
         </div>
+        <Footer/>
        </>
   );
 }

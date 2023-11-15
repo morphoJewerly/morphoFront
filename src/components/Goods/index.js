@@ -11,6 +11,7 @@ import Categor from "./Categor";
 import MyContext from "../../MyContext";
 import {Link, useLocation} from "react-router-dom";
 import Detail from "./Detail";
+import Footer from "../Footer";
 function Goods ({}) {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = React.useState(true);
@@ -62,6 +63,7 @@ return(
       goods.filter((obj => (obj.category === catId)))
     .map((item,index)=> <Good f1={isClicked} setF1={setIsClicked} callback={(idt)=> pullOut(idt)}  isLoading={isLoading} key={index} {...item}/>)} 
       </div>
+      <Footer/>
       </main>:
       <Detail f1={isClicked} setF1={setIsClicked} goods = {goods.find(obj => obj._id == idf)}/>
 }

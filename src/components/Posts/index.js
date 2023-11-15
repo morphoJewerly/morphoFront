@@ -12,6 +12,7 @@ import { selectIsAuth, logout } from '../../Redux/auth';
 import Det from "./Det";
 import Post from "./Post";
 import Header from "../Header";
+import Footer from "../Footer";
 function Posts ({}) {
     const dispatch = useDispatch();
     const location = useLocation();
@@ -45,9 +46,12 @@ return(
       {isLoading ? ar.map(( _ , index) => <MyLoader key={index}/>):
       items.map((item,index) => <Post f1={isClicked} setF1={setIsClicked} callback={(idt)=> pullOut(idt)}  isLoading={isLoading} key={index} {...item}/>)}
       </div>
-      </main>:
+      <Footer/>
+      </main>
+      :
       <Det f1={isClicked} setF1={setIsClicked} items = {items.find(obj => obj._id == idf)}/>
 }
+
       </>
        )}
      export default Posts;

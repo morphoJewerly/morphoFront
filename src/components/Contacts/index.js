@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import styles from './Contacts.module.css';
 import Header from '../Header';
+import Footer from '../Footer';
 function Contacts() {
   const { register, handleSubmit, reset , formState: { errors } } = useForm();
   const apiForm = process.env.REACT_APP_API_URL_FORM_ONE
@@ -69,6 +70,7 @@ function Contacts() {
     </form>
     </div>
     </div>
+    <Footer/>
     </>
   );
 }

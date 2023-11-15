@@ -8,6 +8,7 @@ import { selectIsAuth } from '../../Redux/auth';
 import Preload from '../../Preload';
 import Header from '../Header';
 import Lazyload from '../../Lazyload';
+import Footer from '../Footer';
 function Home() {
   const location = useLocation();
   const { pathname } = location;
@@ -212,8 +213,10 @@ function Home() {
                 </p>
               {isEditable ?  <button className={styles.buttonSave} onClick={handleSaveClick}>ЗБЕРЕГТИ</button> : ""} 
           </div>
+        
           </main>
           }
+            <Footer/>
         </>
   )}
   export default Home;
