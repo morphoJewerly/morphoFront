@@ -1,3 +1,4 @@
+import Footer from '../Footer';
 import Header from '../Header';
 import styles from './Oferta.module.css';
 import {Helmet} from "react-helmet";
@@ -116,6 +117,7 @@ function  Oferta() {
     
 </div>
         </div>
+        <Footer/>
        </>
   );
 }

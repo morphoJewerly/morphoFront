@@ -1,3 +1,4 @@
+import Footer from '../Footer';
 import Header from '../Header';
 import styles from './DeliverInfo.module.css';
 import {Helmet} from "react-helmet";
@@ -30,6 +31,7 @@ function  DeliverInfo() {
 
 </div>
         </div>
+        <Footer/>
        </>
   );
 }

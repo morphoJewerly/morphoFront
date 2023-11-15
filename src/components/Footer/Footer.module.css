@@ -8,6 +8,10 @@ footer{
     padding-bottom: 20px;
     padding-top: 20px;
   }
+  .p{
+    padding: 0;
+    margin: 0;
+  }
   .rigthFooter{
     display: flex;
     align-items: center;

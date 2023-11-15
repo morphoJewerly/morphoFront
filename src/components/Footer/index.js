@@ -22,7 +22,8 @@ function Footer() {
           </div>
           <a>morpho.jewelry</a>
           </div>
-          <Accordion/>
+             <Accordion/>
+          <p className={styles.p}>© 2023 Morpho Jewelry. Усі права захищено.</p>
         </footer>
 }
        </>
