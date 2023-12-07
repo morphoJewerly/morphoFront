@@ -11,6 +11,7 @@ import Categor from "./Categor";
 import MyContext from "../../MyContext";
 import {Link, useLocation} from "react-router-dom";
 import Detail from "./Detail";
+import Accordion from '../Accordion';
 import Footer from "../Footer";
 function Goods ({}) {
     const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function Goods ({}) {
     const catId = useSelector((state) => state.filter.catId)
     const goods = useSelector((state) => state.goods.goods)
     const [isClicked, setIsClicked] =  React.useState(true);
+    const [hideInfo, sethideInfo] =  React.useState(false);
     const [idf,setIdf] =  React.useState(0);
      const selected = useSelector((state) => state.filter.selected)
      const count = useSelector((state) => state.cart.totalCount)
@@ -45,7 +47,14 @@ return(
       </div> */}
       <div className={styles.icons}>
       <Link to="/about"> <img width={25} height={25} className={styles.home} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRoWspnZm3dBSrLQaSlkuK5X1u13UpfUjdA&usqp=CAU"} alt="home" /></Link>
+      { hideInfo ? 
       <p className={styles.p}>THE PIECE OF SKY</p>
+      : 
+      <div className={styles.info}>
+      <Accordion/>
+      <img onClick={() => {sethideInfo(true)}} className={styles.remimg} width={15} height={15} src="/images/rmv.svg" alt="cart" />
+      </div>
+       }
       <Link to="/cart"> <div className={styles.cart}>
       <img width={35} height={35} src={"https://www.iconbunny.com/icons/media/catalog/product/1/0/1027.1-shopping-bag-icon-iconbunny.jpg"} alt="cart" />
         <span className={styles.badge}>{count}</span> 

@@ -9,6 +9,20 @@
     gap: 50px;
     flex-wrap: wrap;
 }
+.info{
+   display: flex;
+   gap: 0.1em;
+}
+.remimg{
+   padding: 5px;
+   background-color: #dedede;
+   border-radius: 100%;
+   margin-top: -5px;
+   cursor: pointer;
+}
+.remimg:hover{
+   background-color: #898989;
+}
 .main {
     margin-top: 15px;
     display: flex;
@@ -157,6 +171,9 @@
       top:-6px;
       font-size: 17px;
 
+   }
+   .remimg{
+      margin-top: -11px;
    }
     .main {
        display: flex;

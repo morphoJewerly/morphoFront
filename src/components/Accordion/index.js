@@ -13,8 +13,8 @@ const AccordionItem = ({ title, content1, content2 ,content3 }) => {
   return (
     <div className={styles['accordion-item']}>
       <div className={styles['accordion-header']} onClick={toggleAccordion}>
+      <span className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>&#9660;</span>
         <p>{title}</p>
-        <span className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>&#9660;</span>
       </div>
       <Collapse isOpened={isOpen}>
         <Link to="/oferta"><div className={styles['accordion-content']}>{content1}</div></Link>

@@ -1,7 +1,7 @@
 import styles from './Footer.module.css';
 import {Helmet} from "react-helmet";
 import {Link, useLocation} from "react-router-dom";
-import Accordion from '../Accordion';
+// import Accordion from '../Accordion';
 function Footer() {
   const location = useLocation();
   const { pathname } = location;
@@ -22,9 +22,10 @@ function Footer() {
           </div>
           <a>morpho.jewelry</a>
           </div>
-             <Accordion/>
+             {/* <Accordion/> */}
           <p className={styles.p}>© 2023 Morpho Jewelry. Усі права захищено.</p>
         </footer>
+        
 }
        </>
   );
