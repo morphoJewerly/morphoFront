@@ -161,6 +161,9 @@
     }
 }
 @media(max-width:600px){
+   .info{
+      margin-right: 10px;
+   }
    .main {
       margin-top: 5px;
    }
