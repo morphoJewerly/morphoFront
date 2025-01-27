@@ -56,7 +56,7 @@ return(
       </div>
        }
       <Link to="/cart"> <div className={styles.cart}>
-      <img width={35} height={35} src={"https://www.iconbunny.com/icons/media/catalog/product/1/0/1027.1-shopping-bag-icon-iconbunny.jpg"} alt="cart" />
+      <img width={35} height={35} src="/images/ct1.png" alt="cart" />
         <span className={styles.badge}>{count}</span> 
     </div></Link>  
          </div>
