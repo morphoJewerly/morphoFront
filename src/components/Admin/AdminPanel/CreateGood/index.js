@@ -208,8 +208,18 @@ function CreateGoods(props) {
                             <select id="category" {...register('category', { required: true })}>
                                 <option className={styles.option1} value="1">каблучки</option>
                                 <option className={styles.option} value="2">сережки</option>
-                                <option className={styles.option} value="3">підвіски</option>
-                                <option className={styles.option} value="4">різне</option>
+                                <option className={styles.option} value="3">сережки пусети</option>
+                                <option className={styles.option} value="4">підвіски/кулони</option>
+                                <option className={styles.option1} value="5">підвіски з ланцюжком</option>
+                                <option className={styles.option1} value="6">набори</option>
+                                <option className={styles.option} value="7">браслети на ногу</option>
+                                <option className={styles.option} value="8">браслети на руку</option>
+                                <option className={styles.option} value="9">значки</option>
+                                <option className={styles.option1} value="10">кафи</option>
+                                <option className={styles.option} value="11">кольє</option>
+                                <option className={styles.option} value="12">ланцюжки</option>
+                                <option className={styles.option} value="13">чокери</option>
+                                <option className={styles.option} value="14">сотуари</option>
                             </select>
                             {errors.category && <span style={{ color: "red" }}>Оберіть категорію</span>}
                         </div>

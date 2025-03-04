@@ -16,7 +16,7 @@ import Footer from "../Footer";
 function Goods ({}) {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = React.useState(true);
-    const categories = [null,"КАБЛУЧКИ","CЕРЕЖКИ","ПІДВІСКИ","РІЗНЕ"]
+    const categories = [null,"КАБЛУЧКИ","CЕРЕЖКИ", "CЕРЕЖКИ ПУСЕТИ", "ПІДВІСКИ/КУЛОНИ","ПІДВІСКИ З ЛАНЦЮЖКОМ", "НАБОРИ", "БРАСЛЕТИ НА НОГУ", "БРАСЛЕТИ НА РУКУ", "ЗНАЧКИ", "КАФИ", "КОЛЬЄ", "ЛАНЦЮЖКИ", "ЧОКЕРИ", "СОТУАРИ"]
     const catId = useSelector((state) => state.filter.catId)
     const goods = useSelector((state) => state.goods.goods)
     const [isClicked, setIsClicked] =  React.useState(true);
