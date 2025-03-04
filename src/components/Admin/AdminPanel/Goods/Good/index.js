@@ -4,7 +4,7 @@ import {useState} from "react";
 import { Link} from "react-router-dom";
 import Detail from "../Detail";
 import { fetchRemoveGoods } from "../../../../../Redux/goodsSlice";
-function Good({_id,id,idd,imgmain,title,price,callback,f1,setF1,imgUrl}) {
+function Good({_id,id,idd,imgmain,title,price,callback,f1,setF1,imgUrl, isVariant, variants}) {
     const cartItems  = useSelector(state => state.cart.cartItems)
     const [isClicked, setIsClicked] = useState(true);
     const cartItem   = useSelector (state => state.cart.cartItems.find((obj) => obj.id === id   ))
@@ -28,10 +28,10 @@ function Good({_id,id,idd,imgmain,title,price,callback,f1,setF1,imgUrl}) {
                   <img onClick={removeGood}  width={50} height={50} className={styles.delete} src="/images/trashBox.png" alt="" />
                   <Link to={`/admin/${_id}/edit`}><img width={50} height={50} className={styles.edit} src="/images/edit.png" alt="" /></Link>
                   </div>
-                  <img height={250} width={299} className={styles.goodPhoto} src={imgmain} alt="item" />
+                  <img height={250} width={299} className={styles.goodPhoto} src={isVariant ? variants[0].imgmain : imgmain} alt="item" />
                 <h3>{title}</h3>
                 <div className={styles.item_footer}>
-                <span>{price} ₴</span>
+                <span>{isVariant ? variants[0].price : price} ₴</span>
                     <button  id={_id} onClick={(event) => pullDatta(event) } >ДЕТАЛІ</button>
                 </div>
             </div> 

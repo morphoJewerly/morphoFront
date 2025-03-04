@@ -4,7 +4,7 @@ import { useSelector,useDispatch } from "react-redux";
 import {useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import Detail from "../Detail";
-function Good({id,_id,imgmain,title,price,text1,category,callback,f1,setF1}) {
+function Good({id,_id,imgmain,title,price,text1,category,callback,f1,setF1, isVariant, variants}) {
     const cartItems  = useSelector(state => state.cart.cartItems)
     const [isClicked, setIsClicked] = useState(true);
     const [text, setText] = useState(text1);
@@ -31,11 +31,11 @@ function Good({id,_id,imgmain,title,price,text1,category,callback,f1,setF1}) {
   
     return (
          <div className={styles.Item}>
-                  <img className={styles.goodPhoto} height={226} width={330} src={imgmain} alt="item" />
+                  <img className={styles.goodPhoto} height={226} width={330} src={isVariant ? variants[0].imgmain : imgmain} alt="item" />
                 <h3 className={styles.title} >{title}</h3>
                 <div className={styles.item_footer}>
                 {/* <span>{text}</span> */}
-                <span className={styles.price}>{price} ₴</span>
+                <span className={styles.price}>{isVariant ? variants[0].price : price} ₴</span>
                     <button className={styles.button}  id={_id} onClick={(event) => pullDatta(event) } ><img width={15} height={15} src="/images/zoom.png" alt="img" />ДЕТАЛІ</button>
                 </div>
             </div> 
