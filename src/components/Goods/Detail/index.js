@@ -16,7 +16,7 @@ function Detail({goods, f1, setF1}) {
         if (!selectedVariant) return;
         const itemToAdd = {
             _id: goods._id,
-            title: goods.title + " - " + selectedVariant?.title,
+            title: goods?.isVariant ? `${goods.title} - ${selectedVariant?.title}` : goods.title,
             price: selectedVariant.price,
             imgmain: selectedVariant.imgmain,
             category: goods.category,
@@ -32,19 +32,19 @@ function Detail({goods, f1, setF1}) {
         <div className={styles.wrapper}>
             <div className={styles.container}>
 
-                <img className={styles.imgmain} height={600} width={900} src={selectedVariant?.imgmain || goods.imgmain}
+                <img className={styles.imgmain} height={600} width={900} src={goods?.isVariant ? selectedVariant?.imgmain : goods.imgmain}
                      alt={goods.title}/>
                 <div className={styles.description}>
                     <div className={styles.description_rigth_paragraph}>
                         <h1>MORPHO</h1>
-                        <h3>{goods.title} - {selectedVariant?.title}</h3>
-                        <h3>{selectedVariant?.price} грн</h3>
+                        <h3>{goods?.isVariant ? `${goods.title} - ${selectedVariant?.title}` : goods.title}</h3>
+                        <h3>{goods?.isVariant ? selectedVariant?.price : goods.price} грн</h3>
                         {goods.variants?.length > 0 && (
                             <div className={styles.variantSelector}>
                                 <label>Оберіть варіант:</label>
                                 <select style={{width: "100%"}} onChange={(e) => setSelectedVariant(goods.variants[e.target.value])}>
                                     {goods.variants.map((variant, index) => (
-                                        <option key={index} value={index}>{variant.title} - {variant.price} грн</option>
+                                        <option key={index} value={index}>{variant.title}</option>
                                     ))}
                                 </select>
                             </div>
@@ -55,9 +55,9 @@ function Detail({goods, f1, setF1}) {
                 </div>
                 <div className={styles.sectionPhoto}>
                     <img className={styles.imgsecond} height={266} width={400}
-                         src={selectedVariant?.imgsecond || goods.imgsecond} alt=""/>
+                         src={goods?.isVariant ? selectedVariant?.imgsecond : goods.imgsecond} alt=""/>
                     <img className={styles.imgthird} height={366} width={550}
-                         src={selectedVariant?.imgthird || goods.imgthird} alt=""/>
+                         src={goods?.isVariant ? selectedVariant?.imgthird : goods.imgthird} alt=""/>
                 </div>
             </div>
             <div className={styles.buttons}>
