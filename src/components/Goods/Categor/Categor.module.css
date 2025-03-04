@@ -1,5 +1,8 @@
 .catItems {
     display: flex;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
     align-items: center;
     justify-content: center;
     gap: 12px;
