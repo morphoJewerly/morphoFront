@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 function Detail({goods,f1,setF1}) {
     // {id,img,title,price,isLoading,}
     const cartItems  = useSelector(state => state.cart.cartItems)
-    const cartItem   = useSelector (state => state.cart.cartItems.find((obj) => obj._id === goods._id   ))
+    const cartItem = useSelector(state => state.cart.cartItems.find(obj => obj._id === goods?.isVariant ? selectedVariant._id : goods._id));
     const addedCount = cartItem ?  cartItem.count : 0; 
     const dispatch  = useDispatch();
     const addCartItem = () => {
-        if (!selectedVariant) return;
+        if (goods?.isVariant && !selectedVariant) return;
         const itemToAdd = {
             _id: goods?.isVariant ? selectedVariant._id : goods._id,
             title: goods?.isVariant ? `${goods.title} - ${selectedVariant?.title}` : goods.title,
