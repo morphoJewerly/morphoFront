@@ -12,10 +12,10 @@ function Detail({goods,f1,setF1}) {
     const addCartItem = () => {
         if (!selectedVariant) return;
         const itemToAdd = {
-            _id: goods._id,
+            _id: goods?.isVariant ? selectedVariant._id : goods._id,
             title: goods?.isVariant ? `${goods.title} - ${selectedVariant?.title}` : goods.title,
-            price: selectedVariant.price,
-            imgmain: selectedVariant.imgmain,
+            price: goods?.isVariant ? selectedVariant.price : goods.price,
+            imgmain: goods?.isVariant ? selectedVariant.imgmain : goods.imgmain,
             category: goods.category,
         };
         dispatch(addCartItems(itemToAdd));
