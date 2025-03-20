@@ -44,6 +44,83 @@
     display: flex;
     align-items: center;
  }
+ .burger {
+     height: 30px;
+     top: 10px;
+     width: 25px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+     left: 10px;
+     position: absolute;
+     cursor: pointer;
+     div {
+         height: 3px;
+         width: 100%;
+         background-color: #000;
+     }
+ }
+ .burger_menu {
+     width: 100vw;
+     height: 100vh;
+     background-color: #fff;
+     position: fixed;
+     top: 0;
+     z-index: 9999;
+     left: -300px;
+     transition: left 0.3s;
+     max-width: 300px;
+ }
+.open {
+    left: 0 !important;
+}
+.burger_menu_container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 70px;
+    overflow-y: auto;
+    max-height: calc(100vh - 70px);
+
+    a {
+        color: black;
+        margin-bottom: 20px;
+        font-family: 'Aneliza', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    nav {
+        margin-top: 0;
+        ul {
+            flex-direction: column;
+            gap: 0;
+            justify-content: flex-start;
+            margin-left: 0;
+            align-items: baseline;
+            margin-top: -28px;
+
+            li {
+                color: black;
+                margin-bottom: 20px !important;
+                font-family: 'Aneliza', sans-serif !important;
+                text-transform: uppercase !important;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}
+.cross {
+    top: 13.5px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    left: 10px;
+    position: absolute;
+    cursor: pointer;
+}
  .home{
     /* background-color: white ;
     padding-left: 3px;
@@ -155,9 +232,15 @@
     flex-direction: column;
 
 }
+.main {
+    margin-top: 50px;
+}
 @media(max-width:800px){
     .Items1,.Items2{
         gap: 30px;
+    }
+    .main {
+        margin-top: 50px;
     }
 }
 @media(max-width:600px){
@@ -165,18 +248,18 @@
       margin-right: 10px;
    }
    .main {
-      margin-top: 5px;
+      margin-top: 50px;
    }
    .icons{
-      height: 40px;
+      height: 50px;
    }
    .p{
-      top:-6px;
+      top:-2px;
       font-size: 17px;
 
    }
    .remimg{
-      margin-top: -11px;
+      margin-top: -5.5px;
    }
     .main {
        display: flex;
@@ -190,13 +273,13 @@
        
     }
     .home{
-        top:10px;
+        top:13.5px;
         width: 23px;
         height: 23px;
       
      }
      .cart{
-       top: 3px;
+       top: 7.5px;
       
      }
      .cart img {
