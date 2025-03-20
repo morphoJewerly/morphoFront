@@ -38,6 +38,8 @@
   /* Start with a height of 0 */
   overflow: hidden; /* Hide overflowed content */
   transition: max-height 0.3s ease-in-out; /* Transition max-height */
+  color: #000;
+  cursor: pointer;
 }
 .accordion-content:hover{
   text-decoration:underline;

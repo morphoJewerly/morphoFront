@@ -149,10 +149,10 @@ header {
     padding-bottom: 3px;
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Marmelad";
+    font-family: 'Aneliza', sans-serif;
     List-style-type: none;
     color: rgb(173, 173, 173);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 17px;
     outline: none;
 }
@@ -181,10 +181,10 @@ header {
 .rigthHeader li .activen  {
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Marmelad";
+    font-family:  'Aneliza', sans-serif;
     List-style-type: none;
     color: rgb(0, 0, 0);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     List-style-type: none;
     border-bottom: 3px solid   #222;
@@ -246,10 +246,10 @@ li {
   .rigthHeader li .activen  {
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Marmelad";
+    font-family:  'Aneliza', sans-serif;
     List-style-type: none;
     color: rgb(0, 0, 0);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
     List-style-type: none;
     border-bottom: 3px solid   #222;

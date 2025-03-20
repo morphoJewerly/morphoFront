@@ -116,10 +116,10 @@
     padding-bottom: 3px;
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Marmelad";
+    font-family: 'Aneliza', sans-serif;
+    font-weight: 500;
     List-style-type: none;
     color: rgb(173, 173, 173);
-    font-weight: 600;
     font-size: 17px;
     outline: none;
 }
@@ -127,10 +127,10 @@
     -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Marmelad";
+    font-family: 'Aneliza', sans-serif;
     List-style-type: none;
     color: rgb(0, 0, 0);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 17px;
     List-style-type: none;
     border-bottom: 3px solid   #222;

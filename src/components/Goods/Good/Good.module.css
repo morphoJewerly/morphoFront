@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     width: 330px;
-    height: 360px;
+    height: 300px;
     background-color:  #ffffff;
     border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -21,12 +21,12 @@
     text-decoration: none;
 }
 .title{
-    top:230px;
+    top:215px;
     position: absolute;
     font-family: 'Philosopher', sans-serif;;
     font-style: normal;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.01em;
@@ -84,9 +84,9 @@
 }
 .price {
     position: absolute;
-    bottom: 20px;
+    bottom: 9px;
     color: #1f1f1f ;
-    font-size: 27px ;
+    font-size: 25px ;
 }
 .item_footer .button:hover {
     background-color: rgb(234, 234, 234);
