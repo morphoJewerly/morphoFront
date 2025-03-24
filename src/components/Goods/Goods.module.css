@@ -154,11 +154,11 @@
      align-items: flex-end;
      flex-direction: row-reverse;
      font-family: 'Aneliza', sans-serif;
-     font-weight: 600;
+     font-weight: 600 !important;
      color: black;
  }
  .added_item {
-     font-weight: 600;
+     font-weight: 600 !important;
  }
  /* .cart  img {
    filter: brightness(0);
