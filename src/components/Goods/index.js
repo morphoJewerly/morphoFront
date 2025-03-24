@@ -52,9 +52,9 @@ return(
           <div className={styles.burger_menu_container}>
               <Link to="/about" className={styles.home_link}>Головна <img width={20} height={20} className={styles.home} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRoWspnZm3dBSrLQaSlkuK5X1u13UpfUjdA&usqp=CAU"} alt="home" /></Link>
               <Categor categories={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
-              <Link to={"/oferta"}>Угода користувача</Link>
-              <Link to={"/deliverinfo"}>Інформація про доставку</Link>
-              <Link to={"/turnaround"}>Повернення товару</Link>
+              <Link to={"/oferta"} className={styles.added_item}>Угода користувача</Link>
+              <Link to={"/deliverinfo"} className={styles.added_item}>Інформація про доставку</Link>
+              <Link to={"/turnaround"} className={styles.added_item}>Повернення товару</Link>
           </div>
       </div>
       <div className={styles.icons}>
