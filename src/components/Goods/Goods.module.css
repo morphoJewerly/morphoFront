@@ -153,6 +153,9 @@
      justify-content: flex-end;
      align-items: flex-end;
      flex-direction: row-reverse;
+     font-family: 'Aneliza', sans-serif;
+     font-weight: 500;
+     color: black;
  }
  /* .cart  img {
    filter: brightness(0);
