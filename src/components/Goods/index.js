@@ -9,12 +9,14 @@ import axios from "../../axios";
 import MyLoader from "./Good/PizzaBlock";
 import Categor from "./Categor";
 import MyContext from "../../MyContext";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import Detail from "./Detail";
 import Accordion from '../Accordion';
 import Footer from "../Footer";
+
 function Goods ({}) {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [isLoading, setIsLoading] = React.useState(true);
     const categories = [null,"КАБЛУЧКИ","CЕРЕЖКИ", "CЕРЕЖКИ ПУСЕТИ", "ПІДВІСКИ/КУЛОНИ","ПІДВІСКИ З ЛАНЦЮЖКОМ", "НАБОРИ", "БРАСЛЕТИ НА НОГУ", "БРАСЛЕТИ НА РУКУ", "ЗНАЧКИ", "КАФИ", "КОЛЬЄ", "ЛАНЦЮЖКИ", "ЧОКЕРИ", "СОТУАРИ"]
     const catId = useSelector((state) => state.filter.catId)
@@ -48,6 +50,7 @@ return(
       </div> */}
       <div className={`${styles.burger_menu} ${isOpenBurgerMenu ? styles.open : ""}`}>
           <div className={styles.burger_menu_container}>
+              <Link to="/about" className={styles.home_link}>Головна <img width={20} height={20} className={styles.home} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRoWspnZm3dBSrLQaSlkuK5X1u13UpfUjdA&usqp=CAU"} alt="home" /></Link>
               <Categor categories={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
               <Link to={"/oferta"}>Угода користувача</Link>
               <Link to={"/deliverinfo"}>Інформація про доставку</Link>
@@ -66,7 +69,10 @@ return(
           </svg>}
       </span>
       { !hideInfo ?
-      <p className={styles.p}>THE PIECE OF SKY</p>
+          <div className={styles.logo_container} onClick={() => navigate("/about")}>
+              <img src={"/images/dark-logo.png"} alt={"logo"}/>
+              <p className={styles.p}>THE PIECE OF SKY</p>
+          </div>
       :
       <div className={styles.info}>
       <Accordion/>
