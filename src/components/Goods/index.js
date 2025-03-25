@@ -70,7 +70,7 @@ return(
       </span>
       { !hideInfo ?
           <div className={styles.logo_container} onClick={() => navigate("/about")}>
-              <img src={"/images/dark-logo.png"} alt={"logo"}/>
+              <img src={"/images/logo-black.png"} alt={"logo"}/>
               <p className={styles.p}>THE PIECE OF SKY</p>
           </div>
       :
